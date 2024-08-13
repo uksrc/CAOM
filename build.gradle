@@ -18,20 +18,15 @@ jar {
     enabled = true
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-            pom {
-                name = 'Common Archive Observation Model'
-                description = 'a general purpose data model for use as the core data model of an astronomical data centre'
-
-            }
-        }
-    }
-}
 
 defaultTasks 'build', 'xslt'
+
+tasks.register("quarkusJar", Jar)
+        {
+            archiveClassifier = 'quarkus'
+            from sourceSets.main.output
+            exclude("META-INF/persistence.xml")
+        }
 
 task initHTML(type: Copy) {
     
@@ -67,6 +62,21 @@ dependencies {
 
     testImplementation 'junit:junit:4.13'
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact  tasks.quarkusJar
+                    pom {
+                        name = 'Common Archive Observation Model'
+                        description = 'a general purpose data model for use as the core data model of an astronomical data centre'
+
+                    }
+        }
+    }
+}
+
 
 apply from: 'opencadc.gradle'
 
