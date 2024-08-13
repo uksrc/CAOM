@@ -1,21 +1,36 @@
 plugins {
     id 'net.ivoa.vo-dml.vodmltools' version '0.5.5'
-    id 'java'
+    id 'java-library'
     id 'checkstyle'
     id "com.github.eerohele.saxon-gradle" version "0.2.1"
+    id 'maven-publish'
 }
 
 
 vodml {
-
+    bindingFiles.setFrom(file("src/main/vo-dml/CAOM-2.5.vodml-binding.xml"))
 }
 group = 'org.opencadc'
 
-version = '2.4'
+version = '2.5.0-SNAPSHOT'
 
 jar {
     enabled = true
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            pom {
+                name = 'Common Archive Observation Model'
+                description = 'a general purpose data model for use as the core data model of an astronomical data centre'
+
+            }
+        }
+    }
+}
+
 defaultTasks 'build', 'xslt'
 
 task initHTML(type: Copy) {
