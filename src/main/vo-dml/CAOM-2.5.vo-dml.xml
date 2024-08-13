@@ -62,7 +62,7 @@
     
     <import>
         <name>ivoa</name>
-        <url>https://www.ivoa.net/xml/VODML/IVOA-v1.vo-dml.xml</url>
+        <url>https://www.ivoa.net/xml/VODML/IVOA-v1.0.vo-dml.xml</url>
         <documentationURL>https://www.ivoa.net/documents/VODML/</documentationURL>
     </import>
     
@@ -98,7 +98,7 @@
             </literal>
             <literal>
                 <vodml-id>ObservationIntentType.OUTREACH</vodml-id>
-                <name>calibration</name>
+                <name>outreach</name>
                 <description>the intent of this observation was to create public outreach content</description>
             </literal>
         </enumeration>
@@ -260,7 +260,7 @@
             </attribute>
             <attribute>
                 <vodml-id>VocabularyTerm.base</vodml-id>
-                <name>term</name>
+                <name>base</name>
                 <description>flag indicating of the vocabulary namespace is a base vocabulary</description>
                 <datatype>
                     <vodml-ref>ivoa:boolean</vodml-ref>
@@ -274,7 +274,7 @@
         
         <dataType abstract="false">
             <vodml-id>CalibrationStatus</vodml-id>
-            <name>DataProductType</name>
+            <name>CalibrationStatus</name>
             <description>term from the IVOA calibration-status vocabulary; this vocabulary does not yet exist
                 but can be created using optional terms in the ObsCore standard (NEW in CAOM-2.5)</description>
             <extends>
@@ -2537,7 +2537,7 @@
             </attribute>
             <attribute>
                 <vodml-id>Visibility.distributionEccentricity</vodml-id>
-                <name>distance</name>
+                <name>distributionEccentricity</name>
                 <description>eccentricity of the distribtuion of ??? in [0,1]</description>
                 <datatype>
                     <vodml-ref>ivoa:real</vodml-ref>
@@ -2549,7 +2549,7 @@
             </attribute>
             <attribute>
                 <vodml-id>Visibility.distributionFill</vodml-id>
-                <name>distance</name>
+                <name>distributionFill</name>
                 <description>fill-factor of the distribtuion of ??? in [0,1]</description>
                 <datatype>
                     <vodml-ref>ivoa:real</vodml-ref>
@@ -2582,7 +2582,7 @@
                 </attribute>
                 <attribute>
                     <vodml-id>Point.cval2</vodml-id>
-                    <name>cval1</name>
+                    <name>cval2</name>
                     <datatype>
                         <vodml-ref>ivoa:real</vodml-ref>
                     </datatype>
@@ -2792,7 +2792,7 @@
                 </attribute>
                 <attribute>
                     <vodml-id>Axis.cunit</vodml-id>
-                    <name>ctype</name>
+                    <name>cunit</name>
                     <datatype>
                         <vodml-ref>ivoa:string</vodml-ref>
                     </datatype>
