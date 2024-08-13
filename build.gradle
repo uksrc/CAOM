@@ -47,6 +47,7 @@ xslt {
 }
 
 dependencies {
+    implementation 'org.javastro.ivoa.vo-dml:ivoa-base:1.0-SNAPSHOT'
     testImplementation 'org.opencadc:cadc-vodml:[1.0.9,1.1)'
 
     testImplementation 'junit:junit:4.13'
