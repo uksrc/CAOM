@@ -3,7 +3,7 @@ model caom2 (2.5) "a general purpose data model for use as the core data model o
      
  author "Patrick Dowler, Canadian Astronomy Data Centre"
 title "Common Archive Observation Model"
-       include "IVOA-v1.0.vodsl"
+       include "../../../build/tmp/IVOA-v1.0.vodsl"
      
     primitive uuid  "represents a 128-bit binary ID in the canonical ascii UUID format"
 package caom2  "this package contains the CAOM object types and enumerations"
@@ -101,7 +101,8 @@ dtype Tracking  -> VocabularyTerm "term from the Tracking vocabulary NEW from en
   {   
   }
 
-dtype UCD  -> VocabularyTerm "term from the UCD1+ vocabulary (NEW from enumeration in CAOM-2.5)"
+//IMPL was just called UCD - this is reserved term in VODSL....
+dtype UCDTerm  -> VocabularyTerm "term from the UCD1+ vocabulary (NEW from enumeration in CAOM-2.5)"
   {   
   }
 
@@ -339,7 +340,7 @@ otype Proposal  "description of the science proposal or programme that initiated
         pi: ivoa:string  @?   "proper name of the principal investigator";
         project: ivoa:string  @?   "common name of the project this proposal belongs to; typically used for larger or
                     long-running projects that include mutliple proposals";
-        title: ivoa:string  @?   "title of the proposal";
+        ^title: ivoa:string  @?   "title of the proposal";
         keywords: ivoa:string  @*   "additional keywords that describe the science goals of the proposal; 
                     keywords cannot contain the pipe (|) character - it is reserved for use in persistence
                     systems (e.g. to store all keywords in a single column in a table)";
@@ -395,7 +396,7 @@ otype Provenance  "description of how this data was produced"
 
 otype Observable  "description of the sample (pixel) values"
   {   
-        ucd: UCD   "Unified Content Descriptor (UCD) that says what kind of quantity is stored";
+        ucd: UCDTerm   "Unified Content Descriptor (UCD) that says what kind of quantity is stored";
         calibration: CalibrationStatus  @?   "term describing the calibration of the observable values";
   }
 
@@ -508,12 +509,12 @@ dtype MultiPolygon  "a region on the sky defined a sequence of points connected 
                 is terminated by a special type of vertex and multiple simple polygons are permitted to describe disconnected regions as
                 a single value"
   {   
-        vertices: Vertex @[3..-1] "";
+        vertices: Vertex @+ ""; //IMPL vodsl does not like @[3..-1] which was in the original
   }
 
 dtype Polygon  -> Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
   {   
-        points: Point @[3..-1] "";
+        points: Point @+ ""; //IMPL vodsl does not like @[3..-1] which was in the original
         samples: MultiPolygon  "";
   }
 
