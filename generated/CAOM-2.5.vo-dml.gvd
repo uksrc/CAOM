@@ -1,0 +1,466 @@
+
+digraph GVmap {  
+	label = "\n\ncaom2 data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+    "caom2" [
+
+    URL="../caom2/caom2"
+    label = "caom2"
+    fillcolor="/set312/2"
+    ] ;
+    
+    subgraph cluster_caom2 {
+      label="Package: caom2"
+      style=filled
+      fillcolor="/set312/2"
+      
+    "caom2.types" [
+
+    URL="../caom2/caom2.types"
+    label = "types"
+    fillcolor="/set312/3"
+    ] ;
+    
+    "caom2.wcs" [
+
+    URL="../caom2/caom2.wcs"
+    label = "wcs"
+    fillcolor="/set312/4"
+    ] ;
+    
+    }
+    
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    "caom2:uuid"[
+    URL="../caom2/uuid"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nuuid}"
+    fillcolor="/set312/1"
+    ] ;
+  "caom2:caom2.ObservationIntentType" [
+    URL="../caom2/caom2.ObservationIntentType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ncaom2/ObservationIntentType|+science\l+calibration\l+outreach\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.CalibrationLevel" [
+    URL="../caom2/caom2.CalibrationLevel"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ncaom2/CalibrationLevel|+PLANNED\l+RAW_INSTRUMENTAL\l+RAW_STANDARD\l+CALIBRATED\l+PRODUCT\l+ANALYSIS_PRODUCT\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.EnergyBand" [
+    URL="../caom2/caom2.EnergyBand"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ncaom2/EnergyBand|+Radio\l+Millimeter\l+Infrared\l+Optical\l+UV\l+EUV\l+Xray\l+Gammaray\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.SegmentType" [
+    URL="../caom2/caom2.SegmentType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ncaom2/SegmentType|+LINE\l+MOVE\l+CLOSE\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.ReleaseType" [
+    URL="../caom2/caom2.ReleaseType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ncaom2/ReleaseType|+data\l+meta\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.VocabularyTerm" [
+    URL="../caom2/caom2.VocabularyTerm"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/VocabularyTerm|+namespace : ivoa:anyURI\l+term : ivoa:string\l+base : ivoa:boolean\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.CalibrationStatus" [
+    URL="../caom2/caom2.CalibrationStatus"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/CalibrationStatus}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.DataProductType" [
+    URL="../caom2/caom2.DataProductType"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/DataProductType}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Quality" [
+    URL="../caom2/caom2.Quality"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/Quality}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Status" [
+    URL="../caom2/caom2.Status"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/Status}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.TargetType" [
+    URL="../caom2/caom2.TargetType"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/TargetType}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.DataLinkSemantics" [
+    URL="../caom2/caom2.DataLinkSemantics"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/DataLinkSemantics}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.PolarizationState" [
+    URL="../caom2/caom2.PolarizationState"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/PolarizationState}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Tracking" [
+    URL="../caom2/caom2.Tracking"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/Tracking}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.UCDTerm" [
+    URL="../caom2/caom2.UCDTerm"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/UCDTerm}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.CaomEntity" [
+    URL="../caom2/caom2.CaomEntity"
+    label = "{caom2/CaomEntity|+id : ivoa:string\l+lastModified : ivoa:datetime\l+maxLastModified : ivoa:datetime\l+metaChecksum : ivoa:anyURI\l+accMetaChecksum : ivoa:anyURI\l+metaProducer : ivoa:anyURI\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Observation" [
+    URL="../caom2/caom2.Observation"
+    label = "{caom2/Observation|+collection : ivoa:string\l+uri : ivoa:anyURI\l+metaRelease : ivoa:datetime\l+sequenceNumber : ivoa:integer\l+type : ivoa:string\l+intent : caom2:caom2.ObservationIntentType\l+metaReadGroups : ivoa:anyURI\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.SimpleObservation" [
+    URL="../caom2/caom2.SimpleObservation"
+    label = "{caom2/SimpleObservation}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.DerivedObservation" [
+    URL="../caom2/caom2.DerivedObservation"
+    label = "{caom2/DerivedObservation|+members : ivoa:anyURI\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Plane" [
+    URL="../caom2/caom2.Plane"
+    label = "{caom2/Plane|+uri : ivoa:anyURI\l+metaRelease : ivoa:datetime\l+metaReadGroups : ivoa:anyURI\l+dataRelease : ivoa:datetime\l+dataReadGroups : ivoa:anyURI\l+calibrationLevel : caom2:caom2.CalibrationLevel\l+dataProductType : caom2:caom2.DataProductType\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Artifact" [
+    URL="../caom2/caom2.Artifact"
+    label = "{caom2/Artifact|+uri : ivoa:anyURI\l+productType : caom2:caom2.DataLinkSemantics\l+releaseType : caom2:caom2.ReleaseType\l+contentType : ivoa:string\l+contentLength : ivoa:integer\l+contentChecksum : ivoa:anyURI\l+contentRelease : ivoa:datetime\l+contentReadGroups : ivoa:anyURI\l+descriptionID : ivoa:anyURI\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.ArtifactDescription" [
+    URL="../caom2/caom2.ArtifactDescription"
+    label = "{caom2/ArtifactDescription|+uri : ivoa:anyURI\l+description : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Part" [
+    URL="../caom2/caom2.Part"
+    label = "{caom2/Part|+name : ivoa:string\l+productType : caom2:caom2.DataLinkSemantics\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Chunk" [
+    URL="../caom2/caom2.Chunk"
+    label = "{caom2/Chunk|+productType : caom2:caom2.DataLinkSemantics\l+naxis : ivoa:integer\l+positionAxis1 : ivoa:integer\l+positionAxis2 : ivoa:integer\l+energyAxis : ivoa:integer\l+timeAxis : ivoa:integer\l+polarizationAxis : ivoa:integer\l+customAxis : ivoa:integer\l+observableAxis : ivoa:integer\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Algorithm" [
+    URL="../caom2/caom2.Algorithm"
+    label = "{caom2/Algorithm|+name : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Telescope" [
+    URL="../caom2/caom2.Telescope"
+    label = "{caom2/Telescope|+name : ivoa:string\l+geoLocationX : ivoa:real\l+geoLocationY : ivoa:real\l+geoLocationZ : ivoa:real\l+keywords : ivoa:string\l+trackingMode : caom2:caom2.VocabularyTerm\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Instrument" [
+    URL="../caom2/caom2.Instrument"
+    label = "{caom2/Instrument|+name : ivoa:string\l+keywords : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Environment" [
+    URL="../caom2/caom2.Environment"
+    label = "{caom2/Environment|+name : ivoa:real\l+humidity : ivoa:real\l+elevation : ivoa:real\l+tau : ivoa:real\l+wavelengthTau : ivoa:real\l+ambientTemp : ivoa:real\l+photometric : ivoa:boolean\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Proposal" [
+    URL="../caom2/caom2.Proposal"
+    label = "{caom2/Proposal|+proposalID : ivoa:string\l+pi : ivoa:string\l+project : ivoa:string\l+title : ivoa:string\l+keywords : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Target" [
+    URL="../caom2/caom2.Target"
+    label = "{caom2/Target|+name : ivoa:string\l+targetID : ivoa:anyURI\l+type : caom2:caom2.TargetType\l+redshift : ivoa:real\l+standard : ivoa:boolean\l+moving : ivoa:boolean\l+keywords : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.TargetPosition" [
+    URL="../caom2/caom2.TargetPosition"
+    label = "{caom2/TargetPosition|+coordsys : ivoa:string\l+equinox : ivoa:real\l+coordinates : caom2:caom2.types.Point\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Requirements" [
+    URL="../caom2/caom2.Requirements"
+    label = "{caom2/Requirements|+flag : caom2:caom2.Status\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Provenance" [
+    URL="../caom2/caom2.Provenance"
+    label = "{caom2/Provenance|+name : ivoa:string\l+reference : ivoa:anyURI\l+version : ivoa:string\l+project : ivoa:string\l+producer : ivoa:string\l+runID : ivoa:string\l+lastExecuted : ivoa:string\l+keywords : ivoa:string\l+inputs : ivoa:anyURI\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Observable" [
+    URL="../caom2/caom2.Observable"
+    label = "{caom2/Observable|+ucd : caom2:caom2.UCDTerm\l+calibration : caom2:caom2.CalibrationStatus\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.DataQuality" [
+    URL="../caom2/caom2.DataQuality"
+    label = "{caom2/DataQuality|+flag : caom2:caom2.Quality\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Metrics" [
+    URL="../caom2/caom2.Metrics"
+    label = "{caom2/Metrics|+sourceNumberDensity : ivoa:real\l+background : ivoa:real\l+backgroundStddev : ivoa:real\l+fluxDensityLimit : ivoa:real\l+magLimit : ivoa:real\l+sampleSNR : ivoa:real\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Position" [
+    URL="../caom2/caom2.Position"
+    label = "{caom2/Position|+bounds : caom2:caom2.types.Shape\l+minBounds : caom2:caom2.types.Shape\l+calibration : caom2:caom2.CalibrationStatus\l+dimension : caom2:caom2.wcs.Dimension2D\l+maxAngularScale : caom2:caom2.types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:caom2.types.Interval\l+sampleSize : ivoa:real\l+energyDependent : ivoa:boolean\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Energy" [
+    URL="../caom2/caom2.Energy"
+    label = "{caom2/Energy|+bounds : caom2:caom2.types.SampledInterval\l+calibration : caom2:caom2.CalibrationStatus\l+energyBands : caom2:caom2.EnergyBand\l+dimension : ivoa:integer\l+resolvingPower : ivoa:real\l+resolvingPowerBounds : caom2:caom2.types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:caom2.types.Interval\l+sampleSize : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:caom2.wcs.EnergyTransition\l+restwav : ivoa:real\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Time" [
+    URL="../caom2/caom2.Time"
+    label = "{caom2/Time|+bounds : caom2:caom2.types.SampledInterval\l+calibration : caom2:caom2.CalibrationStatus\l+dimension : ivoa:integer\l+resolution : ivoa:real\l+resolutionBounds : caom2:caom2.types.Interval\l+sampleSize : ivoa:real\l+exposure : ivoa:real\l+exposureBounds : caom2:caom2.types.Interval\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Polarization" [
+    URL="../caom2/caom2.Polarization"
+    label = "{caom2/Polarization|+states : caom2:caom2.PolarizationState\l+dimension : ivoa:integer\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.CustomAxis" [
+    URL="../caom2/caom2.CustomAxis"
+    label = "{caom2/CustomAxis|+ctype : ivoa:string\l+bounds : caom2:caom2.types.SampledInterval\l+dimension : ivoa:integer\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.Visibility" [
+    URL="../caom2/caom2.Visibility"
+    label = "{caom2/Visibility|+distance : caom2:caom2.types.Interval\l+distributionEccentricity : ivoa:real\l+distributionFill : ivoa:real\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "caom2:caom2.types.Point" [
+    URL="../caom2/caom2.types.Point"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Point|+cval1 : ivoa:real\l+cval2 : ivoa:real\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.Vertex" [
+    URL="../caom2/caom2.types.Vertex"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Vertex|+type : caom2:caom2.SegmentType\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.Shape" [
+    URL="../caom2/caom2.types.Shape"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Shape}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.Circle" [
+    URL="../caom2/caom2.types.Circle"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Circle|+center : caom2:caom2.types.Point\l+radius : ivoa:real\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.MultiPolygon" [
+    URL="../caom2/caom2.types.MultiPolygon"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/MultiPolygon|+vertices : caom2:caom2.types.Vertex\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.Polygon" [
+    URL="../caom2/caom2.types.Polygon"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Polygon|+points : caom2:caom2.types.Point\l+samples : caom2:caom2.types.MultiPolygon\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.Interval" [
+    URL="../caom2/caom2.types.Interval"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/Interval|+lower : ivoa:real\l+upper : ivoa:real\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.types.SampledInterval" [
+    URL="../caom2/caom2.types.SampledInterval"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/types/SampledInterval|+lower : ivoa:real\l+upper : ivoa:real\l+samples : caom2:caom2.types.Interval\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:caom2.wcs.Axis" [
+    URL="../caom2/caom2.wcs.Axis"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/Axis|+ctype : ivoa:string\l+cunit : ivoa:string\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.Dimension2D" [
+    URL="../caom2/caom2.wcs.Dimension2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/Dimension2D|+naxis1 : ivoa:integer\l+naxis2 : ivoa:integer\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.RefCoord" [
+    URL="../caom2/caom2.wcs.RefCoord"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/RefCoord|+pix : ivoa:real\l+val : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordError" [
+    URL="../caom2/caom2.wcs.CoordError"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordError|+crder : ivoa:real\l+csyer : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.Slice" [
+    URL="../caom2/caom2.wcs.Slice"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/Slice|+axis : caom2:caom2.wcs.Axis\l+bin : ivoa:integer\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.EnergyTransition" [
+    URL="../caom2/caom2.wcs.EnergyTransition"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/EnergyTransition|+species : ivoa:string\l+transition : ivoa:string\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.Coord2D" [
+    URL="../caom2/caom2.wcs.Coord2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/Coord2D|+coord1 : caom2:caom2.wcs.RefCoord\l+coord2 : caom2:caom2.wcs.RefCoord\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordRange1D" [
+    URL="../caom2/caom2.wcs.CoordRange1D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordRange1D|+start : caom2:caom2.wcs.RefCoord\l+end : caom2:caom2.wcs.RefCoord\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordBounds1D" [
+    URL="../caom2/caom2.wcs.CoordBounds1D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordBounds1D|+vertices : caom2:caom2.wcs.CoordRange1D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordFunction1D" [
+    URL="../caom2/caom2.wcs.CoordFunction1D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordFunction1D|+dimension : ivoa:integer\l+refCoord : caom2:caom2.wcs.RefCoord\l+delta : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordAxis1D" [
+    URL="../caom2/caom2.wcs.CoordAxis1D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordAxis1D|+axis : caom2:caom2.wcs.Axis\l+error : caom2:caom2.wcs.CoordError\l+range : caom2:caom2.wcs.CoordRange1D\l+bounds : caom2:caom2.wcs.CoordBounds1D\l+function : caom2:caom2.wcs.CoordFunction1D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordRange2D" [
+    URL="../caom2/caom2.wcs.CoordRange2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordRange2D|+start : caom2:caom2.wcs.Coord2D\l+end : caom2:caom2.wcs.Coord2D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordBounds2D" [
+    URL="../caom2/caom2.wcs.CoordBounds2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordBounds2D|+vertices : caom2:caom2.wcs.Coord2D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordFunction2D" [
+    URL="../caom2/caom2.wcs.CoordFunction2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordFunction2D|+dimension : caom2:caom2.wcs.Dimension2D\l+refCoord : caom2:caom2.wcs.Coord2D\l+cd11 : ivoa:real\l+cd12 : ivoa:real\l+cd21 : ivoa:real\l+cd22 : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CoordAxis2D" [
+    URL="../caom2/caom2.wcs.CoordAxis2D"
+    label = "{&lt;&lt;datatype&gt;&gt;\ncaom2/wcs/CoordAxis2D|+axis1 : caom2:caom2.wcs.Axis\l+axis2 : caom2:caom2.wcs.Axis\l+error1 : caom2:caom2.wcs.CoordError\l+error2 : caom2:caom2.wcs.CoordError\l+range : caom2:caom2.wcs.CoordRange2D\l+bounds : caom2:caom2.wcs.CoordBounds2D\l+function : caom2:caom2.wcs.CoordFunction2D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.SpatialWCS" [
+    URL="../caom2/caom2.wcs.SpatialWCS"
+    label = "{caom2/wcs/SpatialWCS|+axis : caom2:caom2.wcs.CoordAxis2D\l+coordsys : ivoa:string\l+equinox : ivoa:real\l+resolution : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.SpectralWCS" [
+    URL="../caom2/caom2.wcs.SpectralWCS"
+    label = "{caom2/wcs/SpectralWCS|+axis : caom2:caom2.wcs.CoordAxis1D\l+specsys : ivoa:string\l+ssysobs : ivoa:string\l+ssyssrc : ivoa:string\l+restfrq : ivoa:real\l+restwav : ivoa:real\l+velosys : ivoa:real\l+zsource : ivoa:real\l+velang : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:caom2.wcs.EnergyTransition\l+resolvingPower : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.TemporalWCS" [
+    URL="../caom2/caom2.wcs.TemporalWCS"
+    label = "{caom2/wcs/TemporalWCS|+axis : caom2:caom2.wcs.CoordAxis1D\l+timesys : ivoa:string\l+trefpos : ivoa:string\l+mjdref : ivoa:real\l+exposure : ivoa:real\l+resolution : ivoa:real\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.PolarizationWCS" [
+    URL="../caom2/caom2.wcs.PolarizationWCS"
+    label = "{caom2/wcs/PolarizationWCS|+axis : caom2:caom2.wcs.CoordAxis1D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.CustomWCS" [
+    URL="../caom2/caom2.wcs.CustomWCS"
+    label = "{caom2/wcs/CustomWCS|+axis : caom2:caom2.wcs.CoordAxis1D\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "caom2:caom2.wcs.ObservableAxis" [
+    URL="../caom2/caom2.wcs.ObservableAxis"
+    label = "{caom2/wcs/ObservableAxis|+dependent : caom2:caom2.wcs.Slice\l+independent : caom2:caom2.wcs.Slice\l}"
+    fillcolor="/set312/4"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "caom2:caom2.CalibrationStatus" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.DataProductType" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.Quality" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.Status" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.TargetType" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.DataLinkSemantics" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.PolarizationState" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.Tracking" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.UCDTerm" -> "caom2:caom2.VocabularyTerm" ;
+  "caom2:caom2.Observation" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.SimpleObservation" -> "caom2:caom2.Observation" ;
+  "caom2:caom2.DerivedObservation" -> "caom2:caom2.Observation" ;
+  "caom2:caom2.Plane" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.Artifact" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.ArtifactDescription" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.Part" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.CaomEntity" ;
+  "caom2:caom2.types.Vertex" -> "caom2:caom2.types.Point" ;
+  "caom2:caom2.types.Circle" -> "caom2:caom2.types.Shape" ;
+  "caom2:caom2.types.Polygon" -> "caom2:caom2.types.Shape" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "caom2:caom2.Observation" -> "caom2:caom2.Algorithm" [headlabel="1",label="algorithm",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Telescope" [headlabel="0..1",label="telescope",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Instrument" [headlabel="0..1",label="instrument",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Environment" [headlabel="0..1",label="environment",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Proposal" [headlabel="0..1",label="proposal",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Target" [headlabel="0..1",label="target",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.TargetPosition" [headlabel="0..1",label="targetPosition",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Requirements" [headlabel="0..1",label="requirements",labelfontsize=10] ;
+  "caom2:caom2.Observation" -> "caom2:caom2.Plane" [headlabel="0..*",label="planes",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Observable" [headlabel="0..1",label="observable",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.DataQuality" [headlabel="0..1",label="quality",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Metrics" [headlabel="0..1",label="metrics",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Position" [headlabel="0..1",label="position",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Energy" [headlabel="0..1",label="energy",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Time" [headlabel="0..1",label="time",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Polarization" [headlabel="0..1",label="polarization",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.CustomAxis" [headlabel="0..1",label="custom",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Visibility" [headlabel="0..1",label="uv",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Provenance" [headlabel="0..1",label="provenance",labelfontsize=10] ;
+  "caom2:caom2.Plane" -> "caom2:caom2.Artifact" [headlabel="0..*",label="artifacts",labelfontsize=10] ;
+  "caom2:caom2.Artifact" -> "caom2:caom2.Part" [headlabel="0..*",label="parts",labelfontsize=10] ;
+  "caom2:caom2.Part" -> "caom2:caom2.Chunk" [headlabel="0..*",label="chunks",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.SpatialWCS" [headlabel="0..1",label="position",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.SpectralWCS" [headlabel="0..1",label="energy",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.TemporalWCS" [headlabel="0..1",label="time",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.PolarizationWCS" [headlabel="0..1",label="polarization",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.CustomWCS" [headlabel="0..1",label="custom",labelfontsize=10] ;
+  "caom2:caom2.Chunk" -> "caom2:caom2.wcs.ObservableAxis" [headlabel="0..1",label="observable",labelfontsize=10] ;
+    
+}
+  

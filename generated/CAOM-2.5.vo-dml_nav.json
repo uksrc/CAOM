@@ -1,0 +1,38 @@
+
+
+            {
+            "caom2 model": [
+            {
+            "Overview": "generated/CAOM-2.5.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"caom2.Algorithm" : "generated/caom2/caom2.Algorithm.md"},{"caom2.Artifact" : "generated/caom2/caom2.Artifact.md"},{"caom2.ArtifactDescription" : "generated/caom2/caom2.ArtifactDescription.md"},{"caom2.CaomEntity" : "generated/caom2/caom2.CaomEntity.md"},{"caom2.Chunk" : "generated/caom2/caom2.Chunk.md"},{"caom2.CustomAxis" : "generated/caom2/caom2.CustomAxis.md"},{"caom2.DataQuality" : "generated/caom2/caom2.DataQuality.md"},{"caom2.DerivedObservation" : "generated/caom2/caom2.DerivedObservation.md"},{"caom2.Energy" : "generated/caom2/caom2.Energy.md"},{"caom2.Environment" : "generated/caom2/caom2.Environment.md"},{"caom2.Instrument" : "generated/caom2/caom2.Instrument.md"},{"caom2.Metrics" : "generated/caom2/caom2.Metrics.md"},{"caom2.Observable" : "generated/caom2/caom2.Observable.md"},{"caom2.Observation" : "generated/caom2/caom2.Observation.md"},{"caom2.Part" : "generated/caom2/caom2.Part.md"},{"caom2.Plane" : "generated/caom2/caom2.Plane.md"},{"caom2.Polarization" : "generated/caom2/caom2.Polarization.md"},{"caom2.Position" : "generated/caom2/caom2.Position.md"},{"caom2.Proposal" : "generated/caom2/caom2.Proposal.md"},{"caom2.Provenance" : "generated/caom2/caom2.Provenance.md"},{"caom2.Requirements" : "generated/caom2/caom2.Requirements.md"},{"caom2.SimpleObservation" : "generated/caom2/caom2.SimpleObservation.md"},{"caom2.Target" : "generated/caom2/caom2.Target.md"},{"caom2.TargetPosition" : "generated/caom2/caom2.TargetPosition.md"},{"caom2.Telescope" : "generated/caom2/caom2.Telescope.md"},{"caom2.Time" : "generated/caom2/caom2.Time.md"},{"caom2.Visibility" : "generated/caom2/caom2.Visibility.md"},{"caom2.wcs.CustomWCS" : "generated/caom2/caom2.wcs.CustomWCS.md"},{"caom2.wcs.ObservableAxis" : "generated/caom2/caom2.wcs.ObservableAxis.md"},{"caom2.wcs.PolarizationWCS" : "generated/caom2/caom2.wcs.PolarizationWCS.md"},{"caom2.wcs.SpatialWCS" : "generated/caom2/caom2.wcs.SpatialWCS.md"},{"caom2.wcs.SpectralWCS" : "generated/caom2/caom2.wcs.SpectralWCS.md"},{"caom2.wcs.TemporalWCS" : "generated/caom2/caom2.wcs.TemporalWCS.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"caom2.CalibrationStatus" : "generated/caom2/caom2.CalibrationStatus.md"},{"caom2.DataLinkSemantics" : "generated/caom2/caom2.DataLinkSemantics.md"},{"caom2.DataProductType" : "generated/caom2/caom2.DataProductType.md"},{"caom2.PolarizationState" : "generated/caom2/caom2.PolarizationState.md"},{"caom2.Quality" : "generated/caom2/caom2.Quality.md"},{"caom2.Status" : "generated/caom2/caom2.Status.md"},{"caom2.TargetType" : "generated/caom2/caom2.TargetType.md"},{"caom2.Tracking" : "generated/caom2/caom2.Tracking.md"},{"caom2.UCDTerm" : "generated/caom2/caom2.UCDTerm.md"},{"caom2.VocabularyTerm" : "generated/caom2/caom2.VocabularyTerm.md"},{"caom2.types.Circle" : "generated/caom2/caom2.types.Circle.md"},{"caom2.types.Interval" : "generated/caom2/caom2.types.Interval.md"},{"caom2.types.MultiPolygon" : "generated/caom2/caom2.types.MultiPolygon.md"},{"caom2.types.Point" : "generated/caom2/caom2.types.Point.md"},{"caom2.types.Polygon" : "generated/caom2/caom2.types.Polygon.md"},{"caom2.types.SampledInterval" : "generated/caom2/caom2.types.SampledInterval.md"},{"caom2.types.Shape" : "generated/caom2/caom2.types.Shape.md"},{"caom2.types.Vertex" : "generated/caom2/caom2.types.Vertex.md"},{"caom2.wcs.Axis" : "generated/caom2/caom2.wcs.Axis.md"},{"caom2.wcs.Coord2D" : "generated/caom2/caom2.wcs.Coord2D.md"},{"caom2.wcs.CoordAxis1D" : "generated/caom2/caom2.wcs.CoordAxis1D.md"},{"caom2.wcs.CoordAxis2D" : "generated/caom2/caom2.wcs.CoordAxis2D.md"},{"caom2.wcs.CoordBounds1D" : "generated/caom2/caom2.wcs.CoordBounds1D.md"},{"caom2.wcs.CoordBounds2D" : "generated/caom2/caom2.wcs.CoordBounds2D.md"},{"caom2.wcs.CoordError" : "generated/caom2/caom2.wcs.CoordError.md"},{"caom2.wcs.CoordFunction1D" : "generated/caom2/caom2.wcs.CoordFunction1D.md"},{"caom2.wcs.CoordFunction2D" : "generated/caom2/caom2.wcs.CoordFunction2D.md"},{"caom2.wcs.CoordRange1D" : "generated/caom2/caom2.wcs.CoordRange1D.md"},{"caom2.wcs.CoordRange2D" : "generated/caom2/caom2.wcs.CoordRange2D.md"},{"caom2.wcs.Dimension2D" : "generated/caom2/caom2.wcs.Dimension2D.md"},{"caom2.wcs.EnergyTransition" : "generated/caom2/caom2.wcs.EnergyTransition.md"},{"caom2.wcs.RefCoord" : "generated/caom2/caom2.wcs.RefCoord.md"},{"caom2.wcs.Slice" : "generated/caom2/caom2.wcs.Slice.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"uuid" : "generated/caom2/uuid.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"caom2.CalibrationLevel" : "generated/caom2/caom2.CalibrationLevel.md"},{"caom2.EnergyBand" : "generated/caom2/caom2.EnergyBand.md"},{"caom2.ObservationIntentType" : "generated/caom2/caom2.ObservationIntentType.md"},{"caom2.ReleaseType" : "generated/caom2/caom2.ReleaseType.md"},{"caom2.SegmentType" : "generated/caom2/caom2.SegmentType.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        
