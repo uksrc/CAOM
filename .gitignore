@@ -1,3 +1,6 @@
 /.idea/
 /.gradle/
 /build/
+/doc/site/generated/
+/site/
+/mkdocs.yml
