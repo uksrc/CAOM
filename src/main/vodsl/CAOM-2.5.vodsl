@@ -82,10 +82,28 @@ dtype DataLinkSemantics  -> VocabularyTerm "term from the DataLink Core vocabula
   {   
   }
 
-dtype PolarizationState  -> VocabularyTerm "this class defines constants for the PolarizationState vocabulary
-            (CHANGED from enumeration in CAOM-2.5)"
-  {   
-  }
+enum PolarizationState  "a classification of polarization (Stokes states plus other related quantities);
+                work-around: using the name of the literal to convey the serialised value"
+{
+I  "unpolarized",
+Q  "Stokes linear Q",
+U  "Stokes linear U",
+V  "Stokes circular V",
+RR  "right-right circular",
+LL  "left-left circular",
+RL  "right-left cross-circular",
+LR  "left-right cross-circular",
+XX  "X parallel linear",
+YY  "Y parallel linear",
+XY  "XY cross-linear",
+YX  "YX cross-linear",
+POLI  "linear polarized intensity: sqrt(Q^2 + U^2)",
+FPOLI  "fractional linear polarization: POLI/I",
+POLA  "linear polarization angle: 1/2 arctan(U,Q)",
+EPOLI  "elliptical polarization intensity: sqrt(Q^2 + U^2 + V^2)",
+CPOLI  "circular polarization intensity: |V|",
+NPOLI  "unpolarized intensity: I - EPOLI"
+}
 
 dtype Tracking  -> VocabularyTerm "term from the Tracking vocabulary NEW from enumeration in CAOM-2.5)"
   {   
@@ -366,7 +384,7 @@ otype TargetPosition  "the intended position of the observation
   {   
         coordsys: ivoa:string   "the coordinate system of the coordinates";
         equinox: ivoa:real  @?   "the equinox of the coordinates";
-        coordinates: types.Point   "the coordinates";
+        coordinates: types.Point as composition  "the coordinates";
   }
 
 otype Requirements  "the observational requirements specified by the proposal"
@@ -415,9 +433,9 @@ otype Metrics  "collection of measured quantities that describe the content of t
 
 otype Position  "description of the position coverage and sampling of the data"
   {   
-        bounds: types.Shape   "spatial boundary that includes the data (cardinality changed in CAOM-2.5)";
-        samples: types.MultiShape   "detailed sub-samples of the bounds (refactored in CAOM-2.5)";
-        minBounds: types.Shape  @?   "minimum spatial boundary that includes the data; this value is smaller than
+        bounds: types.Shape as composition  "spatial boundary that includes the data (cardinality changed in CAOM-2.5)";
+        samples: types.MultiShape as composition  "detailed sub-samples of the bounds (refactored in CAOM-2.5)";
+        minBounds: types.Shape  @? as composition  "minimum spatial boundary that includes the data; this value is smaller than
                 the bounds (maximum) when the field-of-view varies because it is dependent on another 
                 axis (usually energy) (new in CAOM-2.5)";
         dimension: wcs.Dimension2D  @?   "number of separate measurements (pixels) along each axis";
@@ -432,7 +450,7 @@ otype Position  "description of the position coverage and sampling of the data"
 otype Energy  "description of the energy coverage and sampling of the data"
   {   
         bounds: types.Interval   "simple outer bounds of energy coverage of the data (cardinality changed in CAOM-2.5)";
-        samples: types.Interval  @+   "detailed energy coverage of the data (refactored in CAOM-2.5)";
+        samples: types.IntervalM  @+ as composition   "detailed energy coverage of the data (refactored in CAOM-2.5)";
         energyBands: EnergyBand  @*   "standard name of the energy regime(s) included in the data (attribute name 
                 and cardinality changed in CAOM-2.4)";
         dimension: ivoa:integer  @?   "number of measurements (pixels) on the energy axis";
@@ -451,7 +469,7 @@ otype Energy  "description of the energy coverage and sampling of the data"
 otype Time  "description of the time coverage and sampling of the data"
   {   
         bounds: types.Interval   "time bounds that include the data (cardinality changed in CAOM-2.5)";
-        samples: types.Interval  @+   "detailed time coverage that include the data (refactored in CAOM-2.5)";
+        samples: types.IntervalM  @+ as composition   "detailed time coverage that include the data (refactored in CAOM-2.5)";
         calibration: CalibrationStatus  @?   "term describing the calibration of the time axis values";
         dimension: ivoa:integer  @?   "number of discrete samples (pixels) on the time axis";
         resolution: ivoa:real  @?   "median temporal resolution per pixel";
@@ -471,7 +489,7 @@ otype CustomAxis  "description of a custom coordinate axis (new in CAOM-2.4)"
   {   
         ctype: ivoa:string   "coordinate type code";
         bounds: types.Interval   "custom coordinate coverage (cardinality changed in CAOM-2.5)";
-        samples: types.Interval  @+   "detailed custom coordinate coverage (refactored in CAOM-2.5)";
+        samples: types.IntervalM  @+ as composition   "detailed custom coordinate coverage (refactored in CAOM-2.5)";
         dimension: ivoa:integer  @?   "number of discrete samples (pixels) along custom axis";
   }
 
@@ -485,30 +503,30 @@ otype Visibility  "description of a UV-plane for interferometry data (new in CAO
 package types  "data types"
 {
       
-dtype Point  "location on the sky"
+otype Point  "location on the sky"
   {   
         cval1: ivoa:real  "";
         cval2: ivoa:real  "";
   }
 
-abstract dtype Shape ""
+abstract otype Shape ""
   {   
   }
 
-dtype Circle  -> Shape "a circular region on the sky"
+otype Circle  -> Shape "a circular region on the sky"
   {   
-        center: types.Point  "";
+        center: types.Point as composition "";
         radius: ivoa:real  "";
   }
 
-dtype MultiShape  "multiple simple shapess describing disconnected regions as a single value"
+otype MultiShape  "multiple simple shapess describing disconnected regions as a single value"
   {   
-        shapes: types.Shape  @+  "";
+        shapes: types.Shape @+ as composition   "";
   }
 
-dtype Polygon  -> Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
+otype Polygon  -> Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
   {   
-        points:Point @+ ""; //IMPL vodsl does not like @[3..-1] which was in the original
+        points:Point @+ as composition ""; //IMPL vodsl does not like @[3..-1] which was in the original
   }
 
 dtype Interval  "a set of numeric values defined by a lower and upper bound (bounds included: [a,b])"
@@ -516,6 +534,11 @@ dtype Interval  "a set of numeric values defined by a lower and upper bound (bou
         lower: ivoa:real  "";
         upper: ivoa:real  "";
   }
+otype IntervalM "an interval that can appear in a composition"  // This is a hack - really a better overall design needs to be found...
+{
+        lower: ivoa:real  "";
+        upper: ivoa:real  "";
+}
 
 }
   
@@ -563,16 +586,26 @@ dtype Coord2D  "a two-dimensional (pair) of reference coordinates"
         coord1: RefCoord  "";
         coord2: RefCoord  "";
   }
+otype Coord2DM  "a two-dimensional (pair) of reference coordinates"//Kludge to allow in composition
+  {   
+        coord1: RefCoord  "";
+        coord2: RefCoord  "";
+  }
 
 dtype CoordRange1D  "a one-dimensional range of reference coordinates"
   {   
         start: RefCoord  "";
         end: RefCoord  "";
   }
-
-dtype CoordBounds1D  "a one-dimensional sequence of reference coordinate ranges"
+otype CoordRange1DM  "a one-dimensional range of reference coordinates"
   {   
-        vertices: CoordRange1D  @+  "";
+        start: RefCoord  "";
+        end: RefCoord  "";
+  }
+
+otype CoordBounds1D  "a one-dimensional sequence of reference coordinate ranges"
+  {   
+        vertices: CoordRange1DM  @+ as composition "";
   }
 
 dtype CoordFunction1D  "a one-dimensional (linear) WCS coordinate transformation function"
@@ -582,7 +615,7 @@ dtype CoordFunction1D  "a one-dimensional (linear) WCS coordinate transformation
         delta: ivoa:real   "delta in world coordinate value (size of one pixel)";
   }
 
-dtype CoordAxis1D  "a one-dimensional coordinate axis: quantity, values, errors; it is usually only necessary to specify one of the 
+otype CoordAxis1D  "a one-dimensional coordinate axis: quantity, values, errors; it is usually only necessary to specify one of the 
                 range, bounds, or function as they describe the world and pixel coordinate coverage at different levels
                 of detail and the less detailed description is redundant (exception: when the range or bounds and function 
                 are both specified, the range/bounds is a subset of the pixels described by the function and denotes the 
@@ -591,7 +624,7 @@ dtype CoordAxis1D  "a one-dimensional coordinate axis: quantity, values, errors;
         axis: Axis   "description of the quantity";
         error: CoordError  @?   "errors";
         range: CoordRange1D  @?   "pixel and world coordinate values covered by this axis (min,max)";
-        bounds: CoordBounds1D  @?   "pixel and world coordinate values covered by this axis (min,max of tiles)";
+        bounds: CoordBounds1D @?  as composition   "pixel and world coordinate values covered by this axis (min,max of tiles)";
         function: CoordFunction1D  @?   "pixel and world coordinate values covered by this axis (coordinates of every pixel)";
   }
 
@@ -602,10 +635,10 @@ dtype CoordRange2D  "a two-dimensional range of reference coordinates; this can 
         end: Coord2D   "the two-dimensional reference coordinates with maximum longitude and latitude";
   }
 
-dtype CoordBounds2D  "a two-dimensional region in pixel and world coordinates; this can be used to specify a simple polygon
+otype CoordBounds2D  "a two-dimensional region in pixel and world coordinates; this can be used to specify a simple polygon
                 boundary in pixel and world coordinates"
   {   
-        vertices: Coord2D  @+   "the vertices of the polygon with implicit segment from the last vertex back to the first";
+        vertices: Coord2DM  @+ as composition  "the vertices of the polygon with implicit segment from the last vertex back to the first";
   }
 
 dtype CoordFunction2D  "a two-dimensional (linear) WCS coordinate transformation function; this can be used to compute the world
@@ -619,7 +652,7 @@ dtype CoordFunction2D  "a two-dimensional (linear) WCS coordinate transformation
         cd22: ivoa:real   "two-dimensional scale and rotation (CD) matrix (FITS: CD2_2)";
   }
 
-dtype CoordAxis2D  "a two-dimensional coordinate axis pair: quantity, values, errors; it is usually only necessary 
+otype CoordAxis2D  "a two-dimensional coordinate axis pair: quantity, values, errors; it is usually only necessary 
                 to specify one of the range, bounds, or function as they describe the world and pixel coordinate coverage 
                 at different levels of detail and the less detailed description is redundant (exception: when the range or 
                 bounds and function are both specified, the range/bounds is a subset of the pixels described by the function 
@@ -630,13 +663,13 @@ dtype CoordAxis2D  "a two-dimensional coordinate axis pair: quantity, values, er
         error1: CoordError  @?   "position errors on the first axis";
         error2: CoordError  @?   "position errors on the second axis";
         range: CoordRange2D  @?   "pixel and world coordinate values covered by this axis (min,max)";
-        bounds: CoordBounds2D  @?   "pixel and world coordinate values covered by this axis (boundary)";
+        bounds: CoordBounds2D  @? as composition  "pixel and world coordinate values covered by this axis (boundary)";
         function: CoordFunction2D  @?   "pixel and world coordinate values covered by this axis (coordinates of every pixel";
   }
 
 otype SpatialWCS  "World Coordinate System (WCS) metadata for the position axes"
   {   
-        axis: CoordAxis2D   "description of the two-dimensional position axes";
+        axis: CoordAxis2D as composition  "description of the two-dimensional position axes";
         coordsys: ivoa:string  @?   "name of the coordinate system";
         equinox: ivoa:real  @?   "equinox of the coordinate system";
         resolution: ivoa:real  @?   "effective resolution of the data (FWHM of a point source); 
@@ -645,7 +678,7 @@ otype SpatialWCS  "World Coordinate System (WCS) metadata for the position axes"
 
 otype SpectralWCS ""
   {   
-        axis: CoordAxis1D   "description of the one-dimensional energy axis";
+        axis: CoordAxis1D as composition  "description of the one-dimensional energy axis";
         specsys: ivoa:string   "reference frame for the spectral coordinate";
         ssysobs: ivoa:string  @?   "reference frame that is constant over the range of the non-spectral world coordinates";
         ssyssrc: ivoa:string  @?   "reference frame for the velocity of the source (zsource)";
@@ -662,7 +695,7 @@ otype SpectralWCS ""
 
 otype TemporalWCS  "one-dimensional pixel and world coordinates describing the time axis"
   {   
-        axis: CoordAxis1D   "description of the time axis";
+        axis: CoordAxis1D as composition  "description of the time axis";
         timesys: ivoa:string  @?   "time scale for the time coordinates";
         trefpos: ivoa:string  @?   "reference position for the time coordinates";
         mjdref: ivoa:real  @?   "base time offset; time coordinate values are relative to this";
@@ -672,12 +705,12 @@ otype TemporalWCS  "one-dimensional pixel and world coordinates describing the t
 
 otype PolarizationWCS  "one-dimensional pixel and world coordinates describing the polarization states"
   {   
-        axis: CoordAxis1D   "description of the polarization axis";
+        axis: CoordAxis1D as composition  "description of the polarization axis";
   }
 
 otype CustomWCS  "one-dimensional pixel and world coordinates describing a non-standard (custom) coordinate axis"
   {   
-        axis: CoordAxis1D   "description of the custom axis";
+        axis: CoordAxis1D as composition  "description of the custom axis";
   }
 
 otype ObservableAxis  "an axis in the data (array) that varies by observable rather than coordinate; this axis is used when
