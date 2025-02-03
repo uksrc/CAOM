@@ -81,7 +81,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="CalibrationStatus.html" title="class in org.ivoa.dm.caom2">CalibrationStatus</a></code>, <code><a href="DataLinkSemantics.html" title="class in org.ivoa.dm.caom2">DataLinkSemantics</a></code>, <code><a href="DataProductType.html" title="class in org.ivoa.dm.caom2">DataProductType</a></code>, <code><a href="PolarizationState.html" title="class in org.ivoa.dm.caom2">PolarizationState</a></code>, <code><a href="Quality.html" title="class in org.ivoa.dm.caom2">Quality</a></code>, <code><a href="Status.html" title="class in org.ivoa.dm.caom2">Status</a></code>, <code><a href="TargetType.html" title="class in org.ivoa.dm.caom2">TargetType</a></code>, <code><a href="Tracking.html" title="class in org.ivoa.dm.caom2">Tracking</a></code>, <code><a href="UCDTerm.html" title="class in org.ivoa.dm.caom2">UCDTerm</a></code></dd>
+<dd><code><a href="CalibrationStatus.html" title="class in org.ivoa.dm.caom2">CalibrationStatus</a></code>, <code><a href="DataLinkSemantics.html" title="class in org.ivoa.dm.caom2">DataLinkSemantics</a></code>, <code><a href="DataProductType.html" title="class in org.ivoa.dm.caom2">DataProductType</a></code>, <code><a href="Quality.html" title="class in org.ivoa.dm.caom2">Quality</a></code>, <code><a href="Status.html" title="class in org.ivoa.dm.caom2">Status</a></code>, <code><a href="TargetType.html" title="class in org.ivoa.dm.caom2">TargetType</a></code>, <code><a href="Tracking.html" title="class in org.ivoa.dm.caom2">Tracking</a></code>, <code><a href="UCDTerm.html" title="class in org.ivoa.dm.caom2">UCDTerm</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@Embeddable
@@ -142,6 +142,10 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;base)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.caom2.VocabularyTerm)" class="member-name-link">VocabularyTerm</a><wbr>(<a href="VocabularyTerm.html" title="class in org.ivoa.dm.caom2">VocabularyTerm</a>&nbsp;other)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Copy Constructor.</div>
 </div>
 </div>
 </section>
@@ -299,6 +303,17 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dd><code>namespace</code> - globally unique namespace for the vocabulary.</dd>
 <dd><code>term</code> - the word from the vocabulary.</dd>
 <dd><code>base</code> - flag indicating of the vocabulary namespace is a base vocabulary.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(org.ivoa.dm.caom2.VocabularyTerm)">
+<h3>VocabularyTerm</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VocabularyTerm</span><wbr><span class="parameters">(<a href="VocabularyTerm.html" title="class in org.ivoa.dm.caom2">VocabularyTerm</a>&nbsp;other)</span></div>
+<div class="block">Copy Constructor. Note that references will remain as is rather than be copied.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>other</code> - the object to be copied.</dd>
 </dl>
 </section>
 </li>

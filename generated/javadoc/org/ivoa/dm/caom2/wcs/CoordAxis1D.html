@@ -77,22 +77,22 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code>, <code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Embeddable
+<div class="type-signature"><span class="annotations">@Entity
 @VoDml(id="caom2:wcs.CoordAxis1D",
-       role=dataType)
+       role=objectType)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">CoordAxis1D</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
+implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span></div>
 <div class="block">a one-dimensional coordinate axis: quantity, values, errors; it is usually only necessary to specify one of the 
-                                           range, bounds, or function as they describe the world and pixel coordinate coverage at different levels
-                                           of detail and the less detailed description is redundant (exception: when the range or bounds and function 
-                                           are both specified, the range/bounds is a subset of the pixels described by the function and denotes the 
-                                           valid pixels.
+                                            range, bounds, or function as they describe the world and pixel coordinate coverage at different levels
+                                            of detail and the less detailed description is redundant (exception: when the range or bounds and function 
+                                            are both specified, the range/bounds is a subset of the pixels described by the function and denotes the 
+                                            valid pixels.
 
- dataType:  CoordAxis1D</div>
+ objectType:  CoordAxis1D</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -122,29 +122,34 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="Axis.html" title="class in org.ivoa.dm.caom2.wcs">Axis</a></code></div>
-<div class="col-second even-row-color"><code><a href="#axis" class="member-name-link">axis</a></code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color"><code><a href="#_id" class="member-name-link">_id</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">inserted database key</div>
+</div>
+<div class="col-first odd-row-color"><code>protected <a href="Axis.html" title="class in org.ivoa.dm.caom2.wcs">Axis</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#axis" class="member-name-link">axis</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">description of the quantity.</div>
 </div>
-<div class="col-first odd-row-color"><code>protected <a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#bounds" class="member-name-link">bounds</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>protected <a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></code></div>
+<div class="col-second even-row-color"><code><a href="#bounds" class="member-name-link">bounds</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">pixel and world coordinate values covered by this axis (min,max of tiles).</div>
 </div>
-<div class="col-first even-row-color"><code>protected <a href="CoordError.html" title="class in org.ivoa.dm.caom2.wcs">CoordError</a></code></div>
-<div class="col-second even-row-color"><code><a href="#error" class="member-name-link">error</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>protected <a href="CoordError.html" title="class in org.ivoa.dm.caom2.wcs">CoordError</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#error" class="member-name-link">error</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">errors.</div>
 </div>
-<div class="col-first odd-row-color"><code>protected <a href="CoordFunction1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordFunction1D</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#function" class="member-name-link">function</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>protected <a href="CoordFunction1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordFunction1D</a></code></div>
+<div class="col-second even-row-color"><code><a href="#function" class="member-name-link">function</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">pixel and world coordinate values covered by this axis (coordinates of every pixel).</div>
 </div>
-<div class="col-first even-row-color"><code>protected <a href="CoordRange1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordRange1D</a></code></div>
-<div class="col-second even-row-color"><code><a href="#range" class="member-name-link">range</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>protected <a href="CoordRange1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordRange1D</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#range" class="member-name-link">range</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">pixel and world coordinate values covered by this axis (min,max).</div>
 </div>
 </div>
@@ -194,28 +199,34 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="block">create a CoordAxis1D in functional builder style.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Axis.html" title="class in org.ivoa.dm.caom2.wcs">Axis</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAxis()" class="member-name-link">getAxis</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Axis.html" title="class in org.ivoa.dm.caom2.wcs">Axis</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAxis()" class="member-name-link">getAxis</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns axis Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBounds()" class="member-name-link">getBounds</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBounds()" class="member-name-link">getBounds</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns bounds Attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordError.html" title="class in org.ivoa.dm.caom2.wcs">CoordError</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordError.html" title="class in org.ivoa.dm.caom2.wcs">CoordError</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns error Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordFunction1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordFunction1D</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFunction()" class="member-name-link">getFunction</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordFunction1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordFunction1D</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFunction()" class="member-name-link">getFunction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns function Attribute.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordRange1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordRange1D</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRange()" class="member-name-link">getRange</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -301,6 +312,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="_id">
+<h3>_id</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">_id</span></div>
+<div class="block">inserted database key</div>
+</section>
+</li>
+<li>
 <section class="detail" id="axis">
 <h3>axis</h3>
 <div class="member-signature"><span class="annotations">@VoDml(id="caom2:wcs.CoordAxis1D.axis",
@@ -334,17 +352,6 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="bounds">
-<h3>bounds</h3>
-<div class="member-signature"><span class="annotations">@VoDml(id="caom2:wcs.CoordAxis1D.bounds",
-       role=attribute,
-       type="caom2:wcs.CoordBounds1D",
-       typeRole=dataType)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></span>&nbsp;<span class="element-name">bounds</span></div>
-<div class="block">pixel and world coordinate values covered by this axis (min,max of tiles). : Attribute bounds : multiplicity 0..1</div>
-</section>
-</li>
-<li>
 <section class="detail" id="function">
 <h3>function</h3>
 <div class="member-signature"><span class="annotations">@VoDml(id="caom2:wcs.CoordAxis1D.function",
@@ -353,6 +360,21 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
        typeRole=dataType)
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="CoordFunction1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordFunction1D</a></span>&nbsp;<span class="element-name">function</span></div>
 <div class="block">pixel and world coordinate values covered by this axis (coordinates of every pixel). : Attribute function : multiplicity 0..1</div>
+</section>
+</li>
+<li>
+<section class="detail" id="bounds">
+<h3>bounds</h3>
+<div class="member-signature"><span class="annotations">@VoDml(id="caom2:wcs.CoordAxis1D.bounds",
+       role=composition,
+       type="caom2:wcs.CoordBounds1D",
+       typeRole=objectType)
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="CoordBounds1D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds1D</a></span>&nbsp;<span class="element-name">bounds</span></div>
+<div class="block">pixel and world coordinate values covered by this axis (min,max of tiles).
+ composition bounds :
+ (
+ Multiplicity : 0..1
+ )</div>
 </section>
 </li>
 </ul>
@@ -408,6 +430,18 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getId</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the id</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="updateUsing(org.ivoa.dm.caom2.wcs.CoordAxis1D)">
 <h3>updateUsing</h3>
@@ -628,6 +662,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

@@ -77,18 +77,18 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code>, <code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Embeddable
+<div class="type-signature"><span class="annotations">@Entity
 @VoDml(id="caom2:types.MultiShape",
-       role=dataType)
+       role=objectType)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">MultiShape</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
+implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span></div>
 <div class="block">multiple simple shapess describing disconnected regions as a single value.
 
- dataType:  MultiShape</div>
+ objectType:  MultiShape</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -118,9 +118,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#shapes" class="member-name-link">shapes</a></code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color"><code><a href="#_id" class="member-name-link">_id</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">inserted database key</div>
+</div>
+<div class="col-first odd-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#shapes" class="member-name-link">shapes</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">.</div>
 </div>
 </div>
@@ -160,40 +165,56 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createMultiShape(java.util.function.Consumer)" class="member-name-link">createMultiShape</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="MultiShape.MultiShapeBuilder.html" title="class in org.ivoa.dm.caom2.types">MultiShape.MultiShapeBuilder</a>&gt;&nbsp;f)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToShapes(org.ivoa.dm.caom2.types.Shape)" class="member-name-link">addToShapes</a><wbr>(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;p)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add a org.ivoa.dm.caom2.types.Shape to the composition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createMultiShape(java.util.function.Consumer)" class="member-name-link">createMultiShape</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="MultiShape.MultiShapeBuilder.html" title="class in org.ivoa.dm.caom2.types">MultiShape.MultiShapeBuilder</a>&gt;&nbsp;f)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create a MultiShape in functional builder style.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShapes()" class="member-name-link">getShapes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns shapes Attribute.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShapes()" class="member-name-link">getShapes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns shapes composition as an immutable list.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">generally better to use the model level reference persistence as only this can deal with "contained" references properly.</div>
 </div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromShapes(org.ivoa.dm.caom2.types.Shape)" class="member-name-link">removeFromShapes</a><wbr>(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;p)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Remove a org.ivoa.dm.caom2.types.Shape from the composition.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShapes(java.util.List)" class="member-name-link">setShapes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;&nbsp;pShapes)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceInShapes(org.ivoa.dm.caom2.types.Shape)" class="member-name-link">replaceInShapes</a><wbr>(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;_p)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set shapes Attribute.</div>
+<div class="block">update a org.ivoa.dm.caom2.types.Shape in the composition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.types.MultiShape)" class="member-name-link">updateUsing</a><wbr>(<a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a>&nbsp;other)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShapes(java.util.List)" class="member-name-link">setShapes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;&nbsp;pShapes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Update this object with the content of the given object.</div>
+<div class="block">Defines whole shapes composition.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withShapes(java.util.List)" class="member-name-link">withShapes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;&nbsp;pShapes)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.types.MultiShape)" class="member-name-link">updateUsing</a><wbr>(<a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">fluent setter for shapes Attribute.</div>
+<div class="block">Update this object with the content of the given object.</div>
 </div>
 </div>
 </div>
@@ -213,14 +234,25 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="_id">
+<h3>_id</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">_id</span></div>
+<div class="block">inserted database key</div>
+</section>
+</li>
+<li>
 <section class="detail" id="shapes">
 <h3>shapes</h3>
 <div class="member-signature"><span class="annotations">@VoDml(id="caom2:types.MultiShape.shapes",
-       role=attribute,
+       role=composition,
        type="caom2:types.Shape",
-       typeRole=dataType)
+       typeRole=objectType)
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</span>&nbsp;<span class="element-name">shapes</span></div>
-<div class="block">. : Attribute shapes : multiplicity 1..*</div>
+<div class="block">.
+ composition shapes :
+ (
+ Multiplicity : 1..*
+ )</div>
 </section>
 </li>
 </ul>
@@ -269,6 +301,18 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getId</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the id</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="updateUsing(org.ivoa.dm.caom2.types.MultiShape)">
 <h3>updateUsing</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateUsing</span><wbr><span class="parameters">(<a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a>&nbsp;other)</span></div>
@@ -283,10 +327,10 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getShapes()">
 <h3>getShapes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;</span>&nbsp;<span class="element-name">getShapes</span>()</div>
-<div class="block">Returns shapes Attribute.</div>
+<div class="block">Returns shapes composition as an immutable list.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>shapes Attribute</dd>
+<dd>shapes composition.</dd>
 </dl>
 </section>
 </li>
@@ -294,23 +338,44 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setShapes(java.util.List)">
 <h3>setShapes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setShapes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;&nbsp;pShapes)</span></div>
-<div class="block">Set shapes Attribute.</div>
+<div class="block">Defines whole shapes composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pShapes</code> - value to set</dd>
+<dd><code>pShapes</code> - composition to set.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="withShapes(java.util.List)">
-<h3>withShapes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MultiShape.html" title="class in org.ivoa.dm.caom2.types">MultiShape</a></span>&nbsp;<span class="element-name">withShapes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&gt;&nbsp;pShapes)</span></div>
-<div class="block">fluent setter for shapes Attribute.</div>
+<section class="detail" id="addToShapes(org.ivoa.dm.caom2.types.Shape)">
+<h3>addToShapes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToShapes</span><wbr><span class="parameters">(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;p)</span></div>
+<div class="block">Add a org.ivoa.dm.caom2.types.Shape to the composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pShapes</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>MultiShape</dd>
+<dd><code>p</code> - org.ivoa.dm.caom2.types.Shape to add</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFromShapes(org.ivoa.dm.caom2.types.Shape)">
+<h3>removeFromShapes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromShapes</span><wbr><span class="parameters">(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;p)</span></div>
+<div class="block">Remove a org.ivoa.dm.caom2.types.Shape from the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>p</code> - org.ivoa.dm.caom2.types.Shape to remove</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replaceInShapes(org.ivoa.dm.caom2.types.Shape)">
+<h3>replaceInShapes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replaceInShapes</span><wbr><span class="parameters">(<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>&nbsp;_p)</span></div>
+<div class="block">update a org.ivoa.dm.caom2.types.Shape in the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>_p</code> - org.ivoa.dm.caom2.types.Shape to update
+ the match is done via the database key</dd>
 </dl>
 </section>
 </li>
@@ -348,6 +413,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

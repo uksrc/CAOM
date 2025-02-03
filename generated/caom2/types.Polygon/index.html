@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#datatype-polygon" class="md-skip">
+        <a href="#objecttype-polygon" class="md-skip">
           Skip to content
         </a>
       
@@ -79,12 +79,12 @@
     <a href="../../.." title="Model Documentation" class="md-header__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -104,13 +104,13 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -119,15 +119,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -150,7 +150,7 @@
         <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -273,7 +273,7 @@
     <a href="../../.." title="Model Documentation" class="md-nav__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Model Documentation
@@ -283,7 +283,7 @@
       <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -899,6 +899,8 @@
                 
   
   
+    
+  
   
   
     
@@ -908,11 +910,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
@@ -926,7 +928,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_2">
             <span class="md-nav__icon md-icon"></span>
             ObjectTypes
@@ -1528,6 +1530,316 @@
   
   
     <li class="md-nav__item">
+      <a href="../types.Circle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Circle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.IntervalM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.IntervalM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.MultiShape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.MultiShape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Point/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    types.Polygon
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    types.Polygon
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.Coord2DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.Coord2DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordAxis2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordRange1DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordRange1DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../wcs.CustomWCS/" class="md-nav__link">
         
   
@@ -1659,8 +1971,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1670,11 +1980,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
@@ -1688,7 +1998,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_3">
             <span class="md-nav__icon md-icon"></span>
             DataTypes
@@ -1749,27 +2059,6 @@
   
   <span class="md-ellipsis">
     DataProductType
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PolarizationState/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PolarizationState
   </span>
   
 
@@ -1912,165 +2201,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../types.Circle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Circle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../types.Interval/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     types.Interval
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.MultiShape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.MultiShape
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Point/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Point
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    types.Polygon
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    types.Polygon
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      Members
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Shape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Shape
   </span>
   
 
@@ -2113,90 +2248,6 @@
   
   <span class="md-ellipsis">
     wcs.Coord2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordAxis2D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds2D
   </span>
   
 
@@ -2578,6 +2629,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../PolarizationState/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PolarizationState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ReleaseType/" class="md-nav__link">
         
   
@@ -2670,6 +2742,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2688,18 +2769,10 @@
   
 
 
-<h1 id="datatype-polygon">dataType Polygon</h1>
-<p>extends <a href="../types.Shape/" title="dataType">types.Shape</a></p>
+<h1 id="objecttype-polygon">objectType Polygon</h1>
+<p>extends <a href="../types.Shape/" title="objectType">types.Shape</a></p>
 <p>a simple polygon region on the sky defined a sequence of points connected by great-circle segments</p>
-<pre class="mermaid"><code>classDiagram
-
-        class Polygon{
-        caom2:types.Point points
-
-        }
-        Polygon --|&gt; Shape
-
-link Shape "../types.Shape"</code></pre>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="xMaxYMax meet" style="width:187px;height:155px;background:#FFFFFF" version="1.1" viewBox="0 0 187 155" width="100%" zoomAndPan="magnify" class="uml" alt="uml diagram" title=""><defs /><g><g id="elem_Polygon"><rect codeLine="2" fill="#D3D3D3" height="32" id="Polygon" rx="2.5" ry="2.5" style="stroke:#800080;stroke-width:2.0;" width="85.7168" x="52.43" y="7" /><ellipse cx="67.43" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M69.9031,29.1431 Q69.3221,29.4419 68.6829,29.5913 Q68.0438,29.7407 67.3382,29.7407 Q64.8314,29.7407 63.5115,28.0889 Q62.1917,26.437 62.1917,23.3159 Q62.1917,20.1865 63.5115,18.5347 Q64.8314,16.8828 67.3382,16.8828 Q68.0438,16.8828 68.6912,17.0322 Q69.3387,17.1816 69.9031,17.4805 L69.9031,20.2031 Q69.2723,19.6221 68.6788,19.3523 Q68.0853,19.0825 67.4544,19.0825 Q66.1097,19.0825 65.4249,20.1492 Q64.7401,21.2158 64.7401,23.3159 Q64.7401,25.4077 65.4249,26.4744 Q66.1097,27.541 67.4544,27.541 Q68.0853,27.541 68.6788,27.2712 Q69.2723,27.0015 69.9031,26.4204 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.7168" x="81.43" y="28.291">Polygon</text></g><a href="../types.Shape" target="_top" title="../types.Shape" xlink:actuate="onRequest" xlink:href="../types.Shape" xlink:show="new" xlink:title="../types.Shape" xlink:type="simple"><g id="elem_Shape"><rect codeLine="6" fill="#F1F1F1" height="32" id="Shape" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="72.5713" x="7" y="116" /><ellipse cx="22" cy="132" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M21.8633,127.3481 L20.7095,132.4199 L23.0254,132.4199 Z M20.3691,125.1069 L23.3657,125.1069 L26.7109,137.5 L24.2622,137.5 L23.4985,134.437 L20.2197,134.437 L19.4727,137.5 L17.0239,137.5 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="40.5713" x="36" y="137.291">Shape</text></g></a><a href="../types.Point" target="_top" title="../types.Point" xlink:actuate="onRequest" xlink:href="../types.Point" xlink:show="new" xlink:title="../types.Point" xlink:type="simple"><g id="elem_Point"><rect codeLine="8" fill="#F1F1F1" height="32" id="Point" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="66.3096" x="114.13" y="116" /><ellipse cx="129.13" cy="132" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M131.6031,138.1431 Q131.0221,138.4419 130.3829,138.5913 Q129.7438,138.7407 129.0382,138.7407 Q126.5314,138.7407 125.2115,137.0889 Q123.8917,135.437 123.8917,132.3159 Q123.8917,129.1865 125.2115,127.5347 Q126.5314,125.8828 129.0382,125.8828 Q129.7438,125.8828 130.3912,126.0322 Q131.0387,126.1816 131.6031,126.4805 L131.6031,129.2031 Q130.9723,128.6221 130.3788,128.3523 Q129.7853,128.0825 129.1544,128.0825 Q127.8097,128.0825 127.1249,129.1492 Q126.4401,130.2158 126.4401,132.3159 Q126.4401,134.4077 127.1249,135.4744 Q127.8097,136.541 129.1544,136.541 Q129.7853,136.541 130.3788,136.2712 Q130.9723,136.0015 131.6031,135.4204 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.3096" x="143.13" y="137.291">Point</text></g></a><g id="link_Polygon_Shape"><path codeLine="7" d="M87.84,39.33 C77.95,59.67 68.4678,79.1806 58.5878,99.5106 " fill="none" id="Polygon-to-Shape" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="50.72,115.7,63.9843,102.1331,53.1913,96.888,50.72,115.7" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_Polygon_Point"><path codeLine="9" d="M107.9831,50.124 C117.8631,70.464 129.97,95.37 139.85,115.7 " fill="none" id="Polygon-backto-Point" style="stroke:#0000FF;stroke-width:1.0;" /><polygon fill="#0000FF" points="102.74,39.33,101.7636,46.4747,107.9831,50.124,108.9595,42.9793,102.74,39.33" style="stroke:#0000FF;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39.4824" x="125.4" y="82.5684">points</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22.7119" x="111.6354" y="105.1405">1..*</text></g></g></svg></p>
 <h2 id="members">Members</h2>
 <table>
 <thead>
@@ -2713,12 +2786,14 @@ link Shape "../types.Shape"</code></pre>
 <tbody>
 <tr>
 <td>points</td>
-<td><a href="../types.Point/" title="dataType">types.Point</a></td>
+<td><a href="../types.Point/" title="objectType">types.Point</a></td>
 <td>1 or more</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<h2 id="containment">Containment</h2>
+<p>This is contained by <a href="../Position/" title="objectType">Position</a>, <a href="../types.MultiShape/" title="objectType">types.MultiShape</a></p>
 
 
 
@@ -2765,10 +2840,10 @@ link Shape "../types.Shape"</code></pre>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -77,18 +77,18 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code>, <code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Embeddable
+<div class="type-signature"><span class="annotations">@Entity
 @VoDml(id="caom2:types.Point",
-       role=dataType)
+       role=objectType)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">Point</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
+implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span></div>
 <div class="block">location on the sky.
 
- dataType:  Point</div>
+ objectType:  Point</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -118,14 +118,19 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second even-row-color"><code><a href="#cval1" class="member-name-link">cval1</a></code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color"><code><a href="#_id" class="member-name-link">_id</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">.</div>
+<div class="block">inserted database key</div>
 </div>
 <div class="col-first odd-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#cval2" class="member-name-link">cval2</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#cval1" class="member-name-link">cval1</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">.</div>
+</div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second even-row-color"><code><a href="#cval2" class="member-name-link">cval2</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">.</div>
 </div>
 </div>
@@ -172,18 +177,24 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="block">create a Point in functional builder style.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval1()" class="member-name-link">getCval1</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval1()" class="member-name-link">getCval1</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns cval1 Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval2()" class="member-name-link">getCval2</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval2()" class="member-name-link">getCval2</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns cval2 Attribute.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
@@ -233,6 +244,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="field-details" id="field-detail">
 <h2>Field Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="_id">
+<h3>_id</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">_id</span></div>
+<div class="block">inserted database key</div>
+</section>
+</li>
 <li>
 <section class="detail" id="cval1">
 <h3>cval1</h3>
@@ -302,6 +320,18 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getId</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the id</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="updateUsing(org.ivoa.dm.caom2.types.Point)">
 <h3>updateUsing</h3>
@@ -417,6 +447,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

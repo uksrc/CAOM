@@ -12,11 +12,11 @@
         <link rel="prev" href="../UCDTerm/">
       
       
-        <link rel="next" href="../types.Circle/">
+        <link rel="next" href="../types.Interval/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,12 +79,12 @@
     <a href="../../.." title="Model Documentation" class="md-header__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -104,13 +104,13 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -119,15 +119,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -150,7 +150,7 @@
         <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -273,7 +273,7 @@
     <a href="../../.." title="Model Documentation" class="md-nav__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Model Documentation
@@ -283,7 +283,7 @@
       <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -1528,6 +1528,258 @@
   
   
     <li class="md-nav__item">
+      <a href="../types.Circle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Circle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.IntervalM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.IntervalM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.MultiShape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.MultiShape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Point/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Polygon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Polygon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.Coord2DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.Coord2DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordAxis2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordRange1DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordRange1DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../wcs.CustomWCS/" class="md-nav__link">
         
   
@@ -1765,27 +2017,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../PolarizationState/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PolarizationState
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Quality/" class="md-nav__link">
         
   
@@ -1961,116 +2192,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../types.Circle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Circle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../types.Interval/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     types.Interval
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.MultiShape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.MultiShape
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Point/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Point
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Polygon/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Polygon
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Shape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Shape
   </span>
   
 
@@ -2113,90 +2239,6 @@
   
   <span class="md-ellipsis">
     wcs.Coord2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordAxis2D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds2D
   </span>
   
 
@@ -2578,6 +2620,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../PolarizationState/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PolarizationState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ReleaseType/" class="md-nav__link">
         
   
@@ -2690,33 +2753,7 @@
 
 <h1 id="abstract-datatype-vocabularyterm"><em>abstract</em> dataType VocabularyTerm</h1>
 <p>base class of a single term (word) in a vocabulary (NEW in CAOM-2.3)</p>
-<pre class="mermaid"><code>classDiagram
-
-        class VocabularyTerm{
-        ivoa:anyURI namespace
-ivoa:string term
-ivoa:boolean base
-
-        }
-        CalibrationStatus --|&gt; VocabularyTerm
-DataProductType --|&gt; VocabularyTerm
-Quality --|&gt; VocabularyTerm
-Status --|&gt; VocabularyTerm
-TargetType --|&gt; VocabularyTerm
-DataLinkSemantics --|&gt; VocabularyTerm
-PolarizationState --|&gt; VocabularyTerm
-Tracking --|&gt; VocabularyTerm
-UCDTerm --|&gt; VocabularyTerm
-
-link CalibrationStatus "../CalibrationStatus"
-link DataProductType "../DataProductType"
-link Quality "../Quality"
-link Status "../Status"
-link TargetType "../TargetType"
-link DataLinkSemantics "../DataLinkSemantics"
-link PolarizationState "../PolarizationState"
-link Tracking "../Tracking"
-link UCDTerm "../UCDTerm"</code></pre>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="xMaxYMax meet" style="width:1202px;height:212px;background:#FFFFFF" version="1.1" viewBox="0 0 1202 212" width="100%" zoomAndPan="magnify" class="uml" alt="uml diagram" title=""><defs /><g><g id="elem_VocabularyTerm"><rect codeLine="2" fill="#D3D3D3" height="98.0859" id="VocabularyTerm" rx="2.5" ry="2.5" style="stroke:#800080;stroke-width:2.0;" width="170.7441" x="531.59" y="107.62" /><ellipse cx="559.3324" cy="127.9305" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M559.1957,123.2787 L558.0419,128.3505 L560.3578,128.3505 Z M557.7015,121.0375 L560.6981,121.0375 L564.0433,133.4305 L561.5946,133.4305 L560.8309,130.3676 L557.5521,130.3676 L556.805,133.4305 L554.3563,133.4305 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="598.3955" y="124.2216">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="110.4277" x="576.164" y="140.288">VocabularyTerm</text><line style="stroke:#800080;stroke-width:2.0;" x1="532.59" x2="701.3341" y1="148.2411" y2="148.2411" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.7441" x="537.59" y="165.7763">ivoa:anyURI namespace</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.8848" x="537.59" y="182.2645">ivoa:string term</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.2402" x="537.59" y="198.7528">ivoa:boolean base</text></g><a href="../CalibrationStatus" target="_top" title="../CalibrationStatus" xlink:actuate="onRequest" xlink:href="../CalibrationStatus" xlink:show="new" xlink:title="../CalibrationStatus" xlink:type="simple"><g id="elem_CalibrationStatus"><rect codeLine="9" fill="#F1F1F1" height="40.6211" id="CalibrationStatus" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147.9238" x="7" y="7" /><ellipse cx="22" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M24.4731,33.4536 Q23.8921,33.7524 23.2529,33.9019 Q22.6138,34.0513 21.9082,34.0513 Q19.4014,34.0513 18.0815,32.3994 Q16.7617,30.7476 16.7617,27.6265 Q16.7617,24.4971 18.0815,22.8452 Q19.4014,21.1934 21.9082,21.1934 Q22.6138,21.1934 23.2612,21.3428 Q23.9087,21.4922 24.4731,21.791 L24.4731,24.5137 Q23.8423,23.9326 23.2488,23.6628 Q22.6553,23.3931 22.0244,23.3931 Q20.6797,23.3931 19.9949,24.4597 Q19.3101,25.5264 19.3101,27.6265 Q19.3101,29.7183 19.9949,30.7849 Q20.6797,31.8516 22.0244,31.8516 Q22.6553,31.8516 23.2488,31.5818 Q23.8423,31.312 24.4731,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="60.9795" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.9238" x="36" y="39.668">CalibrationStatus</text></g></a><a href="../DataProductType" target="_top" title="../DataProductType" xlink:actuate="onRequest" xlink:href="../DataProductType" xlink:show="new" xlink:title="../DataProductType" xlink:type="simple"><g id="elem_DataProductType"><rect codeLine="11" fill="#F1F1F1" height="40.6211" id="DataProductType" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147.9375" x="189.99" y="7" /><ellipse cx="204.99" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M207.4631,33.4536 Q206.8821,33.7524 206.2429,33.9019 Q205.6038,34.0513 204.8982,34.0513 Q202.3914,34.0513 201.0715,32.3994 Q199.7517,30.7476 199.7517,27.6265 Q199.7517,24.4971 201.0715,22.8452 Q202.3914,21.1934 204.8982,21.1934 Q205.6038,21.1934 206.2512,21.3428 Q206.8987,21.4922 207.4631,21.791 L207.4631,24.5137 Q206.8323,23.9326 206.2388,23.6628 Q205.6453,23.3931 205.0144,23.3931 Q203.6697,23.3931 202.9849,24.4597 Q202.3001,25.5264 202.3001,27.6265 Q202.3001,29.7183 202.9849,30.7849 Q203.6697,31.8516 205.0144,31.8516 Q205.6453,31.8516 206.2388,31.5818 Q206.8323,31.312 207.4631,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="243.9763" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.9375" x="218.99" y="39.668">DataProductType</text></g></a><a href="../Quality" target="_top" title="../Quality" xlink:actuate="onRequest" xlink:href="../Quality" xlink:show="new" xlink:title="../Quality" xlink:type="simple"><g id="elem_Quality"><rect codeLine="13" fill="#F1F1F1" height="40.6211" id="Quality" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93.9648" x="372.98" y="7" /><ellipse cx="387.98" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M390.4531,33.4536 Q389.8721,33.7524 389.2329,33.9019 Q388.5938,34.0513 387.8882,34.0513 Q385.3814,34.0513 384.0615,32.3994 Q382.7417,30.7476 382.7417,27.6265 Q382.7417,24.4971 384.0615,22.8452 Q385.3814,21.1934 387.8882,21.1934 Q388.5938,21.1934 389.2412,21.3428 Q389.8887,21.4922 390.4531,21.791 L390.4531,24.5137 Q389.8223,23.9326 389.2288,23.6628 Q388.6353,23.3931 388.0044,23.3931 Q386.6597,23.3931 385.9749,24.4597 Q385.2901,25.5264 385.2901,27.6265 Q385.2901,29.7183 385.9749,30.7849 Q386.6597,31.8516 388.0044,31.8516 Q388.6353,31.8516 389.2288,31.5818 Q389.8223,31.312 390.4531,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="399.98" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.9404" x="408.9922" y="39.668">Quality</text></g></a><a href="../Status" target="_top" title="../Status" xlink:actuate="onRequest" xlink:href="../Status" xlink:show="new" xlink:title="../Status" xlink:type="simple"><g id="elem_Status"><rect codeLine="15" fill="#F1F1F1" height="40.6211" id="Status" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93.9648" x="501.98" y="7" /><ellipse cx="516.98" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M519.4531,33.4536 Q518.8721,33.7524 518.2329,33.9019 Q517.5938,34.0513 516.8882,34.0513 Q514.3814,34.0513 513.0615,32.3994 Q511.7417,30.7476 511.7417,27.6265 Q511.7417,24.4971 513.0615,22.8452 Q514.3814,21.1934 516.8882,21.1934 Q517.5938,21.1934 518.2412,21.3428 Q518.8887,21.4922 519.4531,21.791 L519.4531,24.5137 Q518.8223,23.9326 518.2288,23.6628 Q517.6353,23.3931 517.0044,23.3931 Q515.6597,23.3931 514.9749,24.4597 Q514.2901,25.5264 514.2901,27.6265 Q514.2901,29.7183 514.9749,30.7849 Q515.6597,31.8516 517.0044,31.8516 Q517.6353,31.8516 518.2288,31.5818 Q518.8223,31.312 519.4531,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="528.98" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.5693" x="541.1778" y="39.668">Status</text></g></a><a href="../TargetType" target="_top" title="../TargetType" xlink:actuate="onRequest" xlink:href="../TargetType" xlink:show="new" xlink:title="../TargetType" xlink:type="simple"><g id="elem_TargetType"><rect codeLine="17" fill="#F1F1F1" height="40.6211" id="TargetType" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108.8564" x="630.53" y="7" /><ellipse cx="645.53" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M648.0031,33.4536 Q647.4221,33.7524 646.7829,33.9019 Q646.1438,34.0513 645.4382,34.0513 Q642.9314,34.0513 641.6115,32.3994 Q640.2917,30.7476 640.2917,27.6265 Q640.2917,24.4971 641.6115,22.8452 Q642.9314,21.1934 645.4382,21.1934 Q646.1438,21.1934 646.7912,21.3428 Q647.4387,21.4922 648.0031,21.791 L648.0031,24.5137 Q647.3723,23.9326 646.7788,23.6628 Q646.1853,23.3931 645.5544,23.3931 Q644.2097,23.3931 643.5249,24.4597 Q642.8401,25.5264 642.8401,27.6265 Q642.8401,29.7183 643.5249,30.7849 Q644.2097,31.8516 645.5544,31.8516 Q646.1853,31.8516 646.7788,31.5818 Q647.3723,31.312 648.0031,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="664.9758" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.8564" x="659.53" y="39.668">TargetType</text></g></a><a href="../DataLinkSemantics" target="_top" title="../DataLinkSemantics" xlink:actuate="onRequest" xlink:href="../DataLinkSemantics" xlink:show="new" xlink:title="../DataLinkSemantics" xlink:type="simple"><g id="elem_DataLinkSemantics"><rect codeLine="19" fill="#F1F1F1" height="40.6211" id="DataLinkSemantics" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="159.9893" x="773.97" y="7" /><ellipse cx="788.97" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M791.4431,33.4536 Q790.8621,33.7524 790.2229,33.9019 Q789.5838,34.0513 788.8782,34.0513 Q786.3714,34.0513 785.0515,32.3994 Q783.7317,30.7476 783.7317,27.6265 Q783.7317,24.4971 785.0515,22.8452 Q786.3714,21.1934 788.8782,21.1934 Q789.5838,21.1934 790.2312,21.3428 Q790.8787,21.4922 791.4431,21.791 L791.4431,24.5137 Q790.8123,23.9326 790.2188,23.6628 Q789.6253,23.3931 788.9944,23.3931 Q787.6497,23.3931 786.9649,24.4597 Q786.2801,25.5264 786.2801,27.6265 Q786.2801,29.7183 786.9649,30.7849 Q787.6497,31.8516 788.9944,31.8516 Q789.6253,31.8516 790.2188,31.5818 Q790.8123,31.312 791.4431,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="833.9822" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.9893" x="802.97" y="39.668">DataLinkSemantics</text></g></a><a href="../Tracking" target="_top" title="../Tracking" xlink:actuate="onRequest" xlink:href="../Tracking" xlink:show="new" xlink:title="../Tracking" xlink:type="simple"><g id="elem_Tracking"><rect codeLine="21" fill="#F1F1F1" height="40.6211" id="Tracking" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93.9648" x="968.98" y="7" /><ellipse cx="983.98" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M986.4531,33.4536 Q985.8721,33.7524 985.2329,33.9019 Q984.5938,34.0513 983.8882,34.0513 Q981.3814,34.0513 980.0615,32.3994 Q978.7417,30.7476 978.7417,27.6265 Q978.7417,24.4971 980.0615,22.8452 Q981.3814,21.1934 983.8882,21.1934 Q984.5938,21.1934 985.2412,21.3428 Q985.8887,21.4922 986.4531,21.791 L986.4531,24.5137 Q985.8223,23.9326 985.2288,23.6628 Q984.6353,23.3931 984.0044,23.3931 Q982.6597,23.3931 981.9749,24.4597 Q981.2901,25.5264 981.2901,27.6265 Q981.2901,29.7183 981.9749,30.7849 Q982.6597,31.8516 984.0044,31.8516 Q984.6353,31.8516 985.2288,31.5818 Q985.8223,31.312 986.4531,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="995.98" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.1309" x="999.397" y="39.668">Tracking</text></g></a><a href="../UCDTerm" target="_top" title="../UCDTerm" xlink:actuate="onRequest" xlink:href="../UCDTerm" xlink:show="new" xlink:title="../UCDTerm" xlink:type="simple"><g id="elem_UCDTerm"><rect codeLine="23" fill="#F1F1F1" height="40.6211" id="UCDTerm" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97.3242" x="1098.3" y="7" /><ellipse cx="1113.3" cy="27.3105" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M1115.7731,33.4536 Q1115.1921,33.7524 1114.5529,33.9019 Q1113.9138,34.0513 1113.2082,34.0513 Q1110.7014,34.0513 1109.3815,32.3994 Q1108.0617,30.7476 1108.0617,27.6265 Q1108.0617,24.4971 1109.3815,22.8452 Q1110.7014,21.1934 1113.2082,21.1934 Q1113.9138,21.1934 1114.5612,21.3428 Q1115.2087,21.4922 1115.7731,21.791 L1115.7731,24.5137 Q1115.1423,23.9326 1114.5488,23.6628 Q1113.9553,23.3931 1113.3244,23.3931 Q1111.9797,23.3931 1111.2949,24.4597 Q1110.6101,25.5264 1110.6101,27.6265 Q1110.6101,29.7183 1111.2949,30.7849 Q1111.9797,31.8516 1113.3244,31.8516 Q1113.9553,31.8516 1114.5488,31.5818 Q1115.1423,31.312 1115.7731,30.731 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65.9648" x="1126.9797" y="23.6016">&#171;dataType&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.3242" x="1127.3" y="39.668">UCDTerm</text></g></a><g id="link_CalibrationStatus_VocabularyTerm"><path codeLine="10" d="M155.21,45.95 C253.79,69.38 410.0072,106.5004 513.9572,131.1904 " fill="none" id="CalibrationStatus-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="531.47,135.35,515.3437,125.3528,512.5707,137.028,531.47,135.35" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_DataProductType_VocabularyTerm"><path codeLine="12" d="M318.73,48.07 C375.47,68.54 448.0086,94.7104 514.1586,118.5804 " fill="none" id="DataProductType-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="531.09,124.69,516.1951,112.9366,512.1221,124.2242,531.09,124.69" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_Quality_VocabularyTerm"><path codeLine="14" d="M450.31,47.93 C474.7,63.7 494.9144,76.7666 526.7744,97.3666 " fill="none" id="Quality-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="541.89,107.14,530.0322,92.3281,523.5166,102.4051,541.89,107.14" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_Status_VocabularyTerm"><path codeLine="16" d="M559.44,47.93 C567.86,63.7 571.5714,70.6619 582.5714,91.2619 " fill="none" id="Status-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="591.05,107.14,587.8641,88.4357,577.2787,94.0881,591.05,107.14" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_TargetType_VocabularyTerm"><path codeLine="18" d="M674.49,47.93 C666.07,63.7 662.3426,70.6587 651.3526,91.2587 " fill="none" id="TargetType-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="642.88,107.14,656.6464,94.0829,646.0588,88.4345,642.88,107.14" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_DataLinkSemantics_VocabularyTerm"><path codeLine="20" d="M817.19,48.07 C786.7,64.46 757.9949,79.8782 718.6449,101.0282 " fill="none" id="DataLinkSemantics-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="702.79,109.55,721.4855,106.3132,715.8044,95.7432,702.79,109.55" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_Tracking_VocabularyTerm"><path codeLine="22" d="M968.62,43.42 C903.19,64.31 801.1179,96.8873 719.8079,122.8373 " fill="none" id="Tracking-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="702.66,128.31,721.6321,128.5532,717.9836,117.1213,702.66,128.31" style="stroke:#FF0000;stroke-width:1.0;" /></g><g id="link_UCDTerm_VocabularyTerm"><path codeLine="24" d="M1098.01,42.74 C1091.94,44.43 1085.82,46.1 1079.96,47.62 C948.97,81.76 813.3772,112.6216 720.1972,133.1816 " fill="none" id="UCDTerm-to-VocabularyTerm" style="stroke:#FF0000;stroke-width:1.0;" /><polygon fill="none" points="702.62,137.06,721.49,139.0407,718.9044,127.3226,702.62,137.06" style="stroke:#FF0000;stroke-width:1.0;" /></g></g></svg></p>
 <h2 id="members">Members</h2>
 <table>
 <thead>
@@ -2794,10 +2831,10 @@ link UCDTerm "../UCDTerm"</code></pre>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

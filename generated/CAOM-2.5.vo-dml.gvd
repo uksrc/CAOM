@@ -58,6 +58,11 @@ digraph GVmap {
     label = "{&lt;&lt;enumeration&gt;&gt;\nReleaseType|+data\l+meta\l}"
     fillcolor="/set312/1"
     ] ;
+  "caom2:PolarizationState" [
+    URL="../caom2/PolarizationState"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nPolarizationState|+I\l+Q\l+U\l+V\l+RR\l+LL\l+RL\l+LR\l+XX\l+YY\l+XY\l+YX\l+POLI\l+FPOLI\l+POLA\l+EPOLI\l+CPOLI\l+NPOLI\l}"
+    fillcolor="/set312/1"
+    ] ;
   "caom2:VocabularyTerm" [
     URL="../caom2/VocabularyTerm"
     label = "{&lt;&lt;datatype&gt;&gt;\nVocabularyTerm|+namespace : ivoa:anyURI\l+term : ivoa:string\l+base : ivoa:boolean\l}"
@@ -91,11 +96,6 @@ digraph GVmap {
   "caom2:DataLinkSemantics" [
     URL="../caom2/DataLinkSemantics"
     label = "{&lt;&lt;datatype&gt;&gt;\nDataLinkSemantics}"
-    fillcolor="/set312/1"
-    ] ;
-  "caom2:PolarizationState" [
-    URL="../caom2/PolarizationState"
-    label = "{&lt;&lt;datatype&gt;&gt;\nPolarizationState}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Tracking" [
@@ -190,7 +190,7 @@ digraph GVmap {
     ] ;
   "caom2:TargetPosition" [
     URL="../caom2/TargetPosition"
-    label = "{TargetPosition|+coordsys : ivoa:string\l+equinox : ivoa:real\l+coordinates : caom2:types.Point\l}"
+    label = "{TargetPosition|+coordsys : ivoa:string\l+equinox : ivoa:real\l}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Requirements" [
@@ -220,17 +220,17 @@ digraph GVmap {
     ] ;
   "caom2:Position" [
     URL="../caom2/Position"
-    label = "{Position|+bounds : caom2:types.Shape\l+samples : caom2:types.MultiShape\l+minBounds : caom2:types.Shape\l+dimension : caom2:wcs.Dimension2D\l+maxAngularScale : caom2:types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+calibration : caom2:CalibrationStatus\l}"
+    label = "{Position|+dimension : caom2:wcs.Dimension2D\l+maxAngularScale : caom2:types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+calibration : caom2:CalibrationStatus\l}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Energy" [
     URL="../caom2/Energy"
-    label = "{Energy|+bounds : caom2:types.Interval\l+samples : caom2:types.Interval\l+energyBands : caom2:EnergyBand\l+dimension : ivoa:integer\l+resolvingPower : ivoa:real\l+resolvingPowerBounds : caom2:types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:wcs.EnergyTransition\l+restwav : ivoa:real\l+calibration : caom2:CalibrationStatus\l}"
+    label = "{Energy|+bounds : caom2:types.Interval\l+energyBands : caom2:EnergyBand\l+dimension : ivoa:integer\l+resolvingPower : ivoa:real\l+resolvingPowerBounds : caom2:types.Interval\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:wcs.EnergyTransition\l+restwav : ivoa:real\l+calibration : caom2:CalibrationStatus\l}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Time" [
     URL="../caom2/Time"
-    label = "{Time|+bounds : caom2:types.Interval\l+samples : caom2:types.Interval\l+calibration : caom2:CalibrationStatus\l+dimension : ivoa:integer\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+exposure : ivoa:real\l+exposureBounds : caom2:types.Interval\l}"
+    label = "{Time|+bounds : caom2:types.Interval\l+calibration : caom2:CalibrationStatus\l+dimension : ivoa:integer\l+resolution : ivoa:real\l+resolutionBounds : caom2:types.Interval\l+sampleSize : ivoa:real\l+exposure : ivoa:real\l+exposureBounds : caom2:types.Interval\l}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Polarization" [
@@ -240,7 +240,7 @@ digraph GVmap {
     ] ;
   "caom2:CustomAxis" [
     URL="../caom2/CustomAxis"
-    label = "{CustomAxis|+ctype : ivoa:string\l+bounds : caom2:types.Interval\l+samples : caom2:types.Interval\l+dimension : ivoa:integer\l}"
+    label = "{CustomAxis|+ctype : ivoa:string\l+bounds : caom2:types.Interval\l+dimension : ivoa:integer\l}"
     fillcolor="/set312/1"
     ] ;
   "caom2:Visibility" [
@@ -248,34 +248,39 @@ digraph GVmap {
     label = "{Visibility|+distance : caom2:types.Interval\l+distributionEccentricity : ivoa:real\l+distributionFill : ivoa:real\l}"
     fillcolor="/set312/1"
     ] ;
+  "caom2:types.Interval" [
+    URL="../caom2/types.Interval"
+    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Interval|+lower : ivoa:real\l+upper : ivoa:real\l}"
+    fillcolor="/set312/2"
+    ] ;
   "caom2:types.Point" [
     URL="../caom2/types.Point"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Point|+cval1 : ivoa:real\l+cval2 : ivoa:real\l}"
+    label = "{types/Point|+cval1 : ivoa:real\l+cval2 : ivoa:real\l}"
     fillcolor="/set312/2"
     ] ;
   "caom2:types.Shape" [
     URL="../caom2/types.Shape"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Shape}"
+    label = "{types/Shape}"
     fillcolor="/set312/2"
     ] ;
   "caom2:types.Circle" [
     URL="../caom2/types.Circle"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Circle|+center : caom2:types.Point\l+radius : ivoa:real\l}"
+    label = "{types/Circle|+radius : ivoa:real\l}"
     fillcolor="/set312/2"
     ] ;
   "caom2:types.MultiShape" [
     URL="../caom2/types.MultiShape"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/MultiShape|+shapes : caom2:types.Shape\l}"
+    label = "{types/MultiShape}"
     fillcolor="/set312/2"
     ] ;
   "caom2:types.Polygon" [
     URL="../caom2/types.Polygon"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Polygon|+points : caom2:types.Point\l}"
+    label = "{types/Polygon}"
     fillcolor="/set312/2"
     ] ;
-  "caom2:types.Interval" [
-    URL="../caom2/types.Interval"
-    label = "{&lt;&lt;datatype&gt;&gt;\ntypes/Interval|+lower : ivoa:real\l+upper : ivoa:real\l}"
+  "caom2:types.IntervalM" [
+    URL="../caom2/types.IntervalM"
+    label = "{types/IntervalM|+lower : ivoa:real\l+upper : ivoa:real\l}"
     fillcolor="/set312/2"
     ] ;
   "caom2:wcs.Axis" [
@@ -318,19 +323,9 @@ digraph GVmap {
     label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordRange1D|+start : caom2:wcs.RefCoord\l+end : caom2:wcs.RefCoord\l}"
     fillcolor="/set312/3"
     ] ;
-  "caom2:wcs.CoordBounds1D" [
-    URL="../caom2/wcs.CoordBounds1D"
-    label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordBounds1D|+vertices : caom2:wcs.CoordRange1D\l}"
-    fillcolor="/set312/3"
-    ] ;
   "caom2:wcs.CoordFunction1D" [
     URL="../caom2/wcs.CoordFunction1D"
     label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordFunction1D|+dimension : ivoa:integer\l+refCoord : caom2:wcs.RefCoord\l+delta : ivoa:real\l}"
-    fillcolor="/set312/3"
-    ] ;
-  "caom2:wcs.CoordAxis1D" [
-    URL="../caom2/wcs.CoordAxis1D"
-    label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordAxis1D|+axis : caom2:wcs.Axis\l+error : caom2:wcs.CoordError\l+range : caom2:wcs.CoordRange1D\l+bounds : caom2:wcs.CoordBounds1D\l+function : caom2:wcs.CoordFunction1D\l}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.CoordRange2D" [
@@ -338,44 +333,64 @@ digraph GVmap {
     label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordRange2D|+start : caom2:wcs.Coord2D\l+end : caom2:wcs.Coord2D\l}"
     fillcolor="/set312/3"
     ] ;
-  "caom2:wcs.CoordBounds2D" [
-    URL="../caom2/wcs.CoordBounds2D"
-    label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordBounds2D|+vertices : caom2:wcs.Coord2D\l}"
-    fillcolor="/set312/3"
-    ] ;
   "caom2:wcs.CoordFunction2D" [
     URL="../caom2/wcs.CoordFunction2D"
     label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordFunction2D|+dimension : caom2:wcs.Dimension2D\l+refCoord : caom2:wcs.Coord2D\l+cd11 : ivoa:real\l+cd12 : ivoa:real\l+cd21 : ivoa:real\l+cd22 : ivoa:real\l}"
     fillcolor="/set312/3"
     ] ;
+  "caom2:wcs.Coord2DM" [
+    URL="../caom2/wcs.Coord2DM"
+    label = "{wcs/Coord2DM|+coord1 : caom2:wcs.RefCoord\l+coord2 : caom2:wcs.RefCoord\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:wcs.CoordRange1DM" [
+    URL="../caom2/wcs.CoordRange1DM"
+    label = "{wcs/CoordRange1DM|+start : caom2:wcs.RefCoord\l+end : caom2:wcs.RefCoord\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:wcs.CoordBounds1D" [
+    URL="../caom2/wcs.CoordBounds1D"
+    label = "{wcs/CoordBounds1D}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:wcs.CoordAxis1D" [
+    URL="../caom2/wcs.CoordAxis1D"
+    label = "{wcs/CoordAxis1D|+axis : caom2:wcs.Axis\l+error : caom2:wcs.CoordError\l+range : caom2:wcs.CoordRange1D\l+function : caom2:wcs.CoordFunction1D\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "caom2:wcs.CoordBounds2D" [
+    URL="../caom2/wcs.CoordBounds2D"
+    label = "{wcs/CoordBounds2D}"
+    fillcolor="/set312/3"
+    ] ;
   "caom2:wcs.CoordAxis2D" [
     URL="../caom2/wcs.CoordAxis2D"
-    label = "{&lt;&lt;datatype&gt;&gt;\nwcs/CoordAxis2D|+axis1 : caom2:wcs.Axis\l+axis2 : caom2:wcs.Axis\l+error1 : caom2:wcs.CoordError\l+error2 : caom2:wcs.CoordError\l+range : caom2:wcs.CoordRange2D\l+bounds : caom2:wcs.CoordBounds2D\l+function : caom2:wcs.CoordFunction2D\l}"
+    label = "{wcs/CoordAxis2D|+axis1 : caom2:wcs.Axis\l+axis2 : caom2:wcs.Axis\l+error1 : caom2:wcs.CoordError\l+error2 : caom2:wcs.CoordError\l+range : caom2:wcs.CoordRange2D\l+function : caom2:wcs.CoordFunction2D\l}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.SpatialWCS" [
     URL="../caom2/wcs.SpatialWCS"
-    label = "{wcs/SpatialWCS|+axis : caom2:wcs.CoordAxis2D\l+coordsys : ivoa:string\l+equinox : ivoa:real\l+resolution : ivoa:real\l}"
+    label = "{wcs/SpatialWCS|+coordsys : ivoa:string\l+equinox : ivoa:real\l+resolution : ivoa:real\l}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.SpectralWCS" [
     URL="../caom2/wcs.SpectralWCS"
-    label = "{wcs/SpectralWCS|+axis : caom2:wcs.CoordAxis1D\l+specsys : ivoa:string\l+ssysobs : ivoa:string\l+ssyssrc : ivoa:string\l+restfrq : ivoa:real\l+restwav : ivoa:real\l+velosys : ivoa:real\l+zsource : ivoa:real\l+velang : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:wcs.EnergyTransition\l+resolvingPower : ivoa:real\l}"
+    label = "{wcs/SpectralWCS|+specsys : ivoa:string\l+ssysobs : ivoa:string\l+ssyssrc : ivoa:string\l+restfrq : ivoa:real\l+restwav : ivoa:real\l+velosys : ivoa:real\l+zsource : ivoa:real\l+velang : ivoa:real\l+bandpassName : ivoa:string\l+transition : caom2:wcs.EnergyTransition\l+resolvingPower : ivoa:real\l}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.TemporalWCS" [
     URL="../caom2/wcs.TemporalWCS"
-    label = "{wcs/TemporalWCS|+axis : caom2:wcs.CoordAxis1D\l+timesys : ivoa:string\l+trefpos : ivoa:string\l+mjdref : ivoa:real\l+exposure : ivoa:real\l+resolution : ivoa:real\l}"
+    label = "{wcs/TemporalWCS|+timesys : ivoa:string\l+trefpos : ivoa:string\l+mjdref : ivoa:real\l+exposure : ivoa:real\l+resolution : ivoa:real\l}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.PolarizationWCS" [
     URL="../caom2/wcs.PolarizationWCS"
-    label = "{wcs/PolarizationWCS|+axis : caom2:wcs.CoordAxis1D\l}"
+    label = "{wcs/PolarizationWCS}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.CustomWCS" [
     URL="../caom2/wcs.CustomWCS"
-    label = "{wcs/CustomWCS|+axis : caom2:wcs.CoordAxis1D\l}"
+    label = "{wcs/CustomWCS}"
     fillcolor="/set312/3"
     ] ;
   "caom2:wcs.ObservableAxis" [
@@ -392,7 +407,6 @@ digraph GVmap {
   "caom2:Status" -> "caom2:VocabularyTerm" ;
   "caom2:TargetType" -> "caom2:VocabularyTerm" ;
   "caom2:DataLinkSemantics" -> "caom2:VocabularyTerm" ;
-  "caom2:PolarizationState" -> "caom2:VocabularyTerm" ;
   "caom2:Tracking" -> "caom2:VocabularyTerm" ;
   "caom2:UCDTerm" -> "caom2:VocabularyTerm" ;
   "caom2:Observation" -> "caom2:CaomEntity" ;
@@ -436,6 +450,25 @@ digraph GVmap {
   "caom2:Chunk" -> "caom2:wcs.PolarizationWCS" [headlabel="0..1",label="polarization",labelfontsize=10] ;
   "caom2:Chunk" -> "caom2:wcs.CustomWCS" [headlabel="0..1",label="custom",labelfontsize=10] ;
   "caom2:Chunk" -> "caom2:wcs.ObservableAxis" [headlabel="0..1",label="observable",labelfontsize=10] ;
+  "caom2:TargetPosition" -> "caom2:types.Point" [headlabel="1",label="coordinates",labelfontsize=10] ;
+  "caom2:Position" -> "caom2:types.Shape" [headlabel="1",label="bounds",labelfontsize=10] ;
+  "caom2:Position" -> "caom2:types.MultiShape" [headlabel="1",label="samples",labelfontsize=10] ;
+  "caom2:Position" -> "caom2:types.Shape" [headlabel="0..1",label="minBounds",labelfontsize=10] ;
+  "caom2:Energy" -> "caom2:types.IntervalM" [headlabel="1..*",label="samples",labelfontsize=10] ;
+  "caom2:Time" -> "caom2:types.IntervalM" [headlabel="1..*",label="samples",labelfontsize=10] ;
+  "caom2:CustomAxis" -> "caom2:types.IntervalM" [headlabel="1..*",label="samples",labelfontsize=10] ;
+  "caom2:types.Circle" -> "caom2:types.Point" [headlabel="1",label="center",labelfontsize=10] ;
+  "caom2:types.MultiShape" -> "caom2:types.Shape" [headlabel="1..*",label="shapes",labelfontsize=10] ;
+  "caom2:types.Polygon" -> "caom2:types.Point" [headlabel="1..*",label="points",labelfontsize=10] ;
+  "caom2:wcs.CoordBounds1D" -> "caom2:wcs.CoordRange1DM" [headlabel="1..*",label="vertices",labelfontsize=10] ;
+  "caom2:wcs.CoordAxis1D" -> "caom2:wcs.CoordBounds1D" [headlabel="0..1",label="bounds",labelfontsize=10] ;
+  "caom2:wcs.CoordBounds2D" -> "caom2:wcs.Coord2DM" [headlabel="1..*",label="vertices",labelfontsize=10] ;
+  "caom2:wcs.CoordAxis2D" -> "caom2:wcs.CoordBounds2D" [headlabel="0..1",label="bounds",labelfontsize=10] ;
+  "caom2:wcs.SpatialWCS" -> "caom2:wcs.CoordAxis2D" [headlabel="1",label="axis",labelfontsize=10] ;
+  "caom2:wcs.SpectralWCS" -> "caom2:wcs.CoordAxis1D" [headlabel="1",label="axis",labelfontsize=10] ;
+  "caom2:wcs.TemporalWCS" -> "caom2:wcs.CoordAxis1D" [headlabel="1",label="axis",labelfontsize=10] ;
+  "caom2:wcs.PolarizationWCS" -> "caom2:wcs.CoordAxis1D" [headlabel="1",label="axis",labelfontsize=10] ;
+  "caom2:wcs.CustomWCS" -> "caom2:wcs.CoordAxis1D" [headlabel="1",label="axis",labelfontsize=10] ;
     
 }
   

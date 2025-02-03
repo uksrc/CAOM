@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#datatype-coordaxis2d" class="md-skip">
+        <a href="#objecttype-coordaxis2d" class="md-skip">
           Skip to content
         </a>
       
@@ -79,12 +79,12 @@
     <a href="../../.." title="Model Documentation" class="md-header__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -104,13 +104,13 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -119,15 +119,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -150,7 +150,7 @@
         <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -273,7 +273,7 @@
     <a href="../../.." title="Model Documentation" class="md-nav__button md-logo" aria-label="Model Documentation" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Model Documentation
@@ -283,7 +283,7 @@
       <a href="https://github.com/uksrc/CAOM" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -899,6 +899,8 @@
                 
   
   
+    
+  
   
   
     
@@ -908,11 +910,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
@@ -926,7 +928,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_2">
             <span class="md-nav__icon md-icon"></span>
             ObjectTypes
@@ -1528,6 +1530,316 @@
   
   
     <li class="md-nav__item">
+      <a href="../types.Circle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Circle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.IntervalM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.IntervalM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.MultiShape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.MultiShape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Point/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Polygon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Polygon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types.Shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    types.Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.Coord2DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.Coord2DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis2D
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordAxis2D
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds1D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordBounds2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcs.CoordRange1DM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wcs.CoordRange1DM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../wcs.CustomWCS/" class="md-nav__link">
         
   
@@ -1659,8 +1971,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1670,11 +1980,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
@@ -1688,7 +1998,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_3">
             <span class="md-nav__icon md-icon"></span>
             DataTypes
@@ -1749,27 +2059,6 @@
   
   <span class="md-ellipsis">
     DataProductType
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PolarizationState/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PolarizationState
   </span>
   
 
@@ -1912,116 +2201,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../types.Circle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Circle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../types.Interval/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     types.Interval
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.MultiShape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.MultiShape
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Point/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Point
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Polygon/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Polygon
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../types.Shape/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    types.Shape
   </span>
   
 
@@ -2064,139 +2248,6 @@
   
   <span class="md-ellipsis">
     wcs.Coord2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordAxis1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis2D
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordAxis2D
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      Members
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds1D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds1D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wcs.CoordBounds2D/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    wcs.CoordBounds2D
   </span>
   
 
@@ -2578,6 +2629,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../PolarizationState/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PolarizationState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ReleaseType/" class="md-nav__link">
         
   
@@ -2670,6 +2742,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#containment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2688,21 +2769,9 @@
   
 
 
-<h1 id="datatype-coordaxis2d">dataType CoordAxis2D</h1>
+<h1 id="objecttype-coordaxis2d">objectType CoordAxis2D</h1>
 <p>a two-dimensional coordinate axis pair: quantity, values, errors; it is usually only necessary to specify one of the range, bounds, or function as they describe the world and pixel coordinate coverage at different levels of detail and the less detailed description is redundant (exception: when the range or bounds and function are both specified, the range/bounds is a subset of the pixels described by the function and denotes the valid pixels</p>
-<pre class="mermaid"><code>classDiagram
-
-        class CoordAxis2D{
-        caom2:wcs.Axis axis1
-caom2:wcs.Axis axis2
-caom2:wcs.CoordError error1
-caom2:wcs.CoordError error2
-caom2:wcs.CoordRange2D range
-caom2:wcs.CoordBounds2D bounds
-caom2:wcs.CoordFunction2D function
-
-        }
-</code></pre>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" preserveAspectRatio="xMaxYMax meet" style="width:285px;height:261px;background:#FFFFFF" version="1.1" viewBox="0 0 285 261" width="100%" zoomAndPan="magnify" class="uml" alt="uml diagram" title=""><defs /><g><g id="elem_CoordAxis2D"><rect codeLine="2" fill="#D3D3D3" height="138.9297" id="CoordAxis2D" rx="2.5" ry="2.5" style="stroke:#800080;stroke-width:2.0;" width="271.4648" x="7" y="7" /><ellipse cx="93.3857" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M95.8589,29.1431 Q95.2778,29.4419 94.6387,29.5913 Q93.9995,29.7407 93.2939,29.7407 Q90.7871,29.7407 89.4673,28.0889 Q88.1475,26.437 88.1475,23.3159 Q88.1475,20.1865 89.4673,18.5347 Q90.7871,16.8828 93.2939,16.8828 Q93.9995,16.8828 94.647,17.0322 Q95.2944,17.1816 95.8589,17.4805 L95.8589,20.2031 Q95.228,19.6221 94.6345,19.3523 Q94.041,19.0825 93.4102,19.0825 Q92.0654,19.0825 91.3806,20.1492 Q90.6958,21.2158 90.6958,23.3159 Q90.6958,25.4077 91.3806,26.4744 Q92.0654,27.541 93.4102,27.541 Q94.041,27.541 94.6345,27.2712 Q95.228,27.0015 95.8589,26.4204 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90.1934" x="113.8857" y="28.291">CoordAxis2D</text><line style="stroke:#800080;stroke-width:2.0;" x1="8" x2="277.4648" y1="39" y2="39" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.5908" x="13" y="56.5352">caom2:wcs.Axis axis1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.5908" x="13" y="73.0234">caom2:wcs.Axis axis2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201.0449" x="13" y="89.5117">caom2:wcs.CoordError error1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201.0449" x="13" y="106">caom2:wcs.CoordError error2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="225.0527" x="13" y="122.4883">caom2:wcs.CoordRange2D range</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="259.4648" x="13" y="138.9766">caom2:wcs.CoordFunction2D function</text></g><a href="../wcs.CoordBounds2D" target="_top" title="../wcs.CoordBounds2D" xlink:actuate="onRequest" xlink:href="../wcs.CoordBounds2D" xlink:show="new" xlink:title="../wcs.CoordBounds2D" xlink:type="simple"><g id="elem_CoordBounds2D"><rect codeLine="12" fill="#F1F1F1" height="32" id="CoordBounds2D" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142.7422" x="71.36" y="222.93" /><ellipse cx="86.36" cy="238.93" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M88.8331,245.0731 Q88.2521,245.3719 87.6129,245.5213 Q86.9738,245.6707 86.2682,245.6707 Q83.7614,245.6707 82.4415,244.0189 Q81.1217,242.367 81.1217,239.2459 Q81.1217,236.1165 82.4415,234.4647 Q83.7614,232.8128 86.2682,232.8128 Q86.9738,232.8128 87.6212,232.9622 Q88.2687,233.1116 88.8331,233.4105 L88.8331,236.1331 Q88.2023,235.5521 87.6088,235.2823 Q87.0153,235.0125 86.3844,235.0125 Q85.0397,235.0125 84.3549,236.0792 Q83.6701,237.1458 83.6701,239.2459 Q83.6701,241.3377 84.3549,242.4044 Q85.0397,243.471 86.3844,243.471 Q87.0153,243.471 87.6088,243.2012 Q88.2023,242.9315 88.8331,242.3504 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.7422" x="100.36" y="244.221">CoordBounds2D</text></g></a><g id="link_CoordAxis2D_CoordBounds2D"><path codeLine="13" d="M142.73,157.98 C142.73,186.43 142.73,204.89 142.73,222.63 " fill="none" id="CoordAxis2D-backto-CoordBounds2D" style="stroke:#0000FF;stroke-width:1.0;" /><polygon fill="#0000FF" points="142.73,145.98,138.73,151.98,142.73,157.98,146.73,151.98,142.73,145.98" style="stroke:#0000FF;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47.1123" x="143.73" y="189.4984">bounds</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24.667" x="114.7193" y="212.0705">0..1</text></g></g></svg></p>
 <h2 id="members">Members</h2>
 <table>
 <thead>
@@ -2746,7 +2815,7 @@ caom2:wcs.CoordFunction2D function
 </tr>
 <tr>
 <td>bounds</td>
-<td><a href="../wcs.CoordBounds2D/" title="dataType">wcs.CoordBounds2D</a></td>
+<td><a href="../wcs.CoordBounds2D/" title="objectType">wcs.CoordBounds2D</a></td>
 <td>optional</td>
 <td>pixel and world coordinate values covered by this axis (boundary)</td>
 </tr>
@@ -2758,6 +2827,8 @@ caom2:wcs.CoordFunction2D function
 </tr>
 </tbody>
 </table>
+<h2 id="containment">Containment</h2>
+<p>This is contained by <a href="../wcs.SpatialWCS/" title="objectType">wcs.SpatialWCS</a></p>
 
 
 
@@ -2804,10 +2875,10 @@ caom2:wcs.CoordFunction2D function
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

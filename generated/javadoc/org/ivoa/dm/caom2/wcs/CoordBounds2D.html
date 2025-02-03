@@ -77,19 +77,19 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code>, <code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Embeddable
+<div class="type-signature"><span class="annotations">@Entity
 @VoDml(id="caom2:wcs.CoordBounds2D",
-       role=dataType)
+       role=objectType)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">CoordBounds2D</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
+implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span></div>
 <div class="block">a two-dimensional region in pixel and world coordinates; this can be used to specify a simple polygon
-                                           boundary in pixel and world coordinates.
+                                            boundary in pixel and world coordinates.
 
- dataType:  CoordBounds2D</div>
+ objectType:  CoordBounds2D</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,9 +119,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#vertices" class="member-name-link">vertices</a></code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color"><code><a href="#_id" class="member-name-link">_id</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">inserted database key</div>
+</div>
+<div class="col-first odd-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#vertices" class="member-name-link">vertices</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">the vertices of the polygon with implicit segment from the last vertex back to the first.</div>
 </div>
 </div>
@@ -139,7 +144,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-last even-row-color">
 <div class="block">Creates a new CoordBounds2D</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List)" class="member-name-link">CoordBounds2D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;vertices)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List)" class="member-name-link">CoordBounds2D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;&nbsp;vertices)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -161,40 +166,56 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCoordBounds2D(java.util.function.Consumer)" class="member-name-link">createCoordBounds2D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CoordBounds2D.CoordBounds2DBuilder.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D.CoordBounds2DBuilder</a>&gt;&nbsp;f)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToVertices(org.ivoa.dm.caom2.wcs.Coord2DM)" class="member-name-link">addToVertices</a><wbr>(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;p)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add a org.ivoa.dm.caom2.wcs.Coord2DM to the composition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCoordBounds2D(java.util.function.Consumer)" class="member-name-link">createCoordBounds2D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CoordBounds2D.CoordBounds2DBuilder.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D.CoordBounds2DBuilder</a>&gt;&nbsp;f)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create a CoordBounds2D in functional builder style.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertices()" class="member-name-link">getVertices</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns vertices Attribute.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertices()" class="member-name-link">getVertices</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns vertices composition as an immutable list.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">generally better to use the model level reference persistence as only this can deal with "contained" references properly.</div>
 </div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromVertices(org.ivoa.dm.caom2.wcs.Coord2DM)" class="member-name-link">removeFromVertices</a><wbr>(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;p)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Remove a org.ivoa.dm.caom2.wcs.Coord2DM from the composition.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertices(java.util.List)" class="member-name-link">setVertices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;pVertices)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceInVertices(org.ivoa.dm.caom2.wcs.Coord2DM)" class="member-name-link">replaceInVertices</a><wbr>(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;_p)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set vertices Attribute.</div>
+<div class="block">update a org.ivoa.dm.caom2.wcs.Coord2DM in the composition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.wcs.CoordBounds2D)" class="member-name-link">updateUsing</a><wbr>(<a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a>&nbsp;other)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertices(java.util.List)" class="member-name-link">setVertices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;&nbsp;pVertices)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Update this object with the content of the given object.</div>
+<div class="block">Defines whole vertices composition.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withVertices(java.util.List)" class="member-name-link">withVertices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;pVertices)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.wcs.CoordBounds2D)" class="member-name-link">updateUsing</a><wbr>(<a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">fluent setter for vertices Attribute.</div>
+<div class="block">Update this object with the content of the given object.</div>
 </div>
 </div>
 </div>
@@ -214,14 +235,25 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="_id">
+<h3>_id</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">_id</span></div>
+<div class="block">inserted database key</div>
+</section>
+</li>
+<li>
 <section class="detail" id="vertices">
 <h3>vertices</h3>
 <div class="member-signature"><span class="annotations">@VoDml(id="caom2:wcs.CoordBounds2D.vertices",
-       role=attribute,
-       type="caom2:wcs.Coord2D",
-       typeRole=dataType)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;</span>&nbsp;<span class="element-name">vertices</span></div>
-<div class="block">the vertices of the polygon with implicit segment from the last vertex back to the first. : Attribute vertices : multiplicity 1..*</div>
+       role=composition,
+       type="caom2:wcs.Coord2DM",
+       typeRole=objectType)
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;</span>&nbsp;<span class="element-name">vertices</span></div>
+<div class="block">the vertices of the polygon with implicit segment from the last vertex back to the first.
+ composition vertices :
+ (
+ Multiplicity : 1..*
+ )</div>
 </section>
 </li>
 </ul>
@@ -242,7 +274,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <li>
 <section class="detail" id="&lt;init&gt;(java.util.List)">
 <h3>CoordBounds2D</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CoordBounds2D</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;vertices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CoordBounds2D</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;&nbsp;vertices)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -270,6 +302,18 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getId</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the id</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="updateUsing(org.ivoa.dm.caom2.wcs.CoordBounds2D)">
 <h3>updateUsing</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateUsing</span><wbr><span class="parameters">(<a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a>&nbsp;other)</span></div>
@@ -283,35 +327,56 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <li>
 <section class="detail" id="getVertices()">
 <h3>getVertices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;</span>&nbsp;<span class="element-name">getVertices</span>()</div>
-<div class="block">Returns vertices Attribute.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;</span>&nbsp;<span class="element-name">getVertices</span>()</div>
+<div class="block">Returns vertices composition as an immutable list.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>vertices Attribute</dd>
+<dd>vertices composition.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setVertices(java.util.List)">
 <h3>setVertices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVertices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;pVertices)</span></div>
-<div class="block">Set vertices Attribute.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVertices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&gt;&nbsp;pVertices)</span></div>
+<div class="block">Defines whole vertices composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pVertices</code> - value to set</dd>
+<dd><code>pVertices</code> - composition to set.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="withVertices(java.util.List)">
-<h3>withVertices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CoordBounds2D.html" title="class in org.ivoa.dm.caom2.wcs">CoordBounds2D</a></span>&nbsp;<span class="element-name">withVertices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Coord2D.html" title="class in org.ivoa.dm.caom2.wcs">Coord2D</a>&gt;&nbsp;pVertices)</span></div>
-<div class="block">fluent setter for vertices Attribute.</div>
+<section class="detail" id="addToVertices(org.ivoa.dm.caom2.wcs.Coord2DM)">
+<h3>addToVertices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToVertices</span><wbr><span class="parameters">(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;p)</span></div>
+<div class="block">Add a org.ivoa.dm.caom2.wcs.Coord2DM to the composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pVertices</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>CoordBounds2D</dd>
+<dd><code>p</code> - org.ivoa.dm.caom2.wcs.Coord2DM to add</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFromVertices(org.ivoa.dm.caom2.wcs.Coord2DM)">
+<h3>removeFromVertices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromVertices</span><wbr><span class="parameters">(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;p)</span></div>
+<div class="block">Remove a org.ivoa.dm.caom2.wcs.Coord2DM from the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>p</code> - org.ivoa.dm.caom2.wcs.Coord2DM to remove</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replaceInVertices(org.ivoa.dm.caom2.wcs.Coord2DM)">
+<h3>replaceInVertices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replaceInVertices</span><wbr><span class="parameters">(<a href="Coord2DM.html" title="class in org.ivoa.dm.caom2.wcs">Coord2DM</a>&nbsp;_p)</span></div>
+<div class="block">update a org.ivoa.dm.caom2.wcs.Coord2DM in the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>_p</code> - org.ivoa.dm.caom2.wcs.Coord2DM to update
+ the match is done via the database key</dd>
 </dl>
 </section>
 </li>
@@ -349,6 +414,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

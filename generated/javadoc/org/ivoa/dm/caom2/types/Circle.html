@@ -79,18 +79,18 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+<dd><code>org.ivoa.vodml.jpa.JPAManipulations</code>, <code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations">@Embeddable
+<div class="type-signature"><span class="annotations">@Entity
 @VoDml(id="caom2:types.Circle",
-       role=dataType)
+       role=objectType)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">Circle</span>
 <span class="extends-implements">extends <a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a>
-implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
+implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span></div>
 <div class="block">a circular region on the sky.
 
- dataType:  Circle</div>
+ objectType:  Circle</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -131,6 +131,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="block">.</div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-org.ivoa.dm.caom2.types.Shape">Fields inherited from class&nbsp;org.ivoa.dm.caom2.types.<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a></h3>
+<code><a href="Shape.html#_id">_id</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -185,48 +188,51 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="block">create a Circle in functional builder style.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCenter()" class="member-name-link">getCenter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCenter()" class="member-name-link">getCenter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns center Attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRadius()" class="member-name-link">getRadius</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRadius()" class="member-name-link">getRadius</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns radius Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#persistRefs(jakarta.persistence.EntityManager)" class="member-name-link">persistRefs</a><wbr>(jakarta.persistence.EntityManager&nbsp;_em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">generally better to use the model level reference persistence as only this can deal with "contained" references properly.</div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCenter(org.ivoa.dm.caom2.types.Point)" class="member-name-link">setCenter</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a>&nbsp;pCenter)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCenter(org.ivoa.dm.caom2.types.Point)" class="member-name-link">setCenter</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a>&nbsp;pCenter)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set center Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRadius(java.lang.Double)" class="member-name-link">setRadius</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pRadius)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRadius(java.lang.Double)" class="member-name-link">setRadius</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pRadius)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set radius Attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.types.Circle)" class="member-name-link">updateUsing</a><wbr>(<a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a>&nbsp;other)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.types.Circle)" class="member-name-link">updateUsing</a><wbr>(<a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a>&nbsp;other)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Update this object with the content of the given object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCenter(org.ivoa.dm.caom2.types.Point)" class="member-name-link">withCenter</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a>&nbsp;pCenter)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCenter(org.ivoa.dm.caom2.types.Point)" class="member-name-link">withCenter</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a>&nbsp;pCenter)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">fluent setter for center Attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRadius(java.lang.Double)" class="member-name-link">withRadius</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pRadius)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Circle.html" title="class in org.ivoa.dm.caom2.types">Circle</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRadius(java.lang.Double)" class="member-name-link">withRadius</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pRadius)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">fluent setter for radius Attribute.</div>
 </div>
 </div>
@@ -234,10 +240,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.ivoa.dm.caom2.types.Shape">Methods inherited from class&nbsp;org.ivoa.dm.caom2.types.<a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a></h3>
-<code><a href="Shape.html#updateUsing(org.ivoa.dm.caom2.types.Shape)">updateUsing</a></code></div>
+<code><a href="Shape.html#getId()">getId</a>, <a href="Shape.html#updateUsing(org.ivoa.dm.caom2.types.Shape)">updateUsing</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-org.ivoa.vodml.jpa.JPAManipulationsForObjectType">Methods inherited from interface&nbsp;org.ivoa.vodml.jpa.JPAManipulationsForObjectType</h3>
+<code>getId</code></div>
 </section>
 </li>
 </ul>
@@ -250,17 +259,6 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="center">
-<h3>center</h3>
-<div class="member-signature"><span class="annotations">@VoDml(id="caom2:types.Circle.center",
-       role=attribute,
-       type="caom2:types.Point",
-       typeRole=dataType)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></span>&nbsp;<span class="element-name">center</span></div>
-<div class="block">. : Attribute center : multiplicity 1</div>
-</section>
-</li>
-<li>
 <section class="detail" id="radius">
 <h3>radius</h3>
 <div class="member-signature"><span class="annotations">@VoDml(id="caom2:types.Circle.radius",
@@ -269,6 +267,21 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
        typeRole=primitiveType)
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">radius</span></div>
 <div class="block">. : Attribute radius : multiplicity 1</div>
+</section>
+</li>
+<li>
+<section class="detail" id="center">
+<h3>center</h3>
+<div class="member-signature"><span class="annotations">@VoDml(id="caom2:types.Circle.center",
+       role=composition,
+       type="caom2:types.Point",
+       typeRole=objectType)
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></span>&nbsp;<span class="element-name">center</span></div>
+<div class="block">.
+ composition center :
+ (
+ Multiplicity : 1
+ )</div>
 </section>
 </li>
 </ul>
@@ -465,6 +478,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="Shape.html#persistRefs(jakarta.persistence.EntityManager)">persistRefs</a></code>&nbsp;in class&nbsp;<code><a href="Shape.html" title="class in org.ivoa.dm.caom2.types">Shape</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

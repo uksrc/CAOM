@@ -141,6 +141,43 @@
             </y:UMLClassNode>
          </data>
       </node>
+      <node id="caom2:PolarizationState">
+         <data key="k1">PolarizationState</data>
+         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
+            <y:UMLClassNode>
+               <y:Fill color="#BDB992" transparent="false"/>
+               <y:BorderStyle color="#000000" type="line" width="1.0"/>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">PolarizationState</y:NodeLabel>
+               <y:UML clipContent="true"
+                      constraint=""
+                      hasDetailsColor="false"
+                      omitDetails="false"
+                      stereotype="enumeration"
+                      use3DEffect="true">
+                  <y:AttributeLabel xml:space="preserve">+I
++Q
++U
++V
++RR
++LL
++RL
++LR
++XX
++YY
++XY
++YX
++POLI
++FPOLI
++POLA
++EPOLI
++CPOLI
++NPOLI
+</y:AttributeLabel>
+                  <y:MethodLabel xml:space="preserve"/>
+               </y:UML>
+            </y:UMLClassNode>
+         </data>
+      </node>
       <node id="caom2:VocabularyTerm">
          <data key="k1">VocabularyTerm</data>
          <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
@@ -265,25 +302,6 @@
                <y:Fill color="#BDB992" transparent="false"/>
                <y:BorderStyle color="#000000" type="line" width="1.0"/>
                <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">DataLinkSemantics</y:NodeLabel>
-               <y:UML clipContent="true"
-                      constraint=""
-                      hasDetailsColor="false"
-                      omitDetails="false"
-                      stereotype=""
-                      use3DEffect="true">
-                  <y:AttributeLabel xml:space="preserve"/>
-                  <y:MethodLabel xml:space="preserve"/>
-               </y:UML>
-            </y:UMLClassNode>
-         </data>
-      </node>
-      <node id="caom2:PolarizationState">
-         <data key="k1">PolarizationState</data>
-         <data xmlns:y="http://www.yworks.com/xml/graphml" key="k2">
-            <y:UMLClassNode>
-               <y:Fill color="#BDB992" transparent="false"/>
-               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">PolarizationState</y:NodeLabel>
                <y:UML clipContent="true"
                       constraint=""
                       hasDetailsColor="false"
@@ -725,7 +743,6 @@
                       use3DEffect="true">
                   <y:AttributeLabel xml:space="preserve">+coordsys : ivoa:string
 +equinox : ivoa:real
-+coordinates : caom2:types.Point
 </y:AttributeLabel>
                   <y:MethodLabel xml:space="preserve"/>
                </y:UML>
@@ -859,10 +876,7 @@
                       omitDetails="false"
                       stereotype=""
                       use3DEffect="true">
-                  <y:AttributeLabel xml:space="preserve">+bounds : caom2:types.Shape
-+samples : caom2:types.MultiShape
-+minBounds : caom2:types.Shape
-+dimension : caom2:wcs.Dimension2D
+                  <y:AttributeLabel xml:space="preserve">+dimension : caom2:wcs.Dimension2D
 +maxAngularScale : caom2:types.Interval
 +resolution : ivoa:real
 +resolutionBounds : caom2:types.Interval
@@ -888,7 +902,6 @@
                       stereotype=""
                       use3DEffect="true">
                   <y:AttributeLabel xml:space="preserve">+bounds : caom2:types.Interval
-+samples : caom2:types.Interval
 +energyBands : caom2:EnergyBand
 +dimension : ivoa:integer
 +resolvingPower : ivoa:real
@@ -920,7 +933,6 @@
                       stereotype=""
                       use3DEffect="true">
                   <y:AttributeLabel xml:space="preserve">+bounds : caom2:types.Interval
-+samples : caom2:types.Interval
 +calibration : caom2:CalibrationStatus
 +dimension : ivoa:integer
 +resolution : ivoa:real
@@ -970,7 +982,6 @@
                       use3DEffect="true">
                   <y:AttributeLabel xml:space="preserve">+ctype : ivoa:string
 +bounds : caom2:types.Interval
-+samples : caom2:types.Interval
 +dimension : ivoa:integer
 </y:AttributeLabel>
                   <y:MethodLabel xml:space="preserve"/>
@@ -1001,7 +1012,7 @@
          </data>
       </node>
       <node xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e1796"
+            id="d2e1867"
             yfiles.foldertype="group">
          <data key="k2">
             <y:GroupNode>
@@ -1014,7 +1025,28 @@
                             backgroundColor="#F2F0D8">types</y:NodeLabel>
             </y:GroupNode>
          </data>
-         <graph edgedefault="directed" id="G">typestypesdata types<node id="caom2:types.Point">
+         <graph edgedefault="directed" id="G">typestypesdata types<node id="caom2:types.Interval">
+               <data key="k1">types/Interval</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">types/Interval</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve">+lower : ivoa:real
++upper : ivoa:real
+</y:AttributeLabel>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
+            <node id="caom2:types.Point">
                <data key="k1">types/Point</data>
                <data key="k2">
                   <y:UMLClassNode>
@@ -1067,8 +1099,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+center : caom2:types.Point
-+radius : ivoa:real
+                        <y:AttributeLabel xml:space="preserve">+radius : ivoa:real
 </y:AttributeLabel>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
@@ -1088,8 +1119,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+shapes : caom2:types.Shape
-</y:AttributeLabel>
+                        <y:AttributeLabel xml:space="preserve"/>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
                   </y:UMLClassNode>
@@ -1108,20 +1138,19 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+points : caom2:types.Point
-</y:AttributeLabel>
+                        <y:AttributeLabel xml:space="preserve"/>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
                   </y:UMLClassNode>
                </data>
             </node>
-            <node id="caom2:types.Interval">
-               <data key="k1">types/Interval</data>
+            <node id="caom2:types.IntervalM">
+               <data key="k1">types/IntervalM</data>
                <data key="k2">
                   <y:UMLClassNode>
                      <y:Fill color="#BDB992" transparent="false"/>
                      <y:BorderStyle color="#000000" type="line" width="1.0"/>
-                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">types/Interval</y:NodeLabel>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">types/IntervalM</y:NodeLabel>
                      <y:UML clipContent="true"
                             constraint=""
                             hasDetailsColor="false"
@@ -1139,7 +1168,7 @@
          </graph>
       </node>
       <node xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e1900"
+            id="d2e1993"
             yfiles.foldertype="group">
          <data key="k2">
             <y:GroupNode>
@@ -1320,26 +1349,6 @@
                   </y:UMLClassNode>
                </data>
             </node>
-            <node id="caom2:wcs.CoordBounds1D">
-               <data key="k1">wcs/CoordBounds1D</data>
-               <data key="k2">
-                  <y:UMLClassNode>
-                     <y:Fill color="#BDB992" transparent="false"/>
-                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
-                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordBounds1D</y:NodeLabel>
-                     <y:UML clipContent="true"
-                            constraint=""
-                            hasDetailsColor="false"
-                            omitDetails="false"
-                            stereotype=""
-                            use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+vertices : caom2:wcs.CoordRange1D
-</y:AttributeLabel>
-                        <y:MethodLabel xml:space="preserve"/>
-                     </y:UML>
-                  </y:UMLClassNode>
-               </data>
-            </node>
             <node id="caom2:wcs.CoordFunction1D">
                <data key="k1">wcs/CoordFunction1D</data>
                <data key="k2">
@@ -1362,30 +1371,6 @@
                   </y:UMLClassNode>
                </data>
             </node>
-            <node id="caom2:wcs.CoordAxis1D">
-               <data key="k1">wcs/CoordAxis1D</data>
-               <data key="k2">
-                  <y:UMLClassNode>
-                     <y:Fill color="#BDB992" transparent="false"/>
-                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
-                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordAxis1D</y:NodeLabel>
-                     <y:UML clipContent="true"
-                            constraint=""
-                            hasDetailsColor="false"
-                            omitDetails="false"
-                            stereotype=""
-                            use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.Axis
-+error : caom2:wcs.CoordError
-+range : caom2:wcs.CoordRange1D
-+bounds : caom2:wcs.CoordBounds1D
-+function : caom2:wcs.CoordFunction1D
-</y:AttributeLabel>
-                        <y:MethodLabel xml:space="preserve"/>
-                     </y:UML>
-                  </y:UMLClassNode>
-               </data>
-            </node>
             <node id="caom2:wcs.CoordRange2D">
                <data key="k1">wcs/CoordRange2D</data>
                <data key="k2">
@@ -1401,26 +1386,6 @@
                             use3DEffect="true">
                         <y:AttributeLabel xml:space="preserve">+start : caom2:wcs.Coord2D
 +end : caom2:wcs.Coord2D
-</y:AttributeLabel>
-                        <y:MethodLabel xml:space="preserve"/>
-                     </y:UML>
-                  </y:UMLClassNode>
-               </data>
-            </node>
-            <node id="caom2:wcs.CoordBounds2D">
-               <data key="k1">wcs/CoordBounds2D</data>
-               <data key="k2">
-                  <y:UMLClassNode>
-                     <y:Fill color="#BDB992" transparent="false"/>
-                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
-                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordBounds2D</y:NodeLabel>
-                     <y:UML clipContent="true"
-                            constraint=""
-                            hasDetailsColor="false"
-                            omitDetails="false"
-                            stereotype=""
-                            use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+vertices : caom2:wcs.Coord2D
 </y:AttributeLabel>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
@@ -1452,6 +1417,109 @@
                   </y:UMLClassNode>
                </data>
             </node>
+            <node id="caom2:wcs.Coord2DM">
+               <data key="k1">wcs/Coord2DM</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/Coord2DM</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve">+coord1 : caom2:wcs.RefCoord
++coord2 : caom2:wcs.RefCoord
+</y:AttributeLabel>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
+            <node id="caom2:wcs.CoordRange1DM">
+               <data key="k1">wcs/CoordRange1DM</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordRange1DM</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve">+start : caom2:wcs.RefCoord
++end : caom2:wcs.RefCoord
+</y:AttributeLabel>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
+            <node id="caom2:wcs.CoordBounds1D">
+               <data key="k1">wcs/CoordBounds1D</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordBounds1D</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve"/>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
+            <node id="caom2:wcs.CoordAxis1D">
+               <data key="k1">wcs/CoordAxis1D</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordAxis1D</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.Axis
++error : caom2:wcs.CoordError
++range : caom2:wcs.CoordRange1D
++function : caom2:wcs.CoordFunction1D
+</y:AttributeLabel>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
+            <node id="caom2:wcs.CoordBounds2D">
+               <data key="k1">wcs/CoordBounds2D</data>
+               <data key="k2">
+                  <y:UMLClassNode>
+                     <y:Fill color="#BDB992" transparent="false"/>
+                     <y:BorderStyle color="#000000" type="line" width="1.0"/>
+                     <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve" y="3.0">wcs/CoordBounds2D</y:NodeLabel>
+                     <y:UML clipContent="true"
+                            constraint=""
+                            hasDetailsColor="false"
+                            omitDetails="false"
+                            stereotype=""
+                            use3DEffect="true">
+                        <y:AttributeLabel xml:space="preserve"/>
+                        <y:MethodLabel xml:space="preserve"/>
+                     </y:UML>
+                  </y:UMLClassNode>
+               </data>
+            </node>
             <node id="caom2:wcs.CoordAxis2D">
                <data key="k1">wcs/CoordAxis2D</data>
                <data key="k2">
@@ -1470,7 +1538,6 @@
 +error1 : caom2:wcs.CoordError
 +error2 : caom2:wcs.CoordError
 +range : caom2:wcs.CoordRange2D
-+bounds : caom2:wcs.CoordBounds2D
 +function : caom2:wcs.CoordFunction2D
 </y:AttributeLabel>
                         <y:MethodLabel xml:space="preserve"/>
@@ -1491,8 +1558,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.CoordAxis2D
-+coordsys : ivoa:string
+                        <y:AttributeLabel xml:space="preserve">+coordsys : ivoa:string
 +equinox : ivoa:real
 +resolution : ivoa:real
 </y:AttributeLabel>
@@ -1514,8 +1580,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.CoordAxis1D
-+specsys : ivoa:string
+                        <y:AttributeLabel xml:space="preserve">+specsys : ivoa:string
 +ssysobs : ivoa:string
 +ssyssrc : ivoa:string
 +restfrq : ivoa:real
@@ -1545,8 +1610,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.CoordAxis1D
-+timesys : ivoa:string
+                        <y:AttributeLabel xml:space="preserve">+timesys : ivoa:string
 +trefpos : ivoa:string
 +mjdref : ivoa:real
 +exposure : ivoa:real
@@ -1570,8 +1634,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.CoordAxis1D
-</y:AttributeLabel>
+                        <y:AttributeLabel xml:space="preserve"/>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
                   </y:UMLClassNode>
@@ -1590,8 +1653,7 @@
                             omitDetails="false"
                             stereotype=""
                             use3DEffect="true">
-                        <y:AttributeLabel xml:space="preserve">+axis : caom2:wcs.CoordAxis1D
-</y:AttributeLabel>
+                        <y:AttributeLabel xml:space="preserve"/>
                         <y:MethodLabel xml:space="preserve"/>
                      </y:UML>
                   </y:UMLClassNode>
@@ -1623,7 +1685,7 @@
       <!--imported nodes-->
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e147"
+            id="d2e224"
             source="caom2:CalibrationStatus"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1635,7 +1697,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e153"
+            id="d2e230"
             source="caom2:DataProductType"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1647,7 +1709,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e159"
+            id="d2e236"
             source="caom2:Quality"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1659,7 +1721,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e165"
+            id="d2e242"
             source="caom2:Status"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1671,7 +1733,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e171"
+            id="d2e248"
             source="caom2:TargetType"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1683,7 +1745,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e177"
+            id="d2e254"
             source="caom2:DataLinkSemantics"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1695,19 +1757,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e183"
-            source="caom2:PolarizationState"
-            target="caom2:VocabularyTerm">
-         <data key="k3">
-            <y:PolyLineEdge>
-               <y:LineStyle color="#FF0000" type="line" width="2.0"/>
-               <y:Arrows source="none" target="white_delta"/>
-               <y:BendStyle smoothed="false"/>
-            </y:PolyLineEdge>
-         </data>
-      </edge>
-      <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e190"
+            id="d2e261"
             source="caom2:Tracking"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1719,7 +1769,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e196"
+            id="d2e267"
             source="caom2:UCDTerm"
             target="caom2:VocabularyTerm">
          <data key="k3">
@@ -1731,7 +1781,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e266"
+            id="d2e337"
             source="caom2:Observation"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1743,7 +1793,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e417"
+            id="d2e488"
             source="caom2:SimpleObservation"
             target="caom2:Observation">
          <data key="k3">
@@ -1755,7 +1805,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e423"
+            id="d2e494"
             source="caom2:DerivedObservation"
             target="caom2:Observation">
          <data key="k3">
@@ -1767,7 +1817,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e438"
+            id="d2e509"
             source="caom2:Plane"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1779,7 +1829,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e607"
+            id="d2e678"
             source="caom2:Artifact"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1791,7 +1841,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e704"
+            id="d2e775"
             source="caom2:ArtifactDescription"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1803,7 +1853,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e728"
+            id="d2e799"
             source="caom2:Part"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1815,7 +1865,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e762"
+            id="d2e833"
             source="caom2:Chunk"
             target="caom2:CaomEntity">
          <data key="k3">
@@ -1827,7 +1877,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e1830"
+            id="d2e1923"
             source="caom2:types.Circle"
             target="caom2:types.Shape">
          <data key="k3">
@@ -1839,7 +1889,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e1867"
+            id="d2e1960"
             source="caom2:types.Polygon"
             target="caom2:types.Shape">
          <data key="k3">
@@ -1851,7 +1901,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e332"
+            id="d2e403"
             source="caom2:Observation"
             target="caom2:Algorithm">
          <data key="k3">
@@ -1867,7 +1917,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e341"
+            id="d2e412"
             source="caom2:Observation"
             target="caom2:Telescope">
          <data key="k3">
@@ -1883,7 +1933,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e350"
+            id="d2e421"
             source="caom2:Observation"
             target="caom2:Instrument">
          <data key="k3">
@@ -1899,7 +1949,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e359"
+            id="d2e430"
             source="caom2:Observation"
             target="caom2:Environment">
          <data key="k3">
@@ -1915,7 +1965,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e368"
+            id="d2e439"
             source="caom2:Observation"
             target="caom2:Proposal">
          <data key="k3">
@@ -1931,7 +1981,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e377"
+            id="d2e448"
             source="caom2:Observation"
             target="caom2:Target">
          <data key="k3">
@@ -1947,7 +1997,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e386"
+            id="d2e457"
             source="caom2:Observation"
             target="caom2:TargetPosition">
          <data key="k3">
@@ -1963,7 +2013,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e395"
+            id="d2e466"
             source="caom2:Observation"
             target="caom2:Requirements">
          <data key="k3">
@@ -1979,7 +2029,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e404"
+            id="d2e475"
             source="caom2:Observation"
             target="caom2:Plane">
          <data key="k3">
@@ -1995,7 +2045,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e504"
+            id="d2e575"
             source="caom2:Plane"
             target="caom2:Observable">
          <data key="k3">
@@ -2011,7 +2061,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e513"
+            id="d2e584"
             source="caom2:Plane"
             target="caom2:DataQuality">
          <data key="k3">
@@ -2027,7 +2077,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e522"
+            id="d2e593"
             source="caom2:Plane"
             target="caom2:Metrics">
          <data key="k3">
@@ -2043,7 +2093,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e531"
+            id="d2e602"
             source="caom2:Plane"
             target="caom2:Position">
          <data key="k3">
@@ -2059,7 +2109,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e540"
+            id="d2e611"
             source="caom2:Plane"
             target="caom2:Energy">
          <data key="k3">
@@ -2075,7 +2125,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e549"
+            id="d2e620"
             source="caom2:Plane"
             target="caom2:Time">
          <data key="k3">
@@ -2091,7 +2141,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e558"
+            id="d2e629"
             source="caom2:Plane"
             target="caom2:Polarization">
          <data key="k3">
@@ -2107,7 +2157,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e567"
+            id="d2e638"
             source="caom2:Plane"
             target="caom2:CustomAxis">
          <data key="k3">
@@ -2123,7 +2173,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e576"
+            id="d2e647"
             source="caom2:Plane"
             target="caom2:Visibility">
          <data key="k3">
@@ -2139,7 +2189,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e585"
+            id="d2e656"
             source="caom2:Plane"
             target="caom2:Provenance">
          <data key="k3">
@@ -2155,7 +2205,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e594"
+            id="d2e665"
             source="caom2:Plane"
             target="caom2:Artifact">
          <data key="k3">
@@ -2171,7 +2221,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e691"
+            id="d2e762"
             source="caom2:Artifact"
             target="caom2:Part">
          <data key="k3">
@@ -2187,7 +2237,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e748"
+            id="d2e819"
             source="caom2:Part"
             target="caom2:Chunk">
          <data key="k3">
@@ -2203,7 +2253,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e846"
+            id="d2e917"
             source="caom2:Chunk"
             target="caom2:wcs.SpatialWCS">
          <data key="k3">
@@ -2219,7 +2269,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e855"
+            id="d2e926"
             source="caom2:Chunk"
             target="caom2:wcs.SpectralWCS">
          <data key="k3">
@@ -2235,7 +2285,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e864"
+            id="d2e935"
             source="caom2:Chunk"
             target="caom2:wcs.TemporalWCS">
          <data key="k3">
@@ -2251,7 +2301,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e873"
+            id="d2e944"
             source="caom2:Chunk"
             target="caom2:wcs.PolarizationWCS">
          <data key="k3">
@@ -2267,7 +2317,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e882"
+            id="d2e953"
             source="caom2:Chunk"
             target="caom2:wcs.CustomWCS">
          <data key="k3">
@@ -2283,7 +2333,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2e891"
+            id="d2e962"
             source="caom2:Chunk"
             target="caom2:wcs.ObservableAxis">
          <data key="k3">
@@ -2294,6 +2344,310 @@
                <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">observable<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
    </y:EdgeLabel>
                <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1278"
+            source="caom2:TargetPosition"
+            target="caom2:types.Point">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">coordinates<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1484"
+            source="caom2:Position"
+            target="caom2:types.Shape">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">bounds<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1493"
+            source="caom2:Position"
+            target="caom2:types.MultiShape">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">samples<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1502"
+            source="caom2:Position"
+            target="caom2:types.Shape">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">minBounds<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1579"
+            source="caom2:Energy"
+            target="caom2:types.IntervalM">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">samples<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1701"
+            source="caom2:Time"
+            target="caom2:types.IntervalM">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">samples<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1818"
+            source="caom2:CustomAxis"
+            target="caom2:types.IntervalM">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">samples<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1925"
+            source="caom2:types.Circle"
+            target="caom2:types.Point">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">center<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1947"
+            source="caom2:types.MultiShape"
+            target="caom2:types.Shape">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">shapes<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e1962"
+            source="caom2:types.Polygon"
+            target="caom2:types.Point">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">points<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2333"
+            source="caom2:wcs.CoordBounds1D"
+            target="caom2:wcs.CoordRange1DM">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">vertices<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2373"
+            source="caom2:wcs.CoordAxis1D"
+            target="caom2:wcs.CoordBounds1D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">bounds<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2395"
+            source="caom2:wcs.CoordBounds2D"
+            target="caom2:wcs.Coord2DM">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">vertices<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1..*<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2453"
+            source="caom2:wcs.CoordAxis2D"
+            target="caom2:wcs.CoordBounds2D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">bounds<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">0..1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2475"
+            source="caom2:wcs.SpatialWCS"
+            target="caom2:wcs.CoordAxis2D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">axis<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2515"
+            source="caom2:wcs.SpectralWCS"
+            target="caom2:wcs.CoordAxis1D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">axis<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2629"
+            source="caom2:wcs.TemporalWCS"
+            target="caom2:wcs.CoordAxis1D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">axis<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2687"
+            source="caom2:wcs.PolarizationWCS"
+            target="caom2:wcs.CoordAxis1D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">axis<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
+      </y:EdgeLabel>
+            </y:PolyLineEdge>
+         </data>
+      </edge>
+      <edge xmlns:y="http://www.yworks.com/xml/graphml"
+            id="d2e2700"
+            source="caom2:wcs.CustomWCS"
+            target="caom2:wcs.CoordAxis1D">
+         <data key="k3">
+            <y:PolyLineEdge>
+               <y:LineStyle color="#9393FF" type="line" width="2.0"/>
+               <y:Arrows source="diamond" target="standard"/>
+               <y:BendStyle smoothed="false"/>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="head" preferredPlacement="centered" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">axis<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="center" side="on_edge" sideReference="relative_to_edge_flow"/>
+   </y:EdgeLabel>
+               <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" horizontalTextPosition="center" iconTextGap="4" modelName="six_pos" modelPosition="thead" preferredPlacement="target_on_edge" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" xml:space="preserve">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="target" side="anywhere" sideReference="relative_to_edge_flow"/>
       </y:EdgeLabel>
             </y:PolyLineEdge>
          </data>

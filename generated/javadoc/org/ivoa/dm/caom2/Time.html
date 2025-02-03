@@ -158,7 +158,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last odd-row-color">
 <div class="block">range of resolution within the bounds.</div>
 </div>
-<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;</code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#samples" class="member-name-link">samples</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">detailed time coverage that include the data (refactored in CAOM-2.5).</div>
@@ -188,7 +188,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="block">Copy Constructor.</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.caom2.types.Interval,java.util.List,org.ivoa.dm.caom2.CalibrationStatus,java.lang.Integer,java.lang.Double,org.ivoa.dm.caom2.types.Interval,java.lang.Double,java.lang.Double,org.ivoa.dm.caom2.types.Interval)" class="member-name-link">Time</a><wbr>(<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&nbsp;bounds,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;samples,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;&nbsp;samples,
  <a href="CalibrationStatus.html" title="class in org.ivoa.dm.caom2">CalibrationStatus</a>&nbsp;calibration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;dimension,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;resolution,
@@ -213,11 +213,19 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Time.html" title="class in org.ivoa.dm.caom2">Time</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createTime(java.util.function.Consumer)" class="member-name-link">createTime</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Time.TimeBuilder.html" title="class in org.ivoa.dm.caom2">Time.TimeBuilder</a>&gt;&nbsp;f)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToSamples(org.ivoa.dm.caom2.types.IntervalM)" class="member-name-link">addToSamples</a><wbr>(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;p)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add a org.ivoa.dm.caom2.types.IntervalM to the composition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Time.html" title="class in org.ivoa.dm.caom2">Time</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createTime(java.util.function.Consumer)" class="member-name-link">createTime</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Time.TimeBuilder.html" title="class in org.ivoa.dm.caom2">Time.TimeBuilder</a>&gt;&nbsp;f)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create a Time in functional builder style.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(jakarta.persistence.EntityManager)" class="member-name-link">delete</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -259,10 +267,10 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns resolutionBounds Attribute.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSamples()" class="member-name-link">getSamples</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns samples Attribute.</div>
+<div class="block">Returns samples composition as an immutable list.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSampleSize()" class="member-name-link">getSampleSize</a>()</code></div>
@@ -275,6 +283,16 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">generally better to use the model level reference persistence as only this can deal with "contained" references properly.</div>
 </div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromSamples(org.ivoa.dm.caom2.types.IntervalM)" class="member-name-link">removeFromSamples</a><wbr>(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;p)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Remove a org.ivoa.dm.caom2.types.IntervalM from the composition.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#replaceInSamples(org.ivoa.dm.caom2.types.IntervalM)" class="member-name-link">replaceInSamples</a><wbr>(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;_p)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">update a org.ivoa.dm.caom2.types.IntervalM in the composition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBounds(org.ivoa.dm.caom2.types.Interval)" class="member-name-link">setBounds</a><wbr>(<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&nbsp;pBounds)</code></div>
@@ -312,9 +330,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="block">Set resolutionBounds Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSamples(java.util.List)" class="member-name-link">setSamples</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;pSamples)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSamples(java.util.List)" class="member-name-link">setSamples</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;&nbsp;pSamples)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set samples Attribute.</div>
+<div class="block">Defines whole samples composition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSampleSize(java.lang.Double)" class="member-name-link">setSampleSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pSampleSize)</code></div>
@@ -362,13 +380,8 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="block">fluent setter for resolutionBounds Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Time.html" title="class in org.ivoa.dm.caom2">Time</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSamples(java.util.List)" class="member-name-link">withSamples</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;pSamples)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSampleSize(java.lang.Double)" class="member-name-link">withSampleSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pSampleSize)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">fluent setter for samples Attribute.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Time.html" title="class in org.ivoa.dm.caom2">Time</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSampleSize(java.lang.Double)" class="member-name-link">withSampleSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pSampleSize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">fluent setter for sampleSize Attribute.</div>
 </div>
 </div>
@@ -404,17 +417,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
        typeRole=dataType)
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a></span>&nbsp;<span class="element-name">bounds</span></div>
 <div class="block">time bounds that include the data (cardinality changed in CAOM-2.5). : Attribute bounds : multiplicity 1</div>
-</section>
-</li>
-<li>
-<section class="detail" id="samples">
-<h3>samples</h3>
-<div class="member-signature"><span class="annotations">@VoDml(id="caom2:Time.samples",
-       role=attribute,
-       type="caom2:types.Interval",
-       typeRole=dataType)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;</span>&nbsp;<span class="element-name">samples</span></div>
-<div class="block">detailed time coverage that include the data (refactored in CAOM-2.5). : Attribute samples : multiplicity 1..*</div>
 </section>
 </li>
 <li>
@@ -494,6 +496,21 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="block">range of exposure within the bounds. : Attribute exposureBounds : multiplicity 0..1</div>
 </section>
 </li>
+<li>
+<section class="detail" id="samples">
+<h3>samples</h3>
+<div class="member-signature"><span class="annotations">@VoDml(id="caom2:Time.samples",
+       role=composition,
+       type="caom2:types.IntervalM",
+       typeRole=objectType)
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;</span>&nbsp;<span class="element-name">samples</span></div>
+<div class="block">detailed time coverage that include the data (refactored in CAOM-2.5).
+ composition samples :
+ (
+ Multiplicity : 1..*
+ )</div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -513,7 +530,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="&lt;init&gt;(org.ivoa.dm.caom2.types.Interval,java.util.List,org.ivoa.dm.caom2.CalibrationStatus,java.lang.Integer,java.lang.Double,org.ivoa.dm.caom2.types.Interval,java.lang.Double,java.lang.Double,org.ivoa.dm.caom2.types.Interval)">
 <h3>Time</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Time</span><wbr><span class="parameters">(<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&nbsp;bounds,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;samples,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;&nbsp;samples,
  <a href="CalibrationStatus.html" title="class in org.ivoa.dm.caom2">CalibrationStatus</a>&nbsp;calibration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;dimension,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;resolution,
@@ -616,35 +633,56 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <li>
 <section class="detail" id="getSamples()">
 <h3>getSamples</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;</span>&nbsp;<span class="element-name">getSamples</span>()</div>
-<div class="block">Returns samples Attribute.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;</span>&nbsp;<span class="element-name">getSamples</span>()</div>
+<div class="block">Returns samples composition as an immutable list.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>samples Attribute</dd>
+<dd>samples composition.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setSamples(java.util.List)">
 <h3>setSamples</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSamples</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;pSamples)</span></div>
-<div class="block">Set samples Attribute.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSamples</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&gt;&nbsp;pSamples)</span></div>
+<div class="block">Defines whole samples composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pSamples</code> - value to set</dd>
+<dd><code>pSamples</code> - composition to set.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="withSamples(java.util.List)">
-<h3>withSamples</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Time.html" title="class in org.ivoa.dm.caom2">Time</a></span>&nbsp;<span class="element-name">withSamples</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="types/Interval.html" title="class in org.ivoa.dm.caom2.types">Interval</a>&gt;&nbsp;pSamples)</span></div>
-<div class="block">fluent setter for samples Attribute.</div>
+<section class="detail" id="addToSamples(org.ivoa.dm.caom2.types.IntervalM)">
+<h3>addToSamples</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToSamples</span><wbr><span class="parameters">(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;p)</span></div>
+<div class="block">Add a org.ivoa.dm.caom2.types.IntervalM to the composition.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>pSamples</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Time</dd>
+<dd><code>p</code> - org.ivoa.dm.caom2.types.IntervalM to add</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFromSamples(org.ivoa.dm.caom2.types.IntervalM)">
+<h3>removeFromSamples</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromSamples</span><wbr><span class="parameters">(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;p)</span></div>
+<div class="block">Remove a org.ivoa.dm.caom2.types.IntervalM from the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>p</code> - org.ivoa.dm.caom2.types.IntervalM to remove</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replaceInSamples(org.ivoa.dm.caom2.types.IntervalM)">
+<h3>replaceInSamples</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replaceInSamples</span><wbr><span class="parameters">(<a href="types/IntervalM.html" title="class in org.ivoa.dm.caom2.types">IntervalM</a>&nbsp;_p)</span></div>
+<div class="block">update a org.ivoa.dm.caom2.types.IntervalM in the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>_p</code> - org.ivoa.dm.caom2.types.IntervalM to update
+ the match is done via the database key</dd>
 </dl>
 </section>
 </li>
@@ -927,6 +965,16 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>persistRefs</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulations</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="delete(jakarta.persistence.EntityManager)">
+<h3>delete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(jakarta.persistence.EntityManager&nbsp;em)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>delete</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
