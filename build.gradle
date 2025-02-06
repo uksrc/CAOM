@@ -1,5 +1,5 @@
 plugins {
-    id 'net.ivoa.vo-dml.vodmltools' version '0.5.14'
+    id 'net.ivoa.vo-dml.vodmltools' version '0.5.15'
     id 'java-library'
     id 'checkstyle'
     id "com.github.eerohele.saxon-gradle" version "0.2.1"
@@ -26,7 +26,9 @@ java {
         languageVersion =JavaLanguageVersion.of(17)
     }
 }
-
+test {
+    useJUnitPlatform()
+}
 
 defaultTasks 'build', 'xslt'
 
@@ -71,7 +73,10 @@ dependencies {
     implementation 'org.javastro.ivoa.vo-dml:ivoa-base:1.0-SNAPSHOT'
     testImplementation 'org.opencadc:cadc-vodml:[1.0.9,1.1)'
 
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher' //should not need this really...
+    testImplementation "com.h2database:h2:2.3.232"
 }
 
 publishing {
