@@ -93,11 +93,11 @@ publishing {
     }
     repositories {
         maven {
-            name = "nexus"
+            name = "uksrcrepo"
             url = uri("https://repo.dev.uksrc.org/repository/maven-snapshots/")
             credentials {
-                username = findProperty("nexusUsername") ?: System.getenv("NEXUS_USERNAME")
-                password = findProperty("nexusPassword") ?: System.getenv("NEXUS_PASSWORD")
+                username = findProperty("nexusUsername") ?: System.getenv("UKSRC_REPO_USERNAME")
+                password = findProperty("nexusPassword") ?: System.getenv("UKSRC_REPO_PASSWORD")
             }
         }
     }
