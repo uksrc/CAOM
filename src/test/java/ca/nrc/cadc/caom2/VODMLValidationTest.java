@@ -72,14 +72,16 @@ import ca.nrc.cadc.util.Log4jInit;
 import ca.nrc.cadc.vodml.SchematronValidationException;
 import ca.nrc.cadc.vodml.VOModelReader;
 import ca.nrc.cadc.vodml.VOModelWriter;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.jdom2.Document;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -135,7 +137,7 @@ public class VODMLValidationTest {
 
             VOModelReader wf = new VOModelReader(false, false, false);
             Document doc = wf.read(new FileInputStream(testVODML));
-            Assert.assertNotNull(doc);
+           assertNotNull(doc);
 
             VOModelWriter w = new VOModelWriter();
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -144,7 +146,7 @@ public class VODMLValidationTest {
             log.info("testWellFormed VO-DML/XML doc: OK");
         } catch (Exception unexpected) {
             log.error("unexpected exception", unexpected);
-            Assert.fail("unexpected exception: " + unexpected);
+            fail("unexpected exception: " + unexpected);
         }
     }
 
@@ -162,7 +164,7 @@ public class VODMLValidationTest {
 
             VOModelReader wf = new VOModelReader(true, false, false);
             Document doc = wf.read(new FileInputStream(testVODML));
-            Assert.assertNotNull(doc);
+            assertNotNull(doc);
 
             VOModelWriter w = new VOModelWriter();
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -172,7 +174,7 @@ public class VODMLValidationTest {
 
         } catch (Exception unexpected) {
             log.error("unexpected exception", unexpected);
-            Assert.fail("unexpected exception: " + unexpected);
+           fail("unexpected exception: " + unexpected);
         }
     }
 
@@ -190,16 +192,16 @@ public class VODMLValidationTest {
 
             VOModelReader wf = new VOModelReader(true, true, true);
             Document doc = wf.read(new FileInputStream(testVODML));
-            Assert.assertNotNull(doc);
+           assertNotNull(doc);
             log.info("testSchematronValid VO-DML/XML doc: OK");
         } catch (SchematronValidationException ex) {
             for (String msg : ex.getFailures()) {
                 log.error(msg);
             }
-            Assert.fail("schematron validation failed: " + ex);
+           fail("schematron validation failed: " + ex);
         } catch (Exception unexpected) {
             log.error("unexpected exception", unexpected);
-            Assert.fail("unexpected exception: " + unexpected);
+           fail("unexpected exception: " + unexpected);
         }
     }
 }

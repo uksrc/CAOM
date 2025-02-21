@@ -22,3 +22,7 @@ role_diagram.svg
 
 # OS-specific
 .DS_Store
+/tmp/
+/bin/
+/src-gen/CAOM-2.5.vo-dml.xml
+/src-gen/IVOA-v1.0.vo-dml.xml
