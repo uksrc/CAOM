@@ -52,4 +52,9 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
    public void testModel(Caom2Model caom2Model) {
       //should do a test!
    }
+
+   @Override
+   protected String setDbDumpFile() {
+      return "CAOM_dump.sql";
+   }
 }
