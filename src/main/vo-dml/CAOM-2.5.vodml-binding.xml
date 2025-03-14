@@ -7,6 +7,11 @@
         <name>caom2</name>
         <file>CAOM-2.5.vo-dml.xml</file>
         <java-package>org.ivoa.dm.caom2</java-package>
-        <xml-targetnamespace prefix="caom2" >http://ivoa.net/dm/models/vo-dml/experiment/caom2</xml-targetnamespace>
+        <xml-targetnamespace prefix="caom2" >http://www.opencadc.org/caom2/xml/v2.5</xml-targetnamespace>
+        <xml elementFormDefault="qualified" attributeFormDefault="qualified"/>
+        <type-detail vodml-id="Entity.id">
+            <isAttribute/>
+        </type-detail>
+
     </model>
 </m:mappedModels>
