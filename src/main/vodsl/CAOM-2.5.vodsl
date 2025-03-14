@@ -168,10 +168,31 @@ abstract otype CaomEntity  "base CAOM entity class to support accumulated metada
                 ";
   }
 
+otype DeletedArtifactDescriptionEvent  -> Entity "an event signifiying that a previously persisted ArtifactDescription was deleted;
+            this event can be synchronized to propagate deletions; the Entity.id of the event
+            is equal to the Entity.id of the deleted observation and this identifier is used
+            when performing deletions"
+  {
+        uri: ivoa:anyURI   "The logical identifier of the ArtifactDescription: the ArtifactDescription.uri
+                value; this is for informational purposes only";
+  }
+
+otype DeletedObservationEvent  -> Entity "an event signifiying that a previously persisted Observation was deleted;
+            this event can be synchronized to propagate deletions; the Entity.id of the event
+            is equal to the Entity.id of the deleted observation and this identifier is used
+            when performing deletions"
+  {
+        uri: ivoa:anyURI   "The logical identifier of the Observation: the Observation.uri value; this
+                is for informational purposes only";
+  }
+
 abstract otype Observation  -> CaomEntity "an observation is a single top-level entry in an astronomy data centre"
   {   
         collection: ivoa:string   "the name of the data collection this observation belongs to";
         uri: ivoa:anyURI   "unique logical identifier for this observation (NEW in CAOM-2.5)";
+        uriBucket: ivoa:string   "short string of hexadecimal digits generated from the uri; the value is
+            the first three characters of the hexadecimal representation of SHA-1 of the UTF-8 encoded
+            URI value";
         metaRelease: ivoa:datetime  @?   "timestamp after which metadata for the observation instance is public";
         sequenceNumber: ivoa:integer  @?   "a collection-specific sequence number for observations; re-use or reset is collection specific";
         type: ivoa:string  @?   "the type of observation (FITS OBSTYPE keyword); usually OBJECT for intent = science";
@@ -238,6 +259,9 @@ otype Plane  -> CaomEntity "a component of an observation that describes one pro
 otype Artifact  -> CaomEntity "a physical product (typically a file)"
   {   
         uri: ivoa:anyURI   "an identifier that resolves to the storage location of the artifact";
+        uriBucket: ivoa:string   "short string of hexadecimal digits generated from the uri; the value is
+            the first three characters of the hexadecimal representation of SHA-1 of the UTF-8 encoded
+            URI value";
         productType: DataLinkSemantics   "the relationship of this Artifact to the parent Plane (DataLink semantics)";
         releaseType: ReleaseType   "field indicating how access permissions for this artifact are determined";
         contentType: ivoa:string  @?   "label specifying the format of the resolved artifact; typically a MIME-type";

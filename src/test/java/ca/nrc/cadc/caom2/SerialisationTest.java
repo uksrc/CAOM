@@ -47,6 +47,7 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
       simpleObs = (SimpleObservation) new SimpleObservation().withCollection("collection").withIntent(ObservationIntentType.CALIBRATION)
             .withUri("http://www.test/")
             .withAlgorithm(new Algorithm("algorithm"))
+            .withUriBucket("http://www.test.uribucket/")
 
 
       ;
