@@ -117,7 +117,7 @@ dtype UCDTerm  -> VocabularyTerm "term from the UCD1+ vocabulary (NEW from enume
 abstract otype Entity  "base entity class to support persistence;
             entity attributes are generally set or updated by persistence implementations"
   {   
-        id: ivoa:string iskey  "globally unique identifier (primary key)"; //IMPL changed from id as that is used for surrogate key - is the id meant to be a "natural key"
+        id:uuid iskey  "globally unique identifier (primary key)"; 
         lastModified: ivoa:datetime  @?   "timestamp of last modification of this entity; the timestamp is intended to be applied
                 or updated when the entity is stored 
                 (e.g. in a database)";
@@ -151,7 +151,7 @@ abstract otype Entity  "base entity class to support persistence;
             ";
   }
 
-abstract otype CaomEntity  "base CAOM entity class to support accumulated metadata checkcums and lastModified
+abstract otype CaomEntity -> Entity  "base CAOM entity class to support accumulated metadata checkcums and lastModified
             timestamps to support synchronisation"
   {   
         maxLastModified: ivoa:datetime  @?   "maximum timestamp of last modification of this entity and all child entities;

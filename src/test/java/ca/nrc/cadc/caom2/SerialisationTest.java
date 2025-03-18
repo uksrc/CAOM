@@ -24,10 +24,11 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 //IMP - this test is very minimal - not really testing the model much - just to make sure that the JPA mapping will work.
-public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, SimpleObservation > {
+public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, SimpleObservation > {
    private SimpleObservation simpleObs;
 
 
@@ -44,18 +45,51 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
    @Override
    public Caom2Model createModel() {
 
-      simpleObs = (SimpleObservation) new SimpleObservation().withCollection("collection").withIntent(ObservationIntentType.CALIBRATION)
-            .withUri("http://www.test/")
-            .withAlgorithm(new Algorithm("algorithm"))
-            .withUriBucket("http://www.test.uribucket/")
-
-
-      ;
+      createSimpleObs();
 
       Caom2Model caom2Model = new Caom2Model();
       caom2Model.addContent(simpleObs);
 
       return caom2Model;
+   }
+
+   private void createSimpleObs() {
+      simpleObs = SimpleObservation.createSimpleObservation(s-> {
+                  s.id = UUID.randomUUID().toString();
+                  s.collection = "collection";
+                  s.intent = ObservationIntentType.CALIBRATION;
+                  s.uri = "http://www.test/";
+                  s.algorithm = new Algorithm("algorithm");
+                  s.uriBucket = "uriBucket";
+                  }
+            );
+
+
+
+      Plane plane = Plane.createPlane(p -> {
+         p.id = UUID.randomUUID().toString();
+         p.uri = "http://www.test/plane";
+      });
+      Artifact artifact = Artifact.createArtifact(a -> {
+         a.id = UUID.randomUUID().toString();
+         a.uri = "http://www.test/artifact";
+         a.uriBucket = "uriBucket";
+         a.productType = new DataLinkSemantics("http://datalink.com/", "product", true);
+         a.releaseType = ReleaseType.DATA;
+      });
+      Part part = Part.createPart(pp -> {
+         pp.id = UUID.randomUUID().toString();
+         pp.name = "name";
+         pp.productType = new DataLinkSemantics("http://datalink.com/", "product", true);
+         Chunk e1 = Chunk.createChunk(chunk -> {
+            chunk.id = UUID.randomUUID().toString();
+         });
+         pp.chunks = List.of(e1);
+      });
+      artifact.addToParts(part);
+      plane.addToArtifacts(artifact
+      );
+      simpleObs.addToPlanes(plane);
    }
 
    @Override
@@ -70,16 +104,13 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
 
    @Test
    public void testSerialiseObservationOnly() throws JAXBException {
-      Observation dro = new DerivedObservation().withCollection("collection").withIntent(ObservationIntentType.CALIBRATION)
-            .withUri("http://www.test/")
-            .withAlgorithm(new Algorithm("algorithm"));
-
+      createSimpleObs();
       JAXBContext jc = Caom2Model.contextFactory();
       StringWriter sw = new StringWriter();
       Marshaller m = jc.createMarshaller();
 
       m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-      JAXBElement<Observation> el = new JAXBElement<Observation>(new QName("http://www.opencadc.org/caom2/xml/v2.5","Observation"), Observation.class, dro);
+      JAXBElement<Observation> el = new JAXBElement<Observation>(new QName("http://www.opencadc.org/caom2/xml/v2.5","Observation"), Observation.class, simpleObs);
       m.marshal(el, sw);
       System.out.println(sw.toString());
    }
@@ -93,7 +124,8 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
                + "    <caom2:algorithm>\n"
                + "        <caom2:name>algorithm</caom2:name>\n"
                + "    </caom2:algorithm>\n"
-               + "    <caom2:planes/>\n"
+               + "    <caom2:planes>\n"
+               + "     </caom2:planes>\n"
                + "</caom2:Observation>\n";
        JAXBContext jc = Caom2Model.contextFactory();
        Unmarshaller um = jc.createUnmarshaller();
@@ -101,6 +133,7 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, Long, Sim
        assertNotNull(o);
        DerivedObservation dobs = (DerivedObservation) o;
        assertNotNull(dobs);
+       assertNotNull(dobs.getId());
        
                
    }

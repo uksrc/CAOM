@@ -9,8 +9,18 @@
         <java-package>org.ivoa.dm.caom2</java-package>
         <xml-targetnamespace prefix="caom2" >http://www.opencadc.org/caom2/xml/v2.5</xml-targetnamespace>
         <xml elementFormDefault="qualified" attributeFormDefault="qualified"/>
+        <rdb inheritance-strategy="inheritance"
+             discriminatorColumnLength="64"/>
+        <type-mapping>
+            <vodml-id>uuid</vodml-id> <!--FIXME - have made this string for now to make it work - however really needs to be specialist UUID - especially in DB -->
+            <java-type jpa-atomic="true">String</java-type>
+            <python-type built-in="true">str</python-type>
+            <xsd-type>xsd:string</xsd-type>
+            <json-type built-in="true">string</json-type>
+        </type-mapping>
         <type-detail vodml-id="Entity.id">
             <isAttribute/>
+            <length>36</length>
         </type-detail>
 
     </model>

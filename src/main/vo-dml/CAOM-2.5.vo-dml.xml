@@ -9,7 +9,7 @@
       <title>Common Archive Observation Model</title>
       <author>Patrick Dowler, Canadian Astronomy Data Centre</author>
       <version>2.5</version>
-      <lastModified>2025-03-14T16:46:13Z</lastModified>
+      <lastModified>2025-03-17T17:39:48Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -357,7 +357,7 @@
                  <name>id</name>
                  <description>globally unique identifier (primary key)</description>	    
                  <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
+                    <vodml-ref>caom2:uuid</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
@@ -437,6 +437,9 @@
                <name>CaomEntity</name>
                <description>base CAOM entity class to support accumulated metadata checkcums and lastModified
                            timestamps to support synchronisation</description>	    
+               <extends>
+                  <vodml-ref>caom2:Entity</vodml-ref>
+               </extends>
                <attribute>
                  <vodml-id>CaomEntity.maxLastModified</vodml-id>
                  <name>maxLastModified</name>
