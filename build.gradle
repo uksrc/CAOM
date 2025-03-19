@@ -51,7 +51,7 @@ task initHTML(type: Copy) {
 }
 
 tasks.withType(Copy).configureEach {//not sure where the duplicate is coming from
-    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    duplicatesStrategy = DuplicatesStrategy.WARN
 }
 
 xslt {
@@ -101,8 +101,8 @@ publishing {
             name = "uksrcrepo"
             url = uri("https://repo.dev.uksrc.org/repository/maven-snapshots/")
             credentials {
-                username = findProperty("nexusUsername") ?: System.getenv("UKSRC_REPO_USERNAME")
-                password = findProperty("nexusPassword") ?: System.getenv("UKSRC_REPO_PASSWORD")
+                username = findProperty("uksrcNexusUsername") ?: System.getenv("UKSRC_REPO_USERNAME")
+                password = findProperty("uksrcNexusPassword") ?: System.getenv("UKSRC_REPO_PASSWORD")
             }
         }
     }
