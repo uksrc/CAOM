@@ -22,39 +22,38 @@ import javax.xml.namespace.QName;
 
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 
 //IMP - this test is very minimal - not really testing the model much - just to make sure that the JPA mapping will work.
-public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, SimpleObservation > {
-   private SimpleObservation simpleObs;
+public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, DerivedObservation > {
+   private DerivedObservation derivedObservation;
 
 
    @Override
-   public SimpleObservation entityForDb() {
-      return simpleObs;
+   public DerivedObservation entityForDb() {
+      return derivedObservation;
    }
 
    @Override
-   public void testEntity(SimpleObservation simpleObservation) {
+   public void testEntity(DerivedObservation derivedObservation) {
       //should do a test!
    }
 
    @Override
    public Caom2Model createModel() {
 
-      createSimpleObs();
+      createObs();
 
       Caom2Model caom2Model = new Caom2Model();
-      caom2Model.addContent(simpleObs);
+      caom2Model.addContent(derivedObservation);
 
       return caom2Model;
    }
 
-   private void createSimpleObs() {
-      simpleObs = SimpleObservation.createSimpleObservation(s-> {
+   private void createObs() {
+      derivedObservation = DerivedObservation.createDerivedObservation(s-> {
                   s.id = UUID.randomUUID().toString();
                   s.collection = "collection";
                   s.intent = ObservationIntentType.CALIBRATION;
@@ -89,7 +88,8 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, S
       artifact.addToParts(part);
       plane.addToArtifacts(artifact
       );
-      simpleObs.addToPlanes(plane);
+      derivedObservation.addToPlanes(plane);
+      derivedObservation.setMembers(List.of("member1", "member2"));
    }
 
    @Override
@@ -104,13 +104,13 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, S
 
    @Test
    public void testSerialiseObservationOnly() throws JAXBException {
-      createSimpleObs();
+      createObs();
       JAXBContext jc = Caom2Model.contextFactory();
       StringWriter sw = new StringWriter();
       Marshaller m = jc.createMarshaller();
 
       m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-      JAXBElement<Observation> el = new JAXBElement<Observation>(new QName("http://www.opencadc.org/caom2/xml/v2.5","Observation"), Observation.class, simpleObs);
+      JAXBElement<Observation> el = new JAXBElement<Observation>(new QName("http://www.opencadc.org/caom2/xml/v2.5","Observation"), Observation.class, derivedObservation);
       m.marshal(el, sw);
       System.out.println(sw.toString());
    }
