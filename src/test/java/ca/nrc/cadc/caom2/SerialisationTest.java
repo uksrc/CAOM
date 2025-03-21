@@ -89,7 +89,7 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
       plane.addToArtifacts(artifact
       );
       derivedObservation.addToPlanes(plane);
-      derivedObservation.setMembers(List.of("member1", "member2"));
+      derivedObservation.setMembers(List.of("http://member1", "http://member2"));
    }
 
    @Override
