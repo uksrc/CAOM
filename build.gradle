@@ -1,5 +1,5 @@
 plugins {
-    id 'net.ivoa.vo-dml.vodmltools' version '0.5.18'
+    id 'net.ivoa.vo-dml.vodmltools' version '0.5.19'
     id 'java-library'
     id 'checkstyle'
     id "com.github.eerohele.saxon-gradle" version "0.2.1"
@@ -15,7 +15,7 @@ vodml {
 }
 group = 'org.opencadc'
 
-version = '2.5.3-SNAPSHOT'
+version = '2.5.4-SNAPSHOT'
 
 jar {
     enabled = true
