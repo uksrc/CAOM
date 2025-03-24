@@ -9,7 +9,7 @@
       <title>Common Archive Observation Model</title>
       <author>Patrick Dowler, Canadian Astronomy Data Centre</author>
       <version>2.5</version>
-      <lastModified>2025-03-17T17:39:48Z</lastModified>
+      <lastModified>2025-03-24T13:56:00Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -288,15 +288,6 @@
                </extends>
             </dataType>
             <dataType>
-              <vodml-id>DataProductType</vodml-id>
-              <name>DataProductType</name>
-              <description>term from the IVOA product-type vocabulary (CHANGED from CAOM DataProductType
-                          vocabulary based on ObsCore in CAOM-2.5)</description>	    
-               <extends>
-                  <vodml-ref>caom2:VocabularyTerm</vodml-ref>
-               </extends>
-            </dataType>
-            <dataType>
               <vodml-id>Quality</vodml-id>
               <name>Quality</name>
               <description>vocabulary term used in CAOM; this class defines constants for the CAOM
@@ -319,14 +310,6 @@
               <name>TargetType</name>
               <description>vocabulary term used in CAOM; this class defines constants for the CAOM
                           TargetType vocabulary (CHANGED from enumeration in CAOM-2.4)</description>	    
-               <extends>
-                  <vodml-ref>caom2:VocabularyTerm</vodml-ref>
-               </extends>
-            </dataType>
-            <dataType>
-              <vodml-id>DataLinkSemantics</vodml-id>
-              <name>DataLinkSemantics</name>
-              <description>term from the DataLink Core vocabulary (CHANGED from ProductType enumeration in CAOM-2.5)</description>	    
                <extends>
                   <vodml-ref>caom2:VocabularyTerm</vodml-ref>
                </extends>
@@ -858,15 +841,18 @@
                <attribute>
                  <vodml-id>Plane.dataProductType</vodml-id>
                  <name>dataProductType</name>
-                 <description>standard classification of the type of data product; describes the logical data type
+                 <description>standard classification of the type of data product; describes the logical data type 
                                  for the main artifacts</description>	    
                  <datatype>
-                    <vodml-ref>caom2:DataProductType</vodml-ref>
+                    <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+               <semanticconcept>
+                 <vocabularyURI>http://www.ivoa.net/rdf/product-type</vocabularyURI>
+               </semanticconcept>
                </attribute>
                <composition>
                  <vodml-id>Plane.observable</vodml-id>
@@ -1043,12 +1029,15 @@
                  <name>productType</name>
                  <description>the relationship of this Artifact to the parent Plane (DataLink semantics)</description>	    
                  <datatype>
-                    <vodml-ref>caom2:DataLinkSemantics</vodml-ref>
+                    <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+               <semanticconcept>
+                 <vocabularyURI>http://www.ivoa.net/rdf/datalink/core</vocabularyURI>
+               </semanticconcept>
                </attribute>
                <attribute>
                  <vodml-id>Artifact.releaseType</vodml-id>
@@ -1209,12 +1198,15 @@
                  <name>productType</name>
                  <description>the relationship of this Artifact to the parent Plane (DataLink semantics)</description>	    
                  <datatype>
-                    <vodml-ref>caom2:DataLinkSemantics</vodml-ref>
+                    <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+               <semanticconcept>
+                 <vocabularyURI>http://www.ivoa.net/rdf/datalink/core</vocabularyURI>
+               </semanticconcept>
                </attribute>
                <composition>
                  <vodml-id>Part.chunks</vodml-id>
@@ -1242,12 +1234,15 @@
                  <name>productType</name>
                  <description>the relationship of this Artifact to the parent Plane (DataLink semantics)</description>	    
                  <datatype>
-                    <vodml-ref>caom2:DataLinkSemantics</vodml-ref>
+                    <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+               <semanticconcept>
+                 <vocabularyURI>http://www.ivoa.net/rdf/datalink/core</vocabularyURI>
+               </semanticconcept>
                </attribute>
                <attribute>
                  <vodml-id>Chunk.naxis</vodml-id>

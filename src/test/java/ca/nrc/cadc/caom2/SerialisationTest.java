@@ -68,18 +68,19 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
       Plane plane = Plane.createPlane(p -> {
          p.id = UUID.randomUUID().toString();
          p.uri = "http://www.test/plane";
+
       });
       Artifact artifact = Artifact.createArtifact(a -> {
          a.id = UUID.randomUUID().toString();
          a.uri = "http://www.test/artifact";
          a.uriBucket = "uriBucket";
-         a.productType = new DataLinkSemantics("http://datalink.com/", "product", true);
+         a.productType = "calibration";
          a.releaseType = ReleaseType.DATA;
       });
       Part part = Part.createPart(pp -> {
          pp.id = UUID.randomUUID().toString();
          pp.name = "name";
-         pp.productType = new DataLinkSemantics("http://datalink.com/", "product", true);
+         pp.productType = "flat";
          Chunk e1 = Chunk.createChunk(chunk -> {
             chunk.id = UUID.randomUUID().toString();
          });

@@ -58,10 +58,6 @@ dtype CalibrationStatus  -> VocabularyTerm "term from the IVOA calibration-statu
   {   
   }
 
-dtype DataProductType  -> VocabularyTerm "term from the IVOA product-type vocabulary (CHANGED from CAOM DataProductType
-            vocabulary based on ObsCore in CAOM-2.5)"
-  {   
-  }
 
 dtype Quality  -> VocabularyTerm "vocabulary term used in CAOM; this class defines constants for the CAOM
             Quality vocabulary (CHANGED from enumeration in CAOM-2.4)"
@@ -78,9 +74,6 @@ dtype TargetType  -> VocabularyTerm "vocabulary term used in CAOM; this class de
   {   
   }
 
-dtype DataLinkSemantics  -> VocabularyTerm "term from the DataLink Core vocabulary (CHANGED from ProductType enumeration in CAOM-2.5)"
-  {   
-  }
 
 enum PolarizationState  "a classification of polarization (Stokes states plus other related quantities);
                 work-around: using the name of the literal to convey the serialised value"
@@ -237,8 +230,8 @@ otype Plane  -> CaomEntity "a component of an observation that describes one pro
         dataReadGroups: ivoa:anyURI  @*   "list of groups (of users) that are allowed to access the data of the plane; this is 
                 applicable when dataRelease is null or in the future (new in CAOM-2.4)";
         calibrationLevel: CalibrationLevel  @?   "standard classification of the degree to which the data is calibrated";
-        dataProductType: DataProductType  @?   "standard classification of the type of data product; describes the logical data type
-                for the main artifacts";
+        dataProductType: ivoa:string  @?   "standard classification of the type of data product; describes the logical data type 
+                for the main artifacts" semantic in "http://www.ivoa.net/rdf/product-type";
         observable : Observable @?  as composition "description of the sample (pixel) values; (new in CAOM-2.4)
             In previous versions the observable was assumed to be flux or intensity of EM radiation.
             ";
@@ -262,7 +255,7 @@ otype Artifact  -> CaomEntity "a physical product (typically a file)"
         uriBucket: ivoa:string   "short string of hexadecimal digits generated from the uri; the value is
             the first three characters of the hexadecimal representation of SHA-1 of the UTF-8 encoded
             URI value";
-        productType: DataLinkSemantics   "the relationship of this Artifact to the parent Plane (DataLink semantics)";
+        productType: ivoa:string   "the relationship of this Artifact to the parent Plane (DataLink semantics)" semantic in "http://www.ivoa.net/rdf/datalink/core";
         releaseType: ReleaseType   "field indicating how access permissions for this artifact are determined";
         contentType: ivoa:string  @?   "label specifying the format of the resolved artifact; typically a MIME-type";
         contentLength: ivoa:integer  @?   "the size of the resolved artifact; typically file size in bytes";
@@ -288,14 +281,14 @@ otype Part  -> CaomEntity "format-specific name of this part;
   {   
         name: ivoa:string   "the name of this part of the artifact;
                 this is typically something like a FITS extension name or number or a filename";
-        productType: DataLinkSemantics  @?   "the relationship of this Artifact to the parent Plane (DataLink semantics)";
+        productType: ivoa:string  @?   "the relationship of this Artifact to the parent Plane (DataLink semantics)" semantic in "http://www.ivoa.net/rdf/datalink/core";
         chunks : Chunk @*  as composition "component chunks that belong to this part";
   }
 
 otype Chunk  -> CaomEntity "a quantitatively defined subsection of a data array;
             the part contains the whole array"
   {   
-        productType: DataLinkSemantics  @?   "the relationship of this Artifact to the parent Plane (DataLink semantics)";
+        productType: ivoa:string  @?   "the relationship of this Artifact to the parent Plane (DataLink semantics)" semantic in "http://www.ivoa.net/rdf/datalink/core";
         naxis: ivoa:integer  @?   "number of axes in the data array; value must be in [1,7] since CAOM supports a maximum
                 of seven axes; furthermore, if naxis has a value, the axis index values 1 to {naxis} must be assigned
                 (to positionAxis1, positionAxis2, energyAxis, timeAxis, polarizationAxis, customAxis, and/or observableAxis) 
