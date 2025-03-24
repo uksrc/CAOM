@@ -22,6 +22,9 @@
             <isAttribute/>
             <length>36</length>
         </type-detail>
+        <type-detail vodml-id="DerivedObservation.members">
+            <length>8192</length> <!-- making length big because members modelled incorrectly -->
+        </type-detail>
 
     </model>
 </m:mappedModels>
