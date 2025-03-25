@@ -1,0 +1,30 @@
+{
+  "uri": "urn:vo-dml:caom2!vocab:tracking",
+  "flavour": "RDF Class",
+  "terms": {
+    "sidereal": {
+      "label": "Sidereal",
+      "description": "Sidereal Tracking",
+      "preliminary": "",
+      "wider": [],
+      "narrower": [
+      ]
+    },
+    "solar": {
+      "label": "solar",
+      "description": "Solar Tracking",
+      "preliminary": "",
+      "wider": [
+      ],
+      "narrower": []
+    },
+    "planetary": {
+      "label": "planetary",
+      "description": "Planetary Tracking",
+      "preliminary": "",
+      "wider": [
+      ],
+      "narrower": []
+    }
+  }
+}

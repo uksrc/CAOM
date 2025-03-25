@@ -9,7 +9,7 @@
       <title>Common Archive Observation Model</title>
       <author>Patrick Dowler, Canadian Astronomy Data Centre</author>
       <version>2.5</version>
-      <lastModified>2025-03-24T13:56:00Z</lastModified>
+      <lastModified>2025-03-25T11:31:45Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
@@ -310,14 +310,6 @@
               <name>TargetType</name>
               <description>vocabulary term used in CAOM; this class defines constants for the CAOM
                           TargetType vocabulary (CHANGED from enumeration in CAOM-2.4)</description>	    
-               <extends>
-                  <vodml-ref>caom2:VocabularyTerm</vodml-ref>
-               </extends>
-            </dataType>
-            <dataType>
-              <vodml-id>Tracking</vodml-id>
-              <name>Tracking</name>
-              <description>term from the Tracking vocabulary NEW from enumeration in CAOM-2.5)</description>	    
                <extends>
                   <vodml-ref>caom2:VocabularyTerm</vodml-ref>
                </extends>
@@ -1523,12 +1515,15 @@
                  <description>term from the (currently non-existent) IVOA Tracking vocabulary used to
                                  indicate how the telescope moves during data acquisition</description>	    
                  <datatype>
-                    <vodml-ref>caom2:VocabularyTerm</vodml-ref>
+                    <vodml-ref>ivoa:string</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+               <semanticconcept>
+                 <vocabularyURI>urn:vo-dml:caom2!vocab:tracking</vocabularyURI>
+               </semanticconcept>
                </attribute>
             </objectType>
             <objectType>

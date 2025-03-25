@@ -60,6 +60,8 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
                   s.uri = "http://www.test/";
                   s.algorithm = new Algorithm("algorithm");
                   s.uriBucket = "uriBucket";
+                  s.telescope = new Telescope("Lovell",3822626.04000, -154105.65000, 5086486.04000,List.of("emerlin","vlbi"),
+                        "sidereal");
                   }
             );
 

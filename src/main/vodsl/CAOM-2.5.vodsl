@@ -98,9 +98,6 @@ CPOLI  "circular polarization intensity: |V|",
 NPOLI  "unpolarized intensity: I - EPOLI"
 }
 
-dtype Tracking  -> VocabularyTerm "term from the Tracking vocabulary NEW from enumeration in CAOM-2.5)"
-  {   
-  }
 
 //IMPL was just called UCD - this is reserved term in VODSL....
 dtype UCDTerm  -> VocabularyTerm "term from the UCD1+ vocabulary (NEW from enumeration in CAOM-2.5)"
@@ -340,8 +337,8 @@ otype Telescope  "the telescope used to acquire the data for an observation"
                 keywords cannot contain the pipe (|) character - it is reserved for use in persistence
                 systems (e.g. to store all keywords in a single column in a table)
             ";
-        trackingMode: VocabularyTerm  @?   "term from the (currently non-existent) IVOA Tracking vocabulary used to
-                indicate how the telescope moves during data acquisition";
+        trackingMode: ivoa:string  @?   "term from the (currently non-existent) IVOA Tracking vocabulary used to
+                indicate how the telescope moves during data acquisition" semantic in "urn:vo-dml:caom2!vocab:tracking"; //FIXME this vocab is very preliminary...
   }
 
 otype Instrument  "the instrument used to acquire or create the observation; this could be used for both physical
