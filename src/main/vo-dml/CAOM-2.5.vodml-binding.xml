@@ -8,7 +8,7 @@
         <file>CAOM-2.5.vo-dml.xml</file>
         <java-package>org.ivoa.dm.caom2</java-package>
         <xml-targetnamespace prefix="caom2" >http://www.opencadc.org/caom2/xml/v2.5</xml-targetnamespace>
-        <xml elementFormDefault="qualified" attributeFormDefault="qualified"/>
+        <xml elementFormDefault="qualified" attributeFormDefault="qualified" packageHandling="ignore"/>
         <rdb inheritance-strategy="inheritance"
              discriminatorColumnLength="64"/>
         <type-mapping>
