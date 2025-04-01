@@ -137,7 +137,16 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
        DerivedObservation dobs = (DerivedObservation) o;
        assertNotNull(dobs);
        assertNotNull(dobs.getId());
-       
-               
+   }
+
+   @Test
+   public void testBigUnmarshal() throws JAXBException {
+      JAXBContext jc = Caom2Model.contextFactory();
+      Unmarshaller um = jc.createUnmarshaller();
+      Observation o = um.unmarshal(new javax.xml.transform.stream.StreamSource(this.getClass().getResourceAsStream("/SampleDerived-CAOM-2.5.xml")),Observation.class).getValue();
+      assertNotNull(o);
+      DerivedObservation dobs = (DerivedObservation) o;
+      assertNotNull(dobs);
+      assertNotNull(dobs.getId());
    }
 }
