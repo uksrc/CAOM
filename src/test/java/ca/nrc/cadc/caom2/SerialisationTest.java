@@ -100,11 +100,6 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
       //should do a test!
    }
 
-   @Override
-   protected String setDbDumpFile() {
-      return "CAOM_dump.sql";
-   }
-
    @Test
    public void testSerialiseObservationOnly() throws JAXBException {
       createObs();
