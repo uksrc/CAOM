@@ -79,16 +79,7 @@ public class SerialisationTest extends AutoDBRoundTripTest<Caom2Model, String, D
          a.productType = "calibration";
          a.releaseType = ReleaseType.DATA;
       });
-      Part part = Part.createPart(pp -> {
-         pp.id = UUID.randomUUID().toString();
-         pp.name = "name";
-         pp.productType = "flat";
-         Chunk e1 = Chunk.createChunk(chunk -> {
-            chunk.id = UUID.randomUUID().toString();
-         });
-         pp.chunks = List.of(e1);
-      });
-      artifact.addToParts(part);
+
       plane.addToArtifacts(artifact
       );
       derivedObservation.addToPlanes(plane);
