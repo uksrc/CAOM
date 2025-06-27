@@ -10,7 +10,8 @@
         <xml-targetnamespace prefix="caom2" >http://www.opencadc.org/caom2/xml/v2.5</xml-targetnamespace>
         <xml elementFormDefault="qualified" attributeFormDefault="qualified" packageHandling="ignore"/>
         <rdb inheritance-strategy="inheritance"
-             discriminatorColumnLength="64"/>
+             discriminatorColumnLength="64"
+             listConcatenationDelimiter="#"/>
         <type-mapping>
             <vodml-id>uuid</vodml-id> <!--FIXME - have made this string for now to make it work - however really needs to be specialist UUID - especially in DB -->
             <java-type jpa-atomic="true">String</java-type>
