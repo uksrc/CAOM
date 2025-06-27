@@ -26,3 +26,6 @@ role_diagram.svg
 /bin/
 /src-gen/CAOM-2.5.vo-dml.xml
 /src-gen/IVOA-v1.0.vo-dml.xml
+/CAOM_dump_tapschema.sql
+/CAOM_dump.sql
+/caom.vodsl
