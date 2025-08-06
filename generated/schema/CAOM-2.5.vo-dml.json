@@ -1,0 +1,1469 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json",
+  "title" : "Common Archive Observation Model",
+  "description" : "",
+  "type" : "object",
+  "properties" : {
+    "Caom2Model" : {
+      "type" : "object",
+      "properties" : {
+        "refs" : {
+          "type" : "object",
+          "properties" : {
+            "$comment" : "placeholder to make commas easier!"
+          },
+          "additionalProperties" : false
+        },
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/DeletedArtifactDescriptionEvent"
+            }, {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/DeletedObservationEvent"
+            }, {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/SimpleObservation"
+            }, {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/DerivedObservation"
+            }, {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/ArtifactDescription"
+            } ]
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "$defs" : {
+    "$comment" : "placeholder to make commas easier!",
+    "Entity" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "lastModified" : {
+          "format" : "date-time",
+          "description" : ""
+        },
+        "metaChecksum" : {
+          "format" : "uri",
+          "description" : ""
+        },
+        "metaProducer" : {
+          "format" : "uri",
+          "description" : ""
+        }
+      },
+      "required" : [ "id" ]
+    },
+    "CaomEntity" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Entity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "maxLastModified" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "accMetaChecksum" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ]
+    },
+    "DeletedArtifactDescriptionEvent" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Entity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "uri" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "DeletedObservationEvent" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Entity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "uri" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Observation" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CaomEntity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "collection" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "uriBucket" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "metaRelease" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "sequenceNumber" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "type" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "intent" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/ObservationIntentType",
+            "description" : ""
+          },
+          "metaReadGroups" : {
+            "type" : "array",
+            "items" : {
+              "format" : "uri"
+            },
+            "description" : ""
+          },
+          "algorithm" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Algorithm"
+          },
+          "telescope" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Telescope"
+          },
+          "instrument" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Instrument"
+          },
+          "environment" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Environment"
+          },
+          "proposal" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Proposal"
+          },
+          "target" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Target"
+          },
+          "targetPosition" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/TargetPosition"
+          },
+          "requirements" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Requirements"
+          },
+          "planes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Plane"
+            }
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "collection", "uri", "uriBucket", "intent", "algorithm" ]
+      } ]
+    },
+    "SimpleObservation" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Observation"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "DerivedObservation" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Observation"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "members" : {
+            "type" : "array",
+            "items" : {
+              "format" : "uri"
+            },
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Plane" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CaomEntity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "metaRelease" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "metaReadGroups" : {
+            "type" : "array",
+            "items" : {
+              "format" : "uri"
+            },
+            "description" : ""
+          },
+          "dataRelease" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "dataReadGroups" : {
+            "type" : "array",
+            "items" : {
+              "format" : "uri"
+            },
+            "description" : ""
+          },
+          "calibrationLevel" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CalibrationLevel",
+            "description" : ""
+          },
+          "dataProductType" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "observable" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Observable"
+          },
+          "quality" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/DataQuality"
+          },
+          "metrics" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Metrics"
+          },
+          "position" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Position"
+          },
+          "energy" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Energy"
+          },
+          "time" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Time"
+          },
+          "polarization" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Polarization"
+          },
+          "custom" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CustomAxis"
+          },
+          "uv" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Visibility"
+          },
+          "provenance" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Provenance"
+          },
+          "artifacts" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Artifact"
+            }
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Artifact" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CaomEntity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "uriBucket" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "productType" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "releaseType" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/ReleaseType",
+            "description" : ""
+          },
+          "contentType" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "contentLength" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "contentChecksum" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "contentRelease" : {
+            "format" : "date-time",
+            "description" : ""
+          },
+          "contentReadGroups" : {
+            "type" : "array",
+            "items" : {
+              "format" : "uri"
+            },
+            "description" : ""
+          },
+          "descriptionID" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "uri", "uriBucket", "productType", "releaseType" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "ArtifactDescription" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Entity"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "uri" : {
+            "format" : "uri",
+            "description" : ""
+          },
+          "description" : {
+            "type" : "string",
+            "description" : ""
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "uri", "description" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Algorithm" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "name" ],
+      "additionalProperties" : false
+    },
+    "Telescope" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "geoLocationX" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "geoLocationY" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "geoLocationZ" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "keywords" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "trackingMode" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "name" ],
+      "additionalProperties" : false
+    },
+    "Instrument" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "keywords" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "name" ],
+      "additionalProperties" : false
+    },
+    "Environment" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "humidity" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "elevation" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "tau" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "wavelengthTau" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "ambientTemp" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "photometric" : {
+          "type" : "boolean",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ],
+      "additionalProperties" : false
+    },
+    "Proposal" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "pi" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "project" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "title" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "keywords" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "reference" : {
+          "format" : "uri",
+          "description" : ""
+        }
+      },
+      "required" : [ "id" ],
+      "additionalProperties" : false
+    },
+    "Target" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "targetID" : {
+          "format" : "uri",
+          "description" : ""
+        },
+        "type" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/TargetType",
+          "description" : ""
+        },
+        "redshift" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "standard" : {
+          "type" : "boolean",
+          "description" : ""
+        },
+        "moving" : {
+          "type" : "boolean",
+          "description" : ""
+        },
+        "keywords" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "name" ],
+      "additionalProperties" : false
+    },
+    "TargetPosition" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "coordsys" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "equinox" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "coordinates" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Point"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "coordsys", "coordinates" ],
+      "additionalProperties" : false
+    },
+    "Requirements" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "flag" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Status",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "flag" ],
+      "additionalProperties" : false
+    },
+    "Provenance" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "reference" : {
+          "format" : "uri",
+          "description" : ""
+        },
+        "version" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "project" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "producer" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "runID" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "lastExecuted" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "keywords" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "inputs" : {
+          "type" : "array",
+          "items" : {
+            "format" : "uri"
+          },
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "name" ],
+      "additionalProperties" : false
+    },
+    "Observable" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "ucd" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/UCDTerm",
+          "description" : ""
+        },
+        "calibration" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CalibrationStatus",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "ucd" ],
+      "additionalProperties" : false
+    },
+    "DataQuality" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "flag" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/Quality",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "flag" ],
+      "additionalProperties" : false
+    },
+    "Metrics" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "sourceNumberDensity" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "background" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "backgroundStddev" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "fluxDensityLimit" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "magLimit" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "sampleSNR" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ],
+      "additionalProperties" : false
+    },
+    "Position" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "dimension" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Dimension2D",
+          "description" : ""
+        },
+        "maxRecoverableScale" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "resolution" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolutionBounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "sampleSize" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "calibration" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CalibrationStatus",
+          "description" : ""
+        },
+        "bounds" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Circle"
+          }, {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Polygon"
+          } ]
+        },
+        "samples" : {
+          "type" : "object",
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.MultiShape"
+        },
+        "minBounds" : {
+          "type" : "object",
+          "anyOf" : [ {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Circle"
+          }, {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Polygon"
+          } ]
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "bounds", "samples" ],
+      "additionalProperties" : false
+    },
+    "Energy" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "bounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "energyBands" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/EnergyBand"
+          },
+          "description" : ""
+        },
+        "dimension" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolvingPower" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolvingPowerBounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "resolution" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolutionBounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "sampleSize" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "bandpassName" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : ""
+        },
+        "restwav" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "calibration" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CalibrationStatus",
+          "description" : ""
+        },
+        "transition" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/EnergyTransition",
+          "description" : ""
+        },
+        "samples" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.IntervalM"
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "bounds", "samples" ],
+      "additionalProperties" : false
+    },
+    "Time" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "bounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "calibration" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/CalibrationStatus",
+          "description" : ""
+        },
+        "dimension" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolution" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "resolutionBounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "sampleSize" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "exposure" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "exposureBounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "samples" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.IntervalM"
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "bounds", "samples" ],
+      "additionalProperties" : false
+    },
+    "Polarization" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "states" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/PolarizationState"
+          },
+          "description" : ""
+        },
+        "dimension" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "states" ],
+      "additionalProperties" : false
+    },
+    "CustomAxis" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "ctype" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "bounds" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "dimension" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "samples" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.IntervalM"
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "ctype", "bounds", "samples" ],
+      "additionalProperties" : false
+    },
+    "Visibility" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "distance" : {
+          "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Interval",
+          "description" : ""
+        },
+        "distributionEccentricity" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "distributionFill" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "distance", "distributionEccentricity", "distributionFill" ],
+      "additionalProperties" : false
+    },
+    "VocabularyTerm" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "namespace" : {
+          "format" : "uri",
+          "description" : ""
+        },
+        "term" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "namespace", "term" ]
+    },
+    "CalibrationStatus" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Quality" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Status" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "TargetType" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Tracking" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "UCDTerm" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/VocabularyTerm"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "EnergyTransition" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "species" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "transition" : {
+          "type" : "string",
+          "description" : ""
+        }
+      },
+      "required" : [ "species", "transition" ],
+      "additionalProperties" : false
+    },
+    "ObservationIntentType" : {
+      "description" : "",
+      "enum" : [ "science", "calibration", "outreach" ]
+    },
+    "CalibrationLevel" : {
+      "description" : "",
+      "enum" : [ "PLANNED", "RAW_INSTRUMENTAL", "RAW_STANDARD", "CALIBRATED", "PRODUCT", "ANALYSIS_PRODUCT" ]
+    },
+    "EnergyBand" : {
+      "description" : "",
+      "enum" : [ "Radio", "Millimeter", "Infrared", "Optical", "UV", "EUV", "Xray", "Gammaray" ]
+    },
+    "ReleaseType" : {
+      "description" : "",
+      "enum" : [ "data", "meta" ]
+    },
+    "PolarizationState" : {
+      "description" : "",
+      "enum" : [ "I", "Q", "U", "V", "RR", "LL", "RL", "LR", "XX", "YY", "XY", "YX", "POLI", "FPOLI", "POLA", "EPOLI", "CPOLI", "NPOLI" ]
+    },
+    "types.Point" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "cval1" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "cval2" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "cval1", "cval2" ],
+      "additionalProperties" : false
+    },
+    "types.Shape" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ ]
+    },
+    "types.Circle" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Shape"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "radius" : {
+            "type" : "number",
+            "description" : ""
+          },
+          "center" : {
+            "type" : "object",
+            "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Point"
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "center", "radius" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "types.MultiShape" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "shapes" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Circle"
+            }, {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Polygon"
+            } ]
+          }
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "shapes" ],
+      "additionalProperties" : false
+    },
+    "types.Polygon" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Shape"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "points" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/CAOM-2.5.vo-dml.json#/$defs/types.Point"
+            }
+          },
+          "_id" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "points" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "types.IntervalM" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "lower" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "upper" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "_id" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "lower", "upper" ],
+      "additionalProperties" : false
+    },
+    "types.Dimension2D" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "naxis1" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "naxis2" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "naxis1", "naxis2" ],
+      "additionalProperties" : false
+    },
+    "types.Interval" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "lower" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "upper" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "lower", "upper" ],
+      "additionalProperties" : false
+    }
+  }
+}

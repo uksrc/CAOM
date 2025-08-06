@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+   <system systemId="CAOM-2.5.vo-dml.xsd"
+           uri="http://www.opencadc.org/caom2/xml/v2.5"/>
+</catalog>
