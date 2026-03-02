@@ -4,6 +4,7 @@ model caom2 (2.5) "a general purpose data model for use as the core data model o
  author "Patrick Dowler, Canadian Astronomy Data Centre"
 title "Common Archive Observation Model"
        include "../../../build/tmp/IVOA-v1.0.vodsl"
+       include "../../../build/tmp/ADQLGeomDM-v1.vodsl"
      
     primitive uuid  "represents a 128-bit binary ID in the canonical ascii UUID format"
 enum ObservationIntentType  "This enumeration describes the intent of the original creator (usually observer)
@@ -428,7 +429,7 @@ otype TargetPosition  "the intended position of the observation
   {   
         coordsys: ivoa:string   "the coordinate system of the coordinates";
         equinox: ivoa:real  @?   "the equinox of the coordinates";
-        coordinates: types.Point as composition  "the coordinates";
+        coordinates: adqlgeom:Point   "the coordinates";
   }
 
 otype Requirements  "the observational requirements specified by the proposal"
@@ -477,9 +478,9 @@ otype Metrics  "collection of measured quantities that describe the content of t
 
 otype Position  "description of the position coverage and sampling of the data"
   {   
-        bounds: types.Shape as composition  "spatial boundary that includes the data (CHANGED cardinality in CAOM-2.5)";
-        samples: types.MultiShape  as composition "detailed sub-samples of the bounds (CHANGED in CAOM-2.5)";
-        minBounds: types.Shape  @? as composition  "minimum spatial boundary that includes the data; this value is smaller than
+        bounds: adqlgeom:Shape   "spatial boundary that includes the data (CHANGED cardinality in CAOM-2.5)";
+        samples: types.MultiShape  "detailed sub-samples of the bounds (CHANGED in CAOM-2.5)";
+        minBounds: adqlgeom:Shape  @?   "minimum spatial boundary that includes the data; this value is smaller than
                 the bounds (maximum) when the field-of-view varies because it is dependent on another 
                 axis (usually energy) (new in CAOM-2.5)";
         dimension: types.Dimension2D  @?   "number of separate measurements (pixels) along each axis";
@@ -550,30 +551,22 @@ dtype Dimension2D  "dimension (number of pixels) for a two-dimensional axis"
         naxis2: ivoa:integer  "";
   }
 
-otype Point  "location on the sky"
-  {   
-        cval1: ivoa:real  "";
-        cval2: ivoa:real  "";
-  }
+  
 
-abstract otype Shape ""
+dtype Circle  -> adqlgeom:Shape "a circular region on the sky"
   {   
-  }
-
-otype Circle  -> Shape "a circular region on the sky"
-  {   
-        center: types.Point as composition "";
+        center: adqlgeom:Point  "";
         radius: ivoa:real  "";
   }
 
-otype MultiShape  "multiple simple shapess describing disconnected regions as a single value"
+dtype MultiShape  "multiple simple shapess describing disconnected regions as a single value"
   {   
-        shapes: types.Shape @+ as composition   "";
+        shapes: adqlgeom:Shape @+    "";
   }
 
-otype Polygon  -> Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
+dtype Polygon  -> adqlgeom:Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
   {   
-        points:Point @+ as composition ""; //IMPL vodsl does not like @[3..-1] which was in the original
+        points: adqlgeom:Point @+  ""; //IMPL vodsl does not like @[3..-1] which was in the original
   }
 
 dtype Interval  "a set of numeric values defined by a lower and upper bound (bounds included: [a,b])"

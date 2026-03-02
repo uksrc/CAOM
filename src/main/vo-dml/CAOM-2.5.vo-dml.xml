@@ -9,11 +9,17 @@
       <title>Common Archive Observation Model</title>
       <author>Patrick Dowler, Canadian Astronomy Data Centre</author>
       <version>2.5</version>
-      <lastModified>2025-06-02T16:04:50Z</lastModified>
+      <lastModified>2026-03-02T09:42:52Z</lastModified>
       <import>
         <name>ivoa</name>
         <version>1.0</version>
         <url>IVOA-v1.0.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+      <import>
+        <name>adqlgeom</name>
+        <version>1.0</version>
+        <url>ADQLGeomDM-v1.vo-dml.xml</url>
         <documentationURL>not known</documentationURL>
       </import>
       <primitiveType >
@@ -1680,18 +1686,18 @@
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
-               <composition>
+               <attribute>
                  <vodml-id>TargetPosition.coordinates</vodml-id>
                  <name>coordinates</name>
                  <description>the coordinates</description>	    
                  <datatype>
-                    <vodml-ref>caom2:types.Point</vodml-ref>
+                    <vodml-ref>adqlgeom:Point</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
-               </composition>
+               </attribute>
             </objectType>
             <objectType>
                <vodml-id>Requirements</vodml-id>
@@ -1955,19 +1961,19 @@
                <vodml-id>Position</vodml-id>
                <name>Position</name>
                <description>description of the position coverage and sampling of the data</description>	    
-               <composition>
+               <attribute>
                  <vodml-id>Position.bounds</vodml-id>
                  <name>bounds</name>
                  <description>spatial boundary that includes the data (CHANGED cardinality in CAOM-2.5)</description>	    
                  <datatype>
-                    <vodml-ref>caom2:types.Shape</vodml-ref>
+                    <vodml-ref>adqlgeom:Shape</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
-               </composition>
-               <composition>
+               </attribute>
+               <attribute>
                  <vodml-id>Position.samples</vodml-id>
                  <name>samples</name>
                  <description>detailed sub-samples of the bounds (CHANGED in CAOM-2.5)</description>	    
@@ -1978,21 +1984,21 @@
                    <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
-               </composition>
-               <composition>
+               </attribute>
+               <attribute>
                  <vodml-id>Position.minBounds</vodml-id>
                  <name>minBounds</name>
                  <description>minimum spatial boundary that includes the data; this value is smaller than
                                  the bounds (maximum) when the field-of-view varies because it is dependent on another 
                                  axis (usually energy) (new in CAOM-2.5)</description>	    
                  <datatype>
-                    <vodml-ref>caom2:types.Shape</vodml-ref>
+                    <vodml-ref>adqlgeom:Shape</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
-               </composition>
+               </attribute>
                <attribute>
                  <vodml-id>Position.dimension</vodml-id>
                  <name>dimension</name>
@@ -2498,6 +2504,75 @@
                          </attribute>
                          </dataType>
                          <dataType>
+                           <vodml-id>types.Circle</vodml-id>
+                           <name>Circle</name>
+                           <description>a circular region on the sky</description>	    
+                            <extends>
+                               <vodml-ref>adqlgeom:Shape</vodml-ref>
+                            </extends>
+                         <attribute>
+                           <vodml-id>types.Circle.center</vodml-id>
+                           <name>center</name>
+                           <description></description>	    
+                           <datatype>
+                              <vodml-ref>adqlgeom:Point</vodml-ref>
+                           </datatype>
+                           <multiplicity>
+                             <minOccurs>1</minOccurs>
+                             <maxOccurs>1</maxOccurs>
+                           </multiplicity>
+                         </attribute>
+                         <attribute>
+                           <vodml-id>types.Circle.radius</vodml-id>
+                           <name>radius</name>
+                           <description></description>	    
+                           <datatype>
+                              <vodml-ref>ivoa:real</vodml-ref>
+                           </datatype>
+                           <multiplicity>
+                             <minOccurs>1</minOccurs>
+                             <maxOccurs>1</maxOccurs>
+                           </multiplicity>
+                         </attribute>
+                         </dataType>
+                         <dataType>
+                           <vodml-id>types.MultiShape</vodml-id>
+                           <name>MultiShape</name>
+                           <description>multiple simple shapess describing disconnected regions as a single value</description>	    
+                         <attribute>
+                           <vodml-id>types.MultiShape.shapes</vodml-id>
+                           <name>shapes</name>
+                           <description></description>	    
+                           <datatype>
+                              <vodml-ref>adqlgeom:Shape</vodml-ref>
+                           </datatype>
+                           <multiplicity>
+                             <minOccurs>1</minOccurs>
+                             <maxOccurs>-1</maxOccurs>
+                           </multiplicity>
+                         </attribute>
+                         </dataType>
+                         <dataType>
+                           <vodml-id>types.Polygon</vodml-id>
+                           <name>Polygon</name>
+                           <description>a simple polygon region on the sky defined a sequence of points connected by great-circle segments</description>	    
+                            <extends>
+                               <vodml-ref>adqlgeom:Shape</vodml-ref>
+                            </extends>
+                         <attribute>
+                           <vodml-id>types.Polygon.points</vodml-id>
+                           <name>points</name>
+                           <description></description>	    
+                           <datatype>
+                              <vodml-ref>adqlgeom:Point</vodml-ref>
+                           </datatype>
+                           <multiplicity>
+                             <minOccurs>1</minOccurs>
+                             <maxOccurs>-1</maxOccurs>
+                           </multiplicity>
+                         </attribute>
+                         </dataType>
+                         <dataType>
                            <vodml-id>types.Interval</vodml-id>
                            <name>Interval</name>
                            <description>a set of numeric values defined by a lower and upper bound (bounds included: [a,b])</description>	    
@@ -2526,109 +2601,6 @@
                            </multiplicity>
                          </attribute>
                          </dataType>
-                         <objectType>
-                            <vodml-id>types.Point</vodml-id>
-                            <name>Point</name>
-                            <description>location on the sky</description>	    
-                            <attribute>
-                              <vodml-id>types.Point.cval1</vodml-id>
-                              <name>cval1</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>ivoa:real</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>1</maxOccurs>
-                              </multiplicity>
-                            </attribute>
-                            <attribute>
-                              <vodml-id>types.Point.cval2</vodml-id>
-                              <name>cval2</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>ivoa:real</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>1</maxOccurs>
-                              </multiplicity>
-                            </attribute>
-                         </objectType>
-                         <objectType abstract="true">
-                            <vodml-id>types.Shape</vodml-id>
-                            <name>Shape</name>
-                            <description></description>	    
-                         </objectType>
-                         <objectType>
-                            <vodml-id>types.Circle</vodml-id>
-                            <name>Circle</name>
-                            <description>a circular region on the sky</description>	    
-                            <extends>
-                               <vodml-ref>caom2:types.Shape</vodml-ref>
-                            </extends>
-                            <composition>
-                              <vodml-id>types.Circle.center</vodml-id>
-                              <name>center</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>caom2:types.Point</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>1</maxOccurs>
-                              </multiplicity>
-                            </composition>
-                            <attribute>
-                              <vodml-id>types.Circle.radius</vodml-id>
-                              <name>radius</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>ivoa:real</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>1</maxOccurs>
-                              </multiplicity>
-                            </attribute>
-                         </objectType>
-                         <objectType>
-                            <vodml-id>types.MultiShape</vodml-id>
-                            <name>MultiShape</name>
-                            <description>multiple simple shapess describing disconnected regions as a single value</description>	    
-                            <composition>
-                              <vodml-id>types.MultiShape.shapes</vodml-id>
-                              <name>shapes</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>caom2:types.Shape</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>-1</maxOccurs>
-                              </multiplicity>
-                            </composition>
-                         </objectType>
-                         <objectType>
-                            <vodml-id>types.Polygon</vodml-id>
-                            <name>Polygon</name>
-                            <description>a simple polygon region on the sky defined a sequence of points connected by great-circle segments</description>	    
-                            <extends>
-                               <vodml-ref>caom2:types.Shape</vodml-ref>
-                            </extends>
-                            <composition>
-                              <vodml-id>types.Polygon.points</vodml-id>
-                              <name>points</name>
-                              <description></description>	    
-                              <datatype>
-                                 <vodml-ref>caom2:types.Point</vodml-ref>
-                              </datatype>
-                              <multiplicity>
-                                <minOccurs>1</minOccurs>
-                                <maxOccurs>-1</maxOccurs>
-                              </multiplicity>
-                            </composition>
-                         </objectType>
                          <objectType>
                             <vodml-id>types.IntervalM</vodml-id>
                             <name>IntervalM</name>
