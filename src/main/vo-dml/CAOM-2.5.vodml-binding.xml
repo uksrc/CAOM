@@ -24,7 +24,10 @@
             <length>36</length>
         </type-detail>
         <type-detail vodml-id="DerivedObservation.members">
-            <length>8192</length> <!-- making length big because members modelled incorrectly -->
+            <length>8192</length> <!-- FIXME making length big because members modelled incorrectly -->
+        </type-detail>
+        <type-detail vodml-id="Target.keywords">
+            <length>8192</length> <!-- FIXME making length big because members modelled incorrectly -->
         </type-detail>
 
     </model>
