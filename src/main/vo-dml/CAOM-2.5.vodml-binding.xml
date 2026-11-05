@@ -9,6 +9,7 @@
         <java-package>org.ivoa.dm.caom2</java-package>
         <xml-targetnamespace prefix="caom2" >http://www.opencadc.org/caom2/xml/v2.5</xml-targetnamespace>
         <xml elementFormDefault="qualified" attributeFormDefault="qualified" packageHandling="ignore"/>
+        <json polymorphism="property"/>
         <rdb inheritance-strategy="inheritance"
              discriminatorColumnLength="64"
              listConcatenationDelimiter="#"/>
